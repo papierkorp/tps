@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://uoruptq8h1bl"]
+
+[ext_resource type="Texture2D" uid="uid://drecgv37mhbsf" path="res://assets/prototype_textures/Dark/texture_01.png" id="1_6xmxd"]
+[ext_resource type="Texture2D" uid="uid://ct1rrnac4iddf" path="res://assets/prototype_textures/Orange/texture_01.png" id="2_h5o24"]
+[ext_resource type="Texture2D" uid="uid://c2031clbgy85q" path="res://assets/prototype_textures/Purple/texture_01.png" id="3_mmdvd"]
+[ext_resource type="PackedScene" uid="uid://waxnia675j70" path="res://player/player.tscn" id="4_h5o24"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6xmxd"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_tcf2h"]
+sky_material = SubResource("ProceduralSkyMaterial_6xmxd")
+
+[sub_resource type="Environment" id="Environment_4717r"]
+background_mode = 2
+sky = SubResource("Sky_tcf2h")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tcf2h"]
+albedo_texture = ExtResource("1_6xmxd")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sc4t8"]
+albedo_texture = ExtResource("2_h5o24")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ai45w"]
+albedo_texture = ExtResource("3_mmdvd")
+uv1_triplanar = true
+
+[node name="world" type="Node3D" unique_id=1810105729]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=344180574]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=962019218]
+environment = SubResource("Environment_4717r")
+
+[node name="wall" type="CSGCombiner3D" parent="." unique_id=1927709517]
+use_collision = true
+collision_layer = 2
+collision_mask = 7
+
+[node name="CSGBox3D" type="CSGBox3D" parent="wall" unique_id=2021493705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8678222, 0)
+size = Vector3(30, 7.8356447, 30)
+material = SubResource("StandardMaterial3D_tcf2h")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="wall" unique_id=1377496481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.077667, 0)
+operation = 2
+size = Vector3(29, 12.055334, 29)
+material = SubResource("StandardMaterial3D_tcf2h")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="wall" unique_id=277683341]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8942766, 0.5, -2.6277418)
+layers = 4
+material = SubResource("StandardMaterial3D_sc4t8")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="wall" unique_id=1164916286]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -4)
+layers = 4
+radius = 1.0
+material = SubResource("StandardMaterial3D_ai45w")
+
+[node name="player" parent="." unique_id=2066123868 instance=ExtResource("4_h5o24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)

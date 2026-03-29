@@ -1,0 +1,55 @@
+extends State
+
+@export_category("References")
+@export var player: PlayerController
+
+@export_category("Movement Settings")
+@export var air_acceleration: float = 0.3  # How much control in air
+@export var glide_gravity_multiplier: float = 0.1  # Lower = more gliding
+@export var air_nudge_force: float = 18.0     # how strongly input nudges direction
+@export var max_air_speed: float = 10.0       # horizontal speed cap
+@export var air_drag: float = 0.98            # horizontal momentum retention (1.0 = no drag)
+
+
+func Enter():
+	print("gliding state")
+	if !player:
+		return
+
+func Physics_Update(delta):
+	if !player:
+		return
+
+	if Input.is_action_just_pressed("aircharge"):
+		state_transition.emit("airhover")
+
+	# Reduced gravity — multiplier actually applied this time
+	player.velocity += player.get_gravity() * glide_gravity_multiplier * delta
+
+	var input_dir = Input.get_vector("move_left", "move_right", "move_forwards", "move_backwards")
+	var direction := Vector3(input_dir.x, 0, input_dir.y)\
+		.rotated(Vector3.UP, player.camera_controller.camera_horizontal).normalized()
+
+	if direction:
+		player.velocity.x += direction.x * air_nudge_force * delta
+		player.velocity.z += direction.z * air_nudge_force * delta
+
+	# Soft horizontal speed cap
+	var horizontal := Vector2(player.velocity.x, player.velocity.z)
+	if horizontal.length() > max_air_speed:
+		horizontal = horizontal.normalized() * max_air_speed
+		player.velocity.x = horizontal.x
+		player.velocity.z = horizontal.y
+
+	# Momentum drag
+	player.velocity.x *= air_drag
+	player.velocity.z *= air_drag
+
+	player.move_and_slide()
+
+	# Check if landed
+	if player.is_on_floor():
+		if input_dir.length() > 0:
+			state_transition.emit("movement")
+		else:
+			state_transition.emit("idle")

@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://waxnia675j70"]
+
+[ext_resource type="Script" uid="uid://f7uwu0t55ov7" path="res://player/player.gd" id="1_ebx5c"]
+[ext_resource type="Script" uid="uid://b2enxkjx2fe4p" path="res://player/camera_controller.gd" id="2_rkbax"]
+[ext_resource type="Script" uid="uid://b2sniaurrmd8r" path="res://player/statemanager/state_manager.gd" id="3_d1dig"]
+[ext_resource type="Script" uid="uid://6kvaf246ivxd" path="res://player/statemanager/states/idle.gd" id="4_boad6"]
+[ext_resource type="PackedScene" uid="uid://pq63ujg3afes" path="res://player/ui/ui.tscn" id="4_yw30f"]
+[ext_resource type="Script" uid="uid://u75mjk02j7di" path="res://player/statemanager/states/movement.gd" id="5_8t03j"]
+[ext_resource type="Script" uid="uid://bd58tnsrf5wsu" path="res://player/ui/fps_label.gd" id="5_g6k8r"]
+[ext_resource type="Script" uid="uid://8ch3mvjc0nck" path="res://player/statemanager/states/jump.gd" id="6_2ieo8"]
+[ext_resource type="Script" uid="uid://30byeasccrig" path="res://player/ui/all_states.gd" id="6_boad6"]
+[ext_resource type="Script" uid="uid://dm6fmvaq6gdcm" path="res://player/statemanager/states/rolling.gd" id="7_32hag"]
+[ext_resource type="Script" uid="uid://tq43r0mcmut8" path="res://player/statemanager/states/gliding.gd" id="7_ebec5"]
+[ext_resource type="Script" uid="uid://dodebdd4s5rwo" path="res://player/statemanager/states/sprintjump.gd" id="8_tqiix"]
+[ext_resource type="Script" uid="uid://231i4fgis6k1" path="res://player/statemanager/states/crouch.gd" id="8_yllr7"]
+[ext_resource type="Script" uid="uid://d4ebx8e673rby" path="res://player/statemanager/states/sprinting.gd" id="9_kb6p2"]
+[ext_resource type="Script" uid="uid://r87ufqs7wsov" path="res://player/statemanager/states/falling.gd" id="10_tqiix"]
+[ext_resource type="Script" uid="uid://xjb5vtxjeq1e" path="res://player/statemanager/states/airhover.gd" id="10_wodsf"]
+[ext_resource type="Script" uid="uid://hewvdrd1wjgm" path="res://player/ui/speed.gd" id="11_2ieo8"]
+[ext_resource type="Script" uid="uid://8accbxu7uycl" path="res://player/statemanager/states/aircharge.gd" id="11_32hag"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kqu6x"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oul6g"]
+radius = 0.6
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_d1dig"]
+radius = 0.2
+
+[node name="player" type="CharacterBody3D" unique_id=2066123868 node_paths=PackedStringArray("camera_controller")]
+collision_mask = 6
+script = ExtResource("1_ebx5c")
+camera_controller = NodePath("camera_controller")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=145105441]
+mesh = SubResource("CapsuleMesh_kqu6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1519850987]
+shape = SubResource("CapsuleShape3D_oul6g")
+
+[node name="camera_controller" type="Node3D" parent="." unique_id=681305640 node_paths=PackedStringArray("player", "camera", "shape_cast")]
+script = ExtResource("2_rkbax")
+player = NodePath("..")
+camera = NodePath("Camera3D")
+shape_cast = NodePath("ShapeCast3D")
+
+[node name="Camera3D" type="Camera3D" parent="camera_controller" unique_id=220676002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 2)
+cull_mask = 1
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="camera_controller" unique_id=904858338]
+shape = SubResource("SphereShape3D_d1dig")
+collision_mask = 2
+
+[node name="state_manager" type="Node3D" parent="." unique_id=1583884867 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("3_d1dig")
+initial_state = NodePath("idle")
+
+[node name="idle" type="Node3D" parent="state_manager" unique_id=113879422 node_paths=PackedStringArray("player")]
+script = ExtResource("4_boad6")
+player = NodePath("../..")
+
+[node name="movement" type="Node3D" parent="state_manager" unique_id=849479216 node_paths=PackedStringArray("player")]
+script = ExtResource("5_8t03j")
+player = NodePath("../..")
+
+[node name="sprinting" type="Node3D" parent="state_manager" unique_id=982344138 node_paths=PackedStringArray("player")]
+script = ExtResource("9_kb6p2")
+player = NodePath("../..")
+
+[node name="rolling" type="Node3D" parent="state_manager" unique_id=1086312837]
+script = ExtResource("7_32hag")
+
+[node name="jump" type="Node3D" parent="state_manager" unique_id=401070768 node_paths=PackedStringArray("player")]
+script = ExtResource("6_2ieo8")
+player = NodePath("../..")
+
+[node name="sprintjump" type="Node3D" parent="state_manager" unique_id=2056664348 node_paths=PackedStringArray("player")]
+script = ExtResource("8_tqiix")
+player = NodePath("../..")
+
+[node name="gliding" type="Node3D" parent="state_manager" unique_id=1935030530 node_paths=PackedStringArray("player")]
+script = ExtResource("7_ebec5")
+player = NodePath("../..")
+
+[node name="falling" type="Node3D" parent="state_manager" unique_id=2056145630 node_paths=PackedStringArray("player")]
+script = ExtResource("10_tqiix")
+player = NodePath("../..")
+
+[node name="crouch" type="Node3D" parent="state_manager" unique_id=160658173 node_paths=PackedStringArray("player")]
+script = ExtResource("8_yllr7")
+player = NodePath("../..")
+
+[node name="airhover" type="Node3D" parent="state_manager" unique_id=128259962 node_paths=PackedStringArray("player")]
+script = ExtResource("10_wodsf")
+player = NodePath("../..")
+
+[node name="aircharge" type="Node3D" parent="state_manager" unique_id=567399489 node_paths=PackedStringArray("player")]
+script = ExtResource("11_32hag")
+player = NodePath("../..")
+
+[node name="ui" parent="." unique_id=20229051 instance=ExtResource("4_yw30f")]
+
+[node name="debug_panel" type="Panel" parent="ui" unique_id=1392949660]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 308.0
+offset_bottom = 389.0
+
+[node name="MarginContainer" type="MarginContainer" parent="ui/debug_panel" unique_id=1097561790]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ui/debug_panel/MarginContainer" unique_id=985089679]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 4
+
+[node name="fps_label" type="Label" parent="ui/debug_panel/MarginContainer/VBoxContainer" unique_id=1570260718]
+layout_mode = 2
+script = ExtResource("5_g6k8r")
+
+[node name="all_states" type="Label" parent="ui/debug_panel/MarginContainer/VBoxContainer" unique_id=2082501526 node_paths=PackedStringArray("player_state_machine")]
+layout_mode = 2
+script = ExtResource("6_boad6")
+player_state_machine = NodePath("../../../../../state_manager")
+
+[node name="speed" type="Label" parent="ui/debug_panel/MarginContainer/VBoxContainer" unique_id=1274659628 node_paths=PackedStringArray("player")]
+layout_mode = 2
+script = ExtResource("11_2ieo8")
+player = NodePath("../../../../..")

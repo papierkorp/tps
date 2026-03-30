@@ -10,23 +10,31 @@ extends State
 @export var max_air_speed: float = 10.0       # horizontal speed cap
 @export var air_drag: float = 0.98            # horizontal momentum retention (1.0 = no drag)
 
+const ALLOWED: Array[State.States] = [State.States.AIR_CHARGE, State.States.FALLING]
 
 func Enter():
 	print("gliding state")
 	if !player:
 		return
+		
+	# kill momentum
+	player.velocity.y = 0.0
+	player.velocity.x *= 0.3
+	player.velocity.z *= 0.3
 
 func Physics_Update(delta):
 	if !player:
 		return
 
 	if Input.is_action_just_pressed("aircharge"):
-		state_transition.emit("airhover")
+		_emit_transition(State.States.AIR_CHARGE)
+
+	if Input.is_action_just_pressed("jump"):
+		_emit_transition(State.States.FALLING)
 
 	# Reduced gravity — multiplier actually applied this time
 	player.velocity += player.get_gravity() * glide_gravity_multiplier * delta
 
-	var input_dir := player.get_input_dir()
 	var direction := player.get_movement_direction()
 
 	if direction:
@@ -45,10 +53,4 @@ func Physics_Update(delta):
 	player.velocity.z *= air_drag
 
 	player.move_and_slide()
-
-	# Check if landed
-	if player.is_on_floor():
-		if input_dir.length() > 0:
-			state_transition.emit("movement")
-		else:
-			state_transition.emit("idle")
+	player.check_idle_state()

@@ -8,6 +8,8 @@ extends State
 
 var calculated_speed: float
 
+const ALLOWED: Array[State.States] = [State.States.GLIDING, State.States.AIR_RISE]
+
 func Enter():
 	print("sprintjump state")
 	if !player:
@@ -21,24 +23,19 @@ func Physics_Update(delta):
 		return
 
 	if Input.is_action_just_pressed("aircharge"):
-		state_transition.emit("airhover")
+		_emit_transition(State.States.AIR_RISE)
 
 	player.velocity += player.get_gravity() * delta
 
 	var input_dir := player.get_input_dir()
 	var direction := player.get_movement_direction()
 
-	if input_dir.length() > 0.1 and direction:
-		var current_velocity = Vector2(player.velocity.x, player.velocity.z)
-		current_velocity = lerp(current_velocity, Vector2(direction.x, direction.z) * calculated_speed, 1.0)
-		player.velocity.x = current_velocity.x
-		player.velocity.z = current_velocity.y
+	player.air_control(calculated_speed, delta)
 
 	player.move_and_slide()
 
 	# Can glide after a sprint jump
 	if player.velocity.y < 0:
-		state_transition.emit("gliding")
+		_emit_transition(State.States.GLIDING)
 
-	if player.is_on_floor():
-		state_transition.emit("movement" if input_dir.length() > 0 else "idle")
+	player.check_idle_state()

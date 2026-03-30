@@ -11,13 +11,14 @@
 [ext_resource type="Script" uid="uid://30byeasccrig" path="res://player/ui/all_states.gd" id="6_boad6"]
 [ext_resource type="Script" uid="uid://dm6fmvaq6gdcm" path="res://player/statemanager/states/rolling.gd" id="7_32hag"]
 [ext_resource type="Script" uid="uid://tq43r0mcmut8" path="res://player/statemanager/states/gliding.gd" id="7_ebec5"]
-[ext_resource type="Script" uid="uid://dodebdd4s5rwo" path="res://player/statemanager/states/sprintjump.gd" id="8_tqiix"]
+[ext_resource type="Script" uid="uid://dodebdd4s5rwo" path="res://player/statemanager/states/sprint_jump.gd" id="8_tqiix"]
 [ext_resource type="Script" uid="uid://231i4fgis6k1" path="res://player/statemanager/states/crouch.gd" id="8_yllr7"]
 [ext_resource type="Script" uid="uid://d4ebx8e673rby" path="res://player/statemanager/states/sprinting.gd" id="9_kb6p2"]
 [ext_resource type="Script" uid="uid://r87ufqs7wsov" path="res://player/statemanager/states/falling.gd" id="10_tqiix"]
-[ext_resource type="Script" uid="uid://xjb5vtxjeq1e" path="res://player/statemanager/states/airhover.gd" id="10_wodsf"]
+[ext_resource type="Script" uid="uid://xjb5vtxjeq1e" path="res://player/statemanager/states/air_hover.gd" id="10_wodsf"]
 [ext_resource type="Script" uid="uid://hewvdrd1wjgm" path="res://player/ui/speed.gd" id="11_2ieo8"]
-[ext_resource type="Script" uid="uid://8accbxu7uycl" path="res://player/statemanager/states/aircharge.gd" id="11_32hag"]
+[ext_resource type="Script" uid="uid://8accbxu7uycl" path="res://player/statemanager/states/air_charge.gd" id="11_32hag"]
+[ext_resource type="Script" uid="uid://dvanfud05qfka" path="res://player/statemanager/states/air_rise.gd" id="15_c35mf"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_kqu6x"]
 
@@ -27,10 +28,11 @@ radius = 0.6
 [sub_resource type="SphereShape3D" id="SphereShape3D_d1dig"]
 radius = 0.2
 
-[node name="player" type="CharacterBody3D" unique_id=2066123868 node_paths=PackedStringArray("camera_controller")]
+[node name="player" type="CharacterBody3D" unique_id=2066123868 node_paths=PackedStringArray("camera_controller", "state")]
 collision_mask = 6
 script = ExtResource("1_ebx5c")
 camera_controller = NodePath("camera_controller")
+state = NodePath("state_manager/idle")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=145105441]
 mesh = SubResource("CapsuleMesh_kqu6x")
@@ -75,7 +77,7 @@ script = ExtResource("7_32hag")
 script = ExtResource("6_2ieo8")
 player = NodePath("../..")
 
-[node name="sprintjump" type="Node3D" parent="state_manager" unique_id=2056664348 node_paths=PackedStringArray("player")]
+[node name="sprint_jump" type="Node3D" parent="state_manager" unique_id=2056664348 node_paths=PackedStringArray("player")]
 script = ExtResource("8_tqiix")
 player = NodePath("../..")
 
@@ -91,12 +93,16 @@ player = NodePath("../..")
 script = ExtResource("8_yllr7")
 player = NodePath("../..")
 
-[node name="airhover" type="Node3D" parent="state_manager" unique_id=128259962 node_paths=PackedStringArray("player")]
+[node name="air_hover" type="Node3D" parent="state_manager" unique_id=128259962 node_paths=PackedStringArray("player")]
 script = ExtResource("10_wodsf")
 player = NodePath("../..")
 
-[node name="aircharge" type="Node3D" parent="state_manager" unique_id=567399489 node_paths=PackedStringArray("player")]
+[node name="air_charge" type="Node3D" parent="state_manager" unique_id=567399489 node_paths=PackedStringArray("player")]
 script = ExtResource("11_32hag")
+player = NodePath("../..")
+
+[node name="air_rise" type="Node3D" parent="state_manager" unique_id=316163710 node_paths=PackedStringArray("player")]
+script = ExtResource("15_c35mf")
 player = NodePath("../..")
 
 [node name="ui" parent="." unique_id=20229051 instance=ExtResource("4_yw30f")]
@@ -104,8 +110,8 @@ player = NodePath("../..")
 [node name="debug_panel" type="Panel" parent="ui" unique_id=1392949660]
 offset_left = 8.0
 offset_top = 8.0
-offset_right = 308.0
-offset_bottom = 389.0
+offset_right = 226.0
+offset_bottom = 338.0
 
 [node name="MarginContainer" type="MarginContainer" parent="ui/debug_panel" unique_id=1097561790]
 layout_mode = 1
@@ -119,21 +125,28 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ui/debug_panel/MarginContainer" unique_id=985089679]
+[node name="ScrollContainer" type="ScrollContainer" parent="ui/debug_panel/MarginContainer" unique_id=386931798]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ui/debug_panel/MarginContainer/ScrollContainer" unique_id=985089679]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/separation = 4
 
-[node name="fps_label" type="Label" parent="ui/debug_panel/MarginContainer/VBoxContainer" unique_id=1570260718]
+[node name="fps_label" type="Label" parent="ui/debug_panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1570260718]
 layout_mode = 2
+theme_override_font_sizes/font_size = 8
 script = ExtResource("5_g6k8r")
 
-[node name="all_states" type="Label" parent="ui/debug_panel/MarginContainer/VBoxContainer" unique_id=2082501526 node_paths=PackedStringArray("player_state_machine")]
+[node name="speed" type="Label" parent="ui/debug_panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1274659628 node_paths=PackedStringArray("player")]
 layout_mode = 2
-script = ExtResource("6_boad6")
-player_state_machine = NodePath("../../../../../state_manager")
-
-[node name="speed" type="Label" parent="ui/debug_panel/MarginContainer/VBoxContainer" unique_id=1274659628 node_paths=PackedStringArray("player")]
-layout_mode = 2
+theme_override_font_sizes/font_size = 8
 script = ExtResource("11_2ieo8")
-player = NodePath("../../../../..")
+player = NodePath("../../../../../..")
+
+[node name="all_states" type="Label" parent="ui/debug_panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=2082501526 node_paths=PackedStringArray("player_state_machine")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+script = ExtResource("6_boad6")
+player_state_machine = NodePath("../../../../../../state_manager")

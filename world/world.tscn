@@ -45,26 +45,26 @@ collision_layer = 2
 collision_mask = 7
 
 [node name="CSGBox3D" type="CSGBox3D" parent="wall" unique_id=2021493705]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8678222, 0)
-size = Vector3(30, 7.8356447, 30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8678222, 0.84747314)
+size = Vector3(40, 7, 40)
 material = SubResource("StandardMaterial3D_tcf2h")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="wall" unique_id=1377496481]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.077667, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 0)
 operation = 2
-size = Vector3(29, 12.055334, 29)
+size = Vector3(29, 20, 29)
 material = SubResource("StandardMaterial3D_tcf2h")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="wall" unique_id=277683341]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8942766, 0.5, -2.6277418)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8942766, 1.5, -2.6277418)
 layers = 4
 material = SubResource("StandardMaterial3D_sc4t8")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="wall" unique_id=1164916286]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -4)
 layers = 4
 radius = 1.0
 material = SubResource("StandardMaterial3D_ai45w")
 
 [node name="player" parent="." unique_id=2066123868 instance=ExtResource("4_h5o24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)

@@ -3,6 +3,8 @@ extends State
 @export_category("References")
 @export var player: PlayerController
 
+const ALLOWED: Array[State.States] = [State.States.IDLE, State.States.MOVEMENT, State.States.SPRINT_JUMP, State.States.AIR_RISE]
+
 func Enter():
 	print("sprinting state")
 	if !player:
@@ -13,22 +15,21 @@ func Physics_Update(_delta):
 		return
 
 	if Input.is_action_just_pressed("aircharge"):
-		state_transition.emit("airhover")
+		_emit_transition(State.States.AIR_RISE)
 		
-	if Input.is_action_just_pressed("jump"): #and player.is_on_floor():
-		state_transition.emit("sprintjump")
+	if Input.is_action_just_pressed("jump") and player.is_on_floor():
+		_emit_transition(State.States.SPRINT_JUMP)
 
 	# If sprint released, go back to movement
 	if not Input.is_action_pressed("sprint"):
-		state_transition.emit("movement")
+		_emit_transition(State.States.MOVEMENT)
 
-	var input_dir := player.get_input_dir()
 	var direction := player.get_movement_direction()
 	
 	if direction:
 		player.velocity.x = direction.x * player.SPRINT_SPEED
 		player.velocity.z = direction.z * player.SPRINT_SPEED
 	else:
-		state_transition.emit("idle")
+		_emit_transition(State.States.IDLE)
 
 	player.move_and_slide()

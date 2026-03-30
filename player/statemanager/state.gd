@@ -11,19 +11,20 @@ enum States {
 	FALLING,
 	GLIDING,
 	AIR_HOVER,
-	AIR_DASH
+	AIR_RISE,
+	AIR_CHARGE
 }
 
-const ALLOWED: Array[States] = []
-
 func _emit_transition(new_state: States) -> void:
-	if ALLOWED.is_empty() or new_state in ALLOWED:
+	var allowed = get("ALLOWED")
+	if allowed == null or allowed.is_empty() or new_state in allowed:
 		state_transition.emit(_state_to_string(new_state))
 	else:
 		push_error("Illegal transition from '%s' to '%s'" % [name, _state_to_string(new_state)])
 
 func _state_to_string(state: States) -> StringName:
 	return States.keys()[state].to_lower()
+
 
 func Enter():
 	pass

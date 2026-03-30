@@ -6,6 +6,8 @@ extends State
 @export_category("Settings")
 @export var dash_speed: float = 40.0
 
+const ALLOWED: Array[State.States] = [State.States.IDLE, State.States.MOVEMENT]
+
 var dash_direction: Vector3
 
 func Enter():
@@ -26,4 +28,7 @@ func Physics_Update(_delta):
 
 	if player.is_on_floor():
 		var input_dir := player.get_input_dir()
-		state_transition.emit("movement" if input_dir.length() > 0 else "idle")
+		if input_dir.length() > 0:
+			_emit_transition(State.States.MOVEMENT)
+		else:
+			_emit_transition(State.States.IDLE)

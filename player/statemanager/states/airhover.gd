@@ -12,6 +12,8 @@ enum Phase { CHARGING, HOVERING }
 var phase: Phase
 var target_y: float
 
+const ALLOWED: Array[State.States] = [State.States.GLIDING, State.States.AIR_DASH]
+
 func Enter():
 	print("airhover state")
 	if !player:
@@ -50,7 +52,7 @@ func _hovering():
 	# Cancel with any movement input → back to gliding
 	var input_dir := player.get_input_dir()
 	if input_dir != Vector2.ZERO:
-		state_transition.emit("gliding")
+		_emit_transition(State.States.GLIDING)
 		return
 
 	# Dash only if aircharge pressed and camera is aimed downward

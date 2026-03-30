@@ -12,13 +12,7 @@ func Enter():
 	print("jump state")
 	if !player:
 		return
-
-	var input_dir = Input.get_vector("move_left", "move_right", "move_forwards", "move_backwards")
-	if input_dir == Vector2.ZERO:
-		player.velocity.x = 0
-		player.velocity.z = 0
-
-	player.velocity.y = player.JUMP_VELOCITY  # ← this was missing
+	player.velocity.y = player.JUMP_VELOCITY
 
 func Physics_Update(delta):
 	if !player:
@@ -29,9 +23,8 @@ func Physics_Update(delta):
 
 	player.velocity += player.get_gravity() * delta
 
-	var input_dir = Input.get_vector("move_left", "move_right", "move_forwards", "move_backwards")
-	var direction := Vector3(input_dir.x, 0, input_dir.y)\
-		.rotated(Vector3.UP, player.camera_controller.camera_horizontal).normalized()
+	var input_dir := player.get_input_dir()
+	var direction := player.get_movement_direction()
 
 	if direction:
 		var current_velocity = Vector2(player.velocity.x, player.velocity.z)

@@ -26,9 +26,8 @@ func Physics_Update(delta):
 	# Reduced gravity — multiplier actually applied this time
 	player.velocity += player.get_gravity() * glide_gravity_multiplier * delta
 
-	var input_dir = Input.get_vector("move_left", "move_right", "move_forwards", "move_backwards")
-	var direction := Vector3(input_dir.x, 0, input_dir.y)\
-		.rotated(Vector3.UP, player.camera_controller.camera_horizontal).normalized()
+	var input_dir := player.get_input_dir()
+	var direction := player.get_movement_direction()
 
 	if direction:
 		player.velocity.x += direction.x * air_nudge_force * delta

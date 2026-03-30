@@ -48,7 +48,7 @@ func _hovering():
 	player.move_and_slide()
 
 	# Cancel with any movement input → back to gliding
-	var input_dir = Input.get_vector("move_left", "move_right", "move_forwards", "move_backwards")
+	var input_dir := player.get_input_dir()
 	if input_dir != Vector2.ZERO:
 		state_transition.emit("gliding")
 		return

@@ -16,8 +16,8 @@ func Physics_Update(_delta):
 		return
 
 	# Get input for air control
-	var input_dir = Input.get_vector("move_left", "move_right", "move_forwards", "move_backwards")
-	var direction = (player.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var input_dir := player.get_input_dir()
+	var direction := player.get_movement_direction()
 
 	# Allow some air control
 	if direction:

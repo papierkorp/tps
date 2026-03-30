@@ -25,5 +25,5 @@ func Physics_Update(_delta):
 	player.move_and_slide()
 
 	if player.is_on_floor():
-		var input_dir = Input.get_vector("move_left", "move_right", "move_forwards", "move_backwards")
+		var input_dir := player.get_input_dir()
 		state_transition.emit("movement" if input_dir.length() > 0 else "idle")

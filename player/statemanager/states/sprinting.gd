@@ -22,9 +22,9 @@ func Physics_Update(_delta):
 	if not Input.is_action_pressed("sprint"):
 		state_transition.emit("movement")
 
-	var input_dir := Input.get_vector("move_left", "move_right", "move_forwards", "move_backwards")
-	var direction := Vector3(input_dir.x, 0, input_dir.y).rotated(Vector3.UP, player.camera_controller.camera_horizontal).normalized()
-
+	var input_dir := player.get_input_dir()
+	var direction := player.get_movement_direction()
+	
 	if direction:
 		player.velocity.x = direction.x * player.SPRINT_SPEED
 		player.velocity.z = direction.z * player.SPRINT_SPEED

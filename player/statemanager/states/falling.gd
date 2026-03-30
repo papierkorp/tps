@@ -20,9 +20,8 @@ func Physics_Update(delta):
 
 	player.velocity += player.get_gravity() * delta
 
-	var input_dir = Input.get_vector("move_left", "move_right", "move_forwards", "move_backwards")
-	var direction := Vector3(input_dir.x, 0, input_dir.y)\
-		.rotated(Vector3.UP, player.camera_controller.camera_horizontal).normalized()
+	var input_dir := player.get_input_dir()
+	var direction := player.get_movement_direction()
 
 	# Limited air control while falling
 	if direction:

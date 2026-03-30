@@ -9,7 +9,7 @@ func Enter():
 		return
 
 	# Clear leftover horizontal velocity unless player is actively pressing input
-	var input_dir = Input.get_vector("move_left", "move_right", "move_forwards", "move_backwards")
+	var input_dir := player.get_input_dir()
 	if input_dir == Vector2.ZERO:
 		player.velocity.x = 0
 		player.velocity.z = 0

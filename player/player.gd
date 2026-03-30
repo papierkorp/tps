@@ -14,3 +14,11 @@ func Physics_Update(delta):
   # Apply reduced gravity for falling effect
 	if not is_on_floor():
 		velocity += get_gravity() * JUMP_VELOCITY * delta
+
+func get_movement_direction() -> Vector3:
+	var input_dir := Input.get_vector("move_left", "move_right", "move_forwards", "move_backwards")
+	return Vector3(input_dir.x, 0, input_dir.y)\
+		.rotated(Vector3.UP, camera_controller.camera_horizontal).normalized()
+
+func get_input_dir() -> Vector2:
+	return Input.get_vector("move_left", "move_right", "move_forwards", "move_backwards")

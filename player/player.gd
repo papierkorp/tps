@@ -46,7 +46,7 @@ func air_control(calculated_speed: float, delta: float) -> void:
 	var target_velocity := Vector2(direction.x, direction.z) * calculated_speed * input_strength  
 
 	# Check if input is opposing current momentum
-	var dot := current_velocity.dot(target_velocity.normalized()) 
+	var dot := current_velocity.dot(target_velocity.normalized() * Vector2(2.0, 2.0))  
 
 	if dot < 0:
 		# Input is backwards — only bleed off speed, don't propel backward

@@ -19,7 +19,9 @@ Anthropomorphic squirrel warrior, male, bipedal, medium height, powerfully built
 
 Lower body is fully unarmored bare fur — cream/tan fur on inner thighs and lower belly, chestnut-orange fur on outer legs. The waist and hips are visible bare fur, no clothing, no panels, no plates.
 
-armor Segmented setup built around a wide leather belt sitting at the navel. Breastplate is rigid pitch black carbon plating with near-void dark grey underlayer and rust-orange trim accents — ends low at the mid-ribcage/sternum, NOT covering the lower belly. Breastplate is fastened to the belt at the sides via straps or buckles, leaving the entire abdominal area below the navel completely exposed bare fur. Suspended from the same belt are rigid pitch black carbon tassets or thigh plates that cover the upper legs and flanks, bridging down to small angular foot plates covering the outer instep of each foot. Lower legs remain completely bare. Shoulder and forearm plating expose the defined lighter-colored biceps.
+Armor Configuration: Segmented setup built around a wide leather belt sitting at the navel. Breastplate is rigid pitch black carbon plating with near-void dark grey underlayer and rust-orange trim accents — ends low at the mid-ribcage/sternum, NOT covering the lower belly. Breastplate is fastened to the belt at the sides via straps or buckles, leaving the entire abdominal area below the navel completely exposed bare fur. Suspended from the same belt are rigid pitch black carbon tassets or thigh plates that cover the upper legs and flanks, bridging down to small angular foot plates covering the outer instep of each foot. Lower legs remain completely bare. 
+
+Shoulder and forearm plating expose the defined lighter-colored biceps.
 
 White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style, heroic silhouette, warmer lighting, soft rim light from above.
 
@@ -30,12 +32,10 @@ ONE tail only.
 Chest Armor: pitch black carbon plating, near-void dark grey underlayer, rust-orange accents on trim only. The chest plate is a hard rigid shell that covers chest and belly, ending in a clean flat hard bottom edge at the navel — like a cut piece of hard plastic, no straps, no buckles, no connectors, no attachments at the bottom edge. It simply stops.
 
 From this bottom edge, small pitch black carbon foot plates hang down, covering the outer instep of each foot — rigid angular guards that bridge the gap between chest armor and foot, leaving the lower leg completely bare.
-
-Shoulder and forearm plating exposing the defined lighter colored biceps.
 ```
 
 ```
-Armor Configuration: Segmented setup built around a wide leather belt sitting at the navel. Breastplate is rigid pitch black carbon plating with near-void dark grey underlayer and rust-orange trim accents — ends low at the mid-ribcage/sternum, NOT covering the lower belly. Breastplate is fastened to the belt at the sides via straps or buckles, leaving the entire abdominal area below the navel completely exposed bare fur. Suspended from the same belt are rigid pitch black carbon tassets or thigh plates that cover the upper legs and flanks, bridging down to small angular foot plates covering the outer instep of each foot. Lower legs remain completely bare. Shoulder and forearm plating expose the defined lighter-colored biceps.
+Armor Configuration: Segmented setup built around a wide leather belt sitting at the navel. Breastplate is rigid pitch black carbon plating with near-void dark grey underlayer and rust-orange trim accents — ends low at the mid-ribcage/sternum, NOT covering the lower belly. Breastplate is fastened to the belt at the sides via straps or buckles, leaving the entire abdominal area below the navel completely exposed bare fur. Suspended from the same belt are rigid pitch black carbon tassets or thigh plates that cover the upper legs and flanks, bridging down to small angular foot plates covering the outer instep of each foot. Lower legs remain completely bare.
 ```
 
 [Details]() - [Direct]()

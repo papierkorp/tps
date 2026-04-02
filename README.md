@@ -19,9 +19,9 @@ Anthropomorphic squirrel warrior, male, bipedal, medium height, powerfully built
 
 Lower body is fully unarmored bare fur — cream/tan fur on inner thighs and lower belly, chestnut-orange fur on outer legs. The waist and hips are visible bare fur, no clothing, no panels, no plates.
 
-Armor Configuration: Segmented setup built around a wide leather belt sitting at the navel. Breastplate is rigid pitch black carbon plating with near-void dark grey underlayer and rust-orange trim accents — ends low at the mid-ribcage/sternum, NOT covering the lower belly. Breastplate is fastened to the belt at the sides via straps or buckles, leaving the entire abdominal area below the navel completely exposed bare fur. Suspended from the same belt are rigid pitch black carbon tassets or thigh plates that cover the upper legs and flanks, bridging down to small angular foot plates covering the outer instep of each foot. Lower legs remain completely bare. 
+Chest Armor: pitch black carbon plating, near-void dark grey underlayer, rust-orange accents on trim only. The chest plate is a hard rigid shell that covers chest and belly, ending in a clean flat hard bottom edge at the navel — like a cut piece of hard plastic, no straps, no buckles, no connectors, no attachments at the bottom edge. It simply stops.
 
-Shoulder and forearm plating expose the defined lighter-colored biceps.
+From this bottom edge, small pitch black carbon foot plates hang down, covering the outer instep of each foot — rigid angular guards that bridge the gap between chest armor and foot, leaving the lower leg completely bare.
 
 White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style, heroic silhouette, warmer lighting, soft rim light from above.
 
@@ -29,22 +29,61 @@ ONE tail only.
 ```
 
 ```
+Anthropomorphic squirrel warrior, male, bipedal, medium height, powerfully built — broad chest, defined biceps with visible cream/tan fur, stocky muscular frame. 
+The biceps are bare fur colored cream/tan — a lighter color patch distinct from the chestnut-orange body fur. 
+Broad rounded face, short muzzle, light chestnut-orange fur, cream/tan patch on muzzle and cheeks. NO neck. 
+Large heavy-lidded eyes, thick furrowed brow, intense scowl. 
+Small dark nose, small rounded tufted ears. 
+Slow confident closed smirk — self-assured. Short wild spiky headfur. 
+ONE single tail only — large, thick, oversized and voluminous, full bushy squirrel tail curving upward behind the body. 
+Warm chestnut/amber-orange fur.
+
+Bare fur lower body: groin, hips, waist, lower belly, inner thighs, knees, shins, ankles all fully exposed fur. Cream/tan fur on inner thighs and lower belly visible. Nothing covers crotch or between legs.
+
+Chest armor: pitch black carbon plate with dark grey underlayer, rust-orange trim. Hard shell covers chest and upper belly only, stops cleanly 2 inches above navel. No downward extension.
+
+Underarm armor: small pitch black carbon plates on each underarm / inner bicep area, covering the armpit down to mid-inner arm. Separate from chest plate. Rust-orange trim on edges.
+
+Upper thigh armor: two small separate clusters of 2-3 stacked horizontal plates attached to front sides of chest plate. Each cluster covers only front top of each thigh, stops at mid-thigh. Large open gap between them exposes entire groin and inner thighs.
+
+Foot armor: small black carbon plates on outer instep only. No knee, shin, or lower leg armor.
+
+White background. Clean lineart, flat cel shading, Hearthstone/LoR card art style. Warm lighting, soft rim light from above.
+
+NEGATIVE: no groin cover, no loincloth, no skirt, no belly plate, no crotch plate, no armor below mid-thigh, no greaves, no cuisses.
+```
+
+```
+Anthropomorphic squirrel warrior, male, bipedal, medium height, powerfully built — broad chest, defined biceps, stocky muscular frame.
+
+Broad rounded face, short muzzle, light chestnut-orange fur, cream/tan patch on muzzle and cheeks. NO neck. 
+Large heavy-lidded eyes, thick furrowed brow, intense scowl. 
+Small dark nose, with a subtle taper and gentle curve, small rounded tufted ears. 
+Slow confident closed smirk — self-assured. 
+Short wild spiky headfur. ONE single tail only — large, thick and voluminous, full bushy squirrel tail curving upward behind the body. 
+Warm chestnut/amber-orange fur. NOT wing-shaped, NOT feathered, NOT split — purely a natural oversized squirrel tail.
+
+Underarm armor: small pitch black carbon plates on each underarm / inner bicep area, covering the armpit down to mid-inner arm. Separate from chest plate. Rust-orange trim on edges.
+
+Lower body is fully unarmored  fur — cream/tan fur on inner thighs and lower belly, chestnut-orange fur on outer legs. The waist and hips are visible  fur, no clothing, no panels, no plates.
+
 Chest Armor: pitch black carbon plating, near-void dark grey underlayer, rust-orange accents on trim only. The chest plate is a hard rigid shell that covers chest and belly, ending in a clean flat hard bottom edge at the navel — like a cut piece of hard plastic, no straps, no buckles, no connectors, no attachments at the bottom edge. It simply stops.
 
-From this bottom edge, small pitch black carbon foot plates hang down, covering the outer instep of each foot — rigid angular guards that bridge the gap between chest armor and foot, leaving the lower leg completely bare.
+Shoulder and forearm plating exposing the defined lighter colored biceps.
+
+White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style, heroic silhouette, warmer lighting, soft rim light from above.
+
+ONE tail only.
 ```
 
-```
-Armor Configuration: Segmented setup built around a wide leather belt sitting at the navel. Breastplate is rigid pitch black carbon plating with near-void dark grey underlayer and rust-orange trim accents — ends low at the mid-ribcage/sternum, NOT covering the lower belly. Breastplate is fastened to the belt at the sides via straps or buckles, leaving the entire abdominal area below the navel completely exposed bare fur. Suspended from the same belt are rigid pitch black carbon tassets or thigh plates that cover the upper legs and flanks, bridging down to small angular foot plates covering the outer instep of each foot. Lower legs remain completely bare.
-```
 
 [Details]() - [Direct]()
 - [Details](https://www.seaart.ai/create/image?id=d4kssode878c7387fae0&model_ver_no=ef24b47a8d618127c9342fd0635aedb9) - [Direct](https://image.cdn2.seaart.me/2026-04-01/d76fjgde878c739jns60/fa8ef0bbee128c4a5abc597b7d37e2b3_high.webp)
 - [Details](https://www.seaart.ai/create/image?id=d4kssode878c7387fae0&model_ver_no=ef24b47a8d618127c9342fd0635aedb9) - [Direct](https://image.cdn2.seaart.me/2026-04-01/d76fm15e878c739k8bqg/125a63ba58d364bb3a59a3337e6bfef5_high.webp)
-- [Details](https://www.seaart.ai/create/image?id=d4kssode878c7387fae0&model_ver_no=ef24b47a8d618127c9342fd0635aedb9) - [Direct](https://image.cdn2.seaart.me/2026-04-01/d76fk6te878c739jsg20/b535d949b049b05036fe85ab334c611a_high.webp)
+- [Details](https://www.seaart.ai/explore/detail/d76fl45e878c73cj0f80?pt=) - [Direct](https://image.cdn2.seaart.me/2026-04-01/d76fk6te878c739jsg20/b535d949b049b05036fe85ab334c611a_high.webp)
 - [Details](https://www.seaart.ai/create/image?id=d4kssode878c7387fae0&model_ver_no=ef24b47a8d618127c9342fd0635aedb9) - [Direct](https://image.cdn2.seaart.me/2026-04-01/d76fakde878c73c6gs8g/e0597d336a97ec5cec37fbc2ee7c5da2_high.webp)
 - [Details](https://www.seaart.ai/explore/detail/d73gl9de878c738mf1lg?pt=) - [Direct](https://image.cdn2.seaart.me/2026-03-27/d73g1dde878c739d84p0/f52deebf5c821bb8f7798921b9c3f04c_high.webp)
-- [Details]() - [Direct]()
+- [Details](https://www.seaart.ai/create/image?id=d4kssode878c7387fae0&model_ver_no=ef24b47a8d618127c9342fd0635aedb9) - [Direct](https://image.cdn2.seaart.me/2026-04-02/d775igde878c738n6j3g/b2138647e4dfb1c8dba6d0567af19aab_high.webp)
 - [Details]() - [Direct]()
 - [Details]() - [Direct]()
 

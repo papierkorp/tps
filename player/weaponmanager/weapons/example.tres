@@ -4,10 +4,13 @@
 [ext_resource type="AudioStream" uid="uid://b4rtqfscq5v8h" path="res://assets/sound_effects/weapons/pistol_reload.mp3" id="2_gpl3l"]
 [ext_resource type="AudioStream" uid="uid://b7tka2xqffeu0" path="res://assets/sound_effects/weapons/shoot.wav" id="3_6cjfu"]
 [ext_resource type="AudioStream" uid="uid://dwhc3cjmngpwb" path="res://assets/sound_effects/weapons/out_of_magazine.mp3" id="4_cuj0d"]
+[ext_resource type="PackedScene" uid="uid://bl8g12kagoc2p" path="res://player/weaponmanager/weapons/example.tscn" id="5_6cjfu"]
 
 [resource]
 script = ExtResource("1_yern4")
 weapon_name = "example"
+weapon_scene = ExtResource("5_6cjfu")
+weapon_position = Vector3(0.6, -0.2, -0.4)
 anim_idle = "idle"
 anim_equip = "equip"
 anim_shoot = "shoot"

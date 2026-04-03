@@ -107,6 +107,9 @@ cull_mask = 1
 shape = SubResource("SphereShape3D_d1dig")
 collision_mask = 2
 
+[node name="bullet_raycast" type="RayCast3D" parent="camera_controller" unique_id=993476726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 2)
+
 [node name="state_manager" type="Node3D" parent="." unique_id=1583884867 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("3_d1dig")
 initial_state = NodePath("idle")
@@ -166,17 +169,17 @@ player = NodePath("../../../../../..")
 [node name="all_states" parent="ui/debug_panel/MarginContainer/ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(20229051, 1103326045) index="2" unique_id=2025488691 node_paths=PackedStringArray("player_state_machine")]
 player_state_machine = NodePath("../../../../../../state_manager")
 
-[node name="weapon_manager" parent="." unique_id=2112504327 node_paths=PackedStringArray("player", "anim_player", "bullet_raycast") instance=ExtResource("17_tqiix")]
+[node name="weapon_manager" parent="." unique_id=2112504327 node_paths=PackedStringArray("player", "anim_player", "bullet_raycast", "weapon_holder") instance=ExtResource("17_tqiix")]
 player = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
-bullet_raycast = NodePath("bullet_raycast")
+bullet_raycast = NodePath("../camera_controller/bullet_raycast")
+weapon_holder = NodePath("../weapon_holder")
 current_weapon = ExtResource("18_e7oew")
-
-[node name="bullet_raycast" type="RayCast3D" parent="weapon_manager" unique_id=993476726]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 2)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1098153867]
 root_node = NodePath("../camera_controller/Camera3D")
 libraries/ = SubResource("AnimationLibrary_65viv")
+
+[node name="weapon_holder" type="Node3D" parent="." unique_id=1930964402]
 
 [editable path="ui"]

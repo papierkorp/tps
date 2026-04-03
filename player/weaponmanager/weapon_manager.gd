@@ -4,14 +4,34 @@ class_name WeaponManager extends Node3D
 @export var player: CharacterBody3D
 @export var anim_player: AnimationPlayer
 @export var bullet_raycast: RayCast3D
+@export var weapon_holder: Node3D
 
 @export_category("Weapon Settings")
 @export var current_weapon: Weapon
 
 @onready var audio_stream_player = $AudioStreamPlayer3D
+var current_weapon_instance: Node3D
 
 func _ready() -> void:
+	# Setup weapon resource
 	current_weapon.weapon_manager = self
+	
+	# Instantiate the weapon model
+	if current_weapon.weapon_scene:
+		current_weapon_instance = current_weapon.weapon_scene.instantiate()
+		weapon_holder.add_child(current_weapon_instance)
+		
+		# Position the weapon
+		current_weapon_instance.position = current_weapon.weapon_position
+		current_weapon_instance.rotation_degrees = current_weapon.weapon_rotation
+		
+		# Get the AnimationPlayer from the weapon instance
+		# Your existing animation code will need to use this instead
+		var weapon_anim_player = current_weapon_instance.get_node_or_null("AnimationPlayer")
+		if weapon_anim_player:
+			# Store reference or modify play_anim to use this
+			pass
+	
 	current_weapon.is_equiped = true
 
 # --------------------------------------------------------

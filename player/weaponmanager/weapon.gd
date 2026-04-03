@@ -2,6 +2,9 @@ class_name Weapon extends Resource
 
 @export_category("Default")
 @export var weapon_name: String
+@export var weapon_scene: PackedScene
+@export var weapon_position: Vector3 = Vector3.ZERO
+@export var weapon_rotation: Vector3 = Vector3.ZERO
 @export var damage = 10
 
 @export_category("Animation")

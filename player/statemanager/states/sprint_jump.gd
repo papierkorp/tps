@@ -27,9 +27,6 @@ func Physics_Update(delta):
 
 	player.velocity += player.get_gravity() * delta
 
-	var input_dir := player.get_input_dir()
-	var direction := player.get_movement_direction()
-
 	player.air_control(calculated_speed, delta)
 
 	player.move_and_slide()

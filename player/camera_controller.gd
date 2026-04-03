@@ -4,6 +4,7 @@ class_name CameraController extends Node3D
 @export var player: PlayerController
 @export var camera: Camera3D
 @export var shape_cast: ShapeCast3D
+@export var animation_player: AnimationPlayer
 
 @export_category("Mouse Settings")
 @export var mouse_sensitivity: float = 0.003
@@ -25,6 +26,10 @@ func _input(event: InputEvent) -> void:
 		_toggle_mouse()
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		_set_mouse_movement(event)
+	if event.is_action_pressed("scope_in"):
+		animation_player.play("zoom_in")
+	if event.is_action_released("scope_in"):
+		animation_player.play_backwards("zoom_in")
 
 func _physics_process(_delta: float) -> void:
 	_update_camera()

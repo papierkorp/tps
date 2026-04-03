@@ -1,3 +1,89 @@
-[gd_scene format=3 uid="uid://pq63ujg3afes"]
+[gd_scene format=3 uid="uid://bgoo5xlh2qrdv"]
+
+[ext_resource type="Script" uid="uid://bd58tnsrf5wsu" path="res://player/ui/fps_label.gd" id="1_la5p8"]
+[ext_resource type="Script" uid="uid://hewvdrd1wjgm" path="res://player/ui/speed.gd" id="2_8dee0"]
+[ext_resource type="Script" uid="uid://30byeasccrig" path="res://player/ui/all_states.gd" id="3_2yc2l"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_la5p8"]
 
 [node name="ui" type="CanvasLayer" unique_id=20229051]
+
+[node name="debug_panel" type="Panel" parent="." unique_id=1689864914]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 226.0
+offset_bottom = 338.0
+
+[node name="MarginContainer" type="MarginContainer" parent="debug_panel" unique_id=1586645624]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="ScrollContainer" type="ScrollContainer" parent="debug_panel/MarginContainer" unique_id=881012843]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="debug_panel/MarginContainer/ScrollContainer" unique_id=1103326045]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 4
+
+[node name="fps_label" type="Label" parent="debug_panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1976371872]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+script = ExtResource("1_la5p8")
+
+[node name="speed" type="Label" parent="debug_panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=694684104]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+script = ExtResource("2_8dee0")
+
+[node name="all_states" type="Label" parent="debug_panel/MarginContainer/ScrollContainer/VBoxContainer" unique_id=2025488691]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+script = ExtResource("3_2yc2l")
+
+[node name="crosshair" type="Control" parent="." unique_id=1045589031]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="crosshair" unique_id=25533966]
+position = Vector2(50, 40)
+rotation = 1.5707964
+scale = Vector2(10, 1.525)
+mesh = SubResource("BoxMesh_la5p8")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="crosshair" unique_id=275749951]
+position = Vector2(50, 60)
+rotation = 1.5707964
+scale = Vector2(10, 1.525)
+mesh = SubResource("BoxMesh_la5p8")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="crosshair" unique_id=888554620]
+position = Vector2(40, 50)
+scale = Vector2(10, 1.525)
+mesh = SubResource("BoxMesh_la5p8")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="crosshair" unique_id=648760827]
+position = Vector2(60, 50)
+scale = Vector2(10, 1.525)
+mesh = SubResource("BoxMesh_la5p8")

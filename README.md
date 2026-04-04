@@ -1,5 +1,24 @@
 # todo
 
+- player - characterbody3d
+- meshinstance3d
+- collisonshape3d
+- camera_controller - node3d
+  - camera3d
+  - shapecast3d
+  - bullet_raycast
+- state_manager -node3d
+  - idle
+  - movement
+  - jump
+  - ...
+- ui (canvas - instantiated with editable children)
+  - crosshair (control)
+    - meshinstance2d
+- weapon_manager (node3d - instantiated)
+- animationplayer (which just hase zoom_in animation atm)
+- weapon_holder (node3d)
+
 # graphics
 
 ## concept art
@@ -14,19 +33,6 @@
 * the main weapon will be a (a bit bulkier) assault rifle in the style of a ACR/SCAR21/G36
 * no background needed
 
-```
-Anthropomorphic squirrel warrior, male, bipedal, medium height, powerfully built — broad chest, defined biceps, stocky muscular frame. Broad rounded face, short muzzle, light chestnut-orange fur, cream/tan patch on muzzle and cheeks. NO neck. Large heavy-lidded eyes, thick furrowed brow, intense scowl. Small dark nose, stylized slightly thicker than natural whiskers, with a subtle taper and gentle curve, small rounded tufted ears. Slow confident closed smirk — self-assured. Short wild spiky headfur. ONE single tail only — large, thick and voluminous, full bushy squirrel tail curving upward behind the body. Warm chestnut/amber-orange fur. NOT wing-shaped, NOT feathered, NOT split — purely a natural oversized squirrel tail.
-
-Lower body is fully unarmored bare fur — cream/tan fur on inner thighs and lower belly, chestnut-orange fur on outer legs. The waist and hips are visible bare fur, no clothing, no panels, no plates.
-
-Chest Armor: pitch black carbon plating, near-void dark grey underlayer, rust-orange accents on trim only. The chest plate is a hard rigid shell that covers chest and belly, ending in a clean flat hard bottom edge at the navel — like a cut piece of hard plastic, no straps, no buckles, no connectors, no attachments at the bottom edge. It simply stops.
-
-From this bottom edge, small pitch black carbon foot plates hang down, covering the outer instep of each foot — rigid angular guards that bridge the gap between chest armor and foot, leaving the lower leg completely bare.
-
-White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style, heroic silhouette, warmer lighting, soft rim light from above.
-
-ONE tail only.
-```
 
 ```
 Anthropomorphic squirrel warrior, male, bipedal, medium height, powerfully built — broad chest, defined biceps with visible cream/tan fur, stocky muscular frame. 
@@ -51,29 +57,6 @@ Foot armor: small black carbon plates on outer instep only. No knee, shin, or lo
 White background. Clean lineart, flat cel shading, Hearthstone/LoR card art style. Warm lighting, soft rim light from above.
 
 NEGATIVE: no groin cover, no loincloth, no skirt, no belly plate, no crotch plate, no armor below mid-thigh, no greaves, no cuisses.
-```
-
-```
-Anthropomorphic squirrel warrior, male, bipedal, medium height, powerfully built — broad chest, defined biceps, stocky muscular frame.
-
-Broad rounded face, short muzzle, light chestnut-orange fur, cream/tan patch on muzzle and cheeks. NO neck. 
-Large heavy-lidded eyes, thick furrowed brow, intense scowl. 
-Small dark nose, with a subtle taper and gentle curve, small rounded tufted ears. 
-Slow confident closed smirk — self-assured. 
-Short wild spiky headfur. ONE single tail only — large, thick and voluminous, full bushy squirrel tail curving upward behind the body. 
-Warm chestnut/amber-orange fur. NOT wing-shaped, NOT feathered, NOT split — purely a natural oversized squirrel tail.
-
-Underarm armor: small pitch black carbon plates on each underarm / inner bicep area, covering the armpit down to mid-inner arm. Separate from chest plate. Rust-orange trim on edges.
-
-Lower body is fully unarmored  fur — cream/tan fur on inner thighs and lower belly, chestnut-orange fur on outer legs. The waist and hips are visible  fur, no clothing, no panels, no plates.
-
-Chest Armor: pitch black carbon plating, near-void dark grey underlayer, rust-orange accents on trim only. The chest plate is a hard rigid shell that covers chest and belly, ending in a clean flat hard bottom edge at the navel — like a cut piece of hard plastic, no straps, no buckles, no connectors, no attachments at the bottom edge. It simply stops.
-
-Shoulder and forearm plating exposing the defined lighter colored biceps.
-
-White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style, heroic silhouette, warmer lighting, soft rim light from above.
-
-ONE tail only.
 ```
 
 

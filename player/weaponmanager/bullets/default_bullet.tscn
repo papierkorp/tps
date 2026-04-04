@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dyag5lgouhbfi"]
+
+[ext_resource type="Script" uid="uid://bn6fqbnr771d5" path="res://player/weaponmanager/bullets/default_bullet.gd" id="1_34r3w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehngf"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_34r3w"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2uf1k"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[node name="DefaultBullet" type="RigidBody3D" unique_id=1422106945]
+script = ExtResource("1_34r3w")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=784040354]
+material_override = SubResource("StandardMaterial3D_ehngf")
+mesh = SubResource("BoxMesh_34r3w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2108659276]
+shape = SubResource("BoxShape3D_2uf1k")

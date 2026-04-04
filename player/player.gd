@@ -3,6 +3,7 @@ class_name PlayerController extends CharacterBody3D
 @export_category("References")
 @export var camera_controller: CameraController
 @export var state: State
+@export var mesh: MeshInstance3D
 
 @export_category("Movement Settings")
 @export var SPEED: float = 7.0
@@ -11,6 +12,9 @@ class_name PlayerController extends CharacterBody3D
 @export var JUMP_VELOCITY: float = 8.0
 @export var SPRINT_JUMP_MULTI: float = 1.5
 @export var AIR_CONTROL: float = 1.5 # higher is snappier, lower is more sluggish
+
+func _ready() -> void:
+	camera_controller.horizontal_rotation_changed.connect(_on_horizontal_rotation_changed)
 
 func Physics_Update(delta):
   # Apply reduced gravity for falling effect
@@ -69,3 +73,11 @@ func check_idle_state() -> void:
 			state._emit_transition(State.States.MOVEMENT)
 		else:
 			state._emit_transition(State.States.IDLE)
+
+# ---------------------------------------------------------
+# ---------------------- Signals ----------------------
+# ---------------------------------------------------------
+
+
+func _on_horizontal_rotation_changed(angle: float):
+	mesh.rotation.y = angle

@@ -29,8 +29,9 @@ class_name Weapon extends Resource
 @export var auto_fire: bool
 @export var shots_per_second: float = 10.0
 
-
-var RAYCAST_DIST: float = 9999 # too far breaks it
+@export_category("Projectile")
+@export var bullet_scene: PackedScene
+@export var bullet_speed: float = 50.0
 
 var weapon_manager: WeaponManager
 
@@ -41,28 +42,6 @@ var weapon_manager: WeaponManager
 
 func can_shoot() -> bool:
 	return ammo_current > 0 and not reload and is_equiped
-
-func fire_shot():
-	print("fire_shot()")
-	weapon_manager.play_sound(sound_shoot)
-	weapon_manager.play_anim(anim_shoot)
-	weapon_manager.queue_anim(anim_idle)
-	
-	var raycast = weapon_manager.bullet_raycast
-	raycast.target_position = Vector3(0,0,-abs(RAYCAST_DIST))
-	raycast.force_raycast_update() # otherwise position is not updated
-
-	if raycast.is_colliding():
-		var obj = raycast.get_collider()
-		var nrml = raycast.get_collision_normal()
-		var pt = raycast.get_collision_point()
-
-		if obj is RigidBody3D:
-			obj.apply_impulse(-nrml * 55.0 / obj.mass, pt - obj.global_position)
-
-		if obj.has_method("take_damage"):
-			obj.take_damage(self.damage)
-
 
 var fire_delay_timer: float = 0.0
 var can_fire: bool = true
@@ -77,15 +56,17 @@ var trigger_down := false :
 				on_trigger_up()
 
 func on_trigger_down():
-	print("on_trigger_down()")
-	print("can_shoot: ", can_shoot())
 	if can_shoot():
 		if auto_fire:
-			fire_shot()
+			weapon_manager.fire_shot()
 			can_fire = false
 			fire_delay_timer = 1.0 / shots_per_second
 		else:
-			fire_shot()
+			weapon_manager.fire_shot()
+
+func on_trigger_up():
+	fire_delay_timer = 0.0
+	can_fire = true
 
 func process_auto_fire(delta: float):
 	if auto_fire and trigger_down:
@@ -93,15 +74,10 @@ func process_auto_fire(delta: float):
 			fire_delay_timer -= delta
 			if fire_delay_timer <= 0.0:
 				can_fire = true
-		
 		if can_fire:
-			fire_shot()
+			weapon_manager.fire_shot()
 			can_fire = false
 			fire_delay_timer = 1.0 / shots_per_second
-
-func on_trigger_up():
-	fire_delay_timer = 0.0
-	can_fire = true
 
 # --------------------------------------------------------
 # ----------------------- inventory -----------------------
@@ -117,8 +93,8 @@ var is_equiped := false :
 				on_unequip()
 
 func on_equip():
-	weapon_manager.play_anim("view_equip_anim")
-	weapon_manager.queue_anim("view_idle_anim")
+	weapon_manager.play_anim(anim_equip)
+	weapon_manager.queue_anim(anim_idle)
 
 func on_unequip():
 	pass

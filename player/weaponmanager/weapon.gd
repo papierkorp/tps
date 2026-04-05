@@ -33,6 +33,8 @@ class_name Weapon extends Resource
 @export var bullet_scene: PackedScene
 @export var bullet_speed: float = 50.0
 
+var RAYCAST_DIST: float = 999.0 # is used for do_raycast()
+
 var weapon_manager: WeaponManager
 
 
@@ -63,6 +65,7 @@ func on_trigger_down():
 			fire_delay_timer = 1.0 / shots_per_second
 		else:
 			weapon_manager.fire_shot()
+			
 
 func on_trigger_up():
 	fire_delay_timer = 0.0

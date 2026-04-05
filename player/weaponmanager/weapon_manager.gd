@@ -3,17 +3,20 @@ class_name WeaponManager extends Node3D
 @export_category("References")
 @export var player: CharacterBody3D
 @export var bullet_raycast: RayCast3D
-@export var weapon_holder: Node3D
 @export var camera_controller: CameraController
 @export var camera: Camera3D
+@export var impact_scene: PackedScene
 
 @export_category("Weapon Settings")
 @export var current_weapon: Weapon
+
+var weapon_holder: Node3D
 
 func _ready() -> void:
 	_setup_weapon()
 	_setup_animations()
 	camera_controller.horizontal_rotation_changed.connect(_on_horizontal_rotation_changed)
+	
 
 
 # --------------------------------------------------------
@@ -45,6 +48,9 @@ var current_weapon_instance: Node3D
 var bullet_spawn: Marker3D
 
 func _setup_weapon() -> void:
+	weapon_holder = Node3D.new()
+	add_child(weapon_holder)
+	
 	# Setup weapon resource
 	current_weapon.weapon_manager = self
 	
@@ -64,7 +70,7 @@ func fire_shot():
 	play_anim(current_weapon.anim_shoot)
 	queue_anim(current_weapon.anim_idle)
 	current_weapon.ammo_current -= 1
-	spawn_bullet()
+	do_raycast()
 
 func spawn_bullet():
 	if not current_weapon.bullet_scene or not bullet_spawn:
@@ -98,6 +104,14 @@ func do_raycast():
 		var obj = raycast.get_collider()
 		var nrml = raycast.get_collision_normal()
 		var pt = raycast.get_collision_point()
+
+		if impact_scene:
+			var impact = impact_scene.instantiate()
+			get_tree().root.add_child(impact)
+			impact.global_position = pt
+			# orient so particles spray away from the surface
+			impact.global_transform = impact.global_transform.looking_at(pt + nrml, Vector3.UP)
+
 
 		if obj is RigidBody3D:
 			obj.apply_impulse(-nrml * 55.0 / obj.mass, pt - obj.global_position)

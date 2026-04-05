@@ -1,23 +1,30 @@
 # todo
 
 - player - characterbody3d
-- meshinstance3d
-- collisonshape3d
-- camera_controller - node3d
-  - camera3d
-  - shapecast3d
-  - bullet_raycast
-- state_manager -node3d
-  - idle
-  - movement
-  - jump
-  - ...
-- ui (canvas - instantiated with editable children)
-  - crosshair (control)
-    - meshinstance2d
-- weapon_manager (node3d - instantiated)
-- animationplayer (which just hase zoom_in animation atm)
-- weapon_holder (node3d)
+  - meshinstance3d
+  - collisonshape3d
+  - camera_controller - node3d
+    - camera3d
+      - bullet_raycast
+    - shapecast3d
+  - state_manager - node3d
+    - idle
+    - movement
+    - jump
+    - ...
+  - animationplayer (which just hase zoom_in animation atm)
+  - ui (canvas - instantiated with editable children)
+    - crosshair (control)
+      - meshinstance2d
+  - weapon_manager (node3d - instantiated)
+    - audiostreamplayer3d
+- exampleWeapon - node3d
+  - meshinstance3d
+  - animationplayer
+  - bulletspawn - marker3d
+- defaultbullet - rigidbody3d
+  - meshinstance3d
+  - collisionshape3d
 
 # graphics
 

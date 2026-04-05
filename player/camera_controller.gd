@@ -32,8 +32,8 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_released("scope_in"):
 		animation_player.play_backwards("zoom_in")
 
-func _physics_process(_delta: float) -> void:
-	_update_camera()
+func _process(delta: float) -> void:
+	_update_camera(delta)
 
 # ---------------------------------------------------------
 # ----------------------- Initialize -----------------------
@@ -59,9 +59,9 @@ func _set_mouse_movement(event: InputEvent) -> void:
 		deg_to_rad(min_pitch),
 		deg_to_rad(max_pitch)
 	)
-	horizontal_rotation_changed.emit(camera_horizontal)
+	
 
-func _update_camera() -> void:
+func _update_camera(delta: float) -> void:
 	var rotated_offset := camera_offset.rotated(Vector3.UP, camera_horizontal)
 
 	# Point the ShapeCast toward the desired camera position and set its length
@@ -72,13 +72,15 @@ func _update_camera() -> void:
 		var margin := 0.2
 		var safe_fraction := shape_cast.get_closest_collision_safe_fraction()
 		var safe_dist := rotated_offset.length() * safe_fraction - margin
-		camera.position = rotated_offset.normalized() * max(safe_dist, 0.1)
+		var target = rotated_offset.normalized() * max(safe_dist, 0.1)
+		camera.position = camera.position.lerp(target, 20.0 * delta)
 	else:
 		camera.position = rotated_offset
 
 	camera.rotation.y = camera_horizontal
 	camera.rotation.x = -camera_vertical
 	# player.rotation.y = camera_horizontal
+	horizontal_rotation_changed.emit(camera_horizontal)
 
 func _toggle_mouse() -> void:
 	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:

@@ -15,7 +15,7 @@ var weapon_holder: Node3D
 func _ready() -> void:
 	_setup_weapon()
 	_setup_animations()
-	camera_controller.horizontal_rotation_changed.connect(_on_horizontal_rotation_changed)
+	camera_controller.camera_rotation_changed.connect(_on_camera_rotation_changed)
 	
 
 
@@ -97,10 +97,19 @@ func spawn_bullet():
 
 func do_raycast():
 	var raycast = bullet_raycast
+	raycast.enabled = true 
 	raycast.target_position = Vector3(0, 0, -abs(current_weapon.RAYCAST_DIST))
 	raycast.force_raycast_update()
+	
+	print("enabled: ", raycast.enabled)
+	print("collision mask: ", raycast.collision_mask)
+	print("global pos: ", raycast.global_position)
+	print("global target: ", raycast.global_transform * raycast.target_position)
+	print("is_colliding: ", raycast.is_colliding())
 
 	if raycast.is_colliding():
+		print("raycast hit")
+		
 		var obj = raycast.get_collider()
 		var nrml = raycast.get_collision_normal()
 		var pt = raycast.get_collision_point()
@@ -108,15 +117,24 @@ func do_raycast():
 		if impact_scene:
 			var impact = impact_scene.instantiate()
 			get_tree().root.add_child(impact)
-			impact.global_position = pt
-			# orient so particles spray away from the surface
-			impact.global_transform = impact.global_transform.looking_at(pt + nrml, Vector3.UP)
-
-
+			
+			# Build a basis where +Y aligns with the surface normal
+			var up = nrml
+			var right = up.cross(Vector3.FORWARD)
+			if right.length_squared() < 0.001:
+				right = up.cross(Vector3.RIGHT)  # fallback if normal is near-parallel to FORWARD
+			right = right.normalized()
+			var forward = right.cross(up).normalized()
+			
+			impact.global_transform = Transform3D(
+				Basis(right, up, forward),
+				pt
+			)
 		if obj is RigidBody3D:
 			obj.apply_impulse(-nrml * 55.0 / obj.mass, pt - obj.global_position)
 		if obj.has_method("take_damage"):
 			obj.take_damage(current_weapon.damage)
+	raycast.enabled = false 
 
 # --------------------------------------------------------
 # ------------------------ sounds ------------------------
@@ -179,5 +197,6 @@ func queue_anim(anim: String):
 	if not anim_player: return
 	anim_player.queue(anim)
 
-func _on_horizontal_rotation_changed(angle: float):
-	weapon_holder.rotation.y = angle
+func _on_camera_rotation_changed(horizontal: float, vertical: float):
+	weapon_holder.rotation.y = horizontal
+	weapon_holder.rotation.x = -vertical

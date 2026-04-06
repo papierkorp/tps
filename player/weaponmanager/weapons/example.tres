@@ -1,6 +1,5 @@
 [gd_resource type="Resource" script_class="Weapon" format=3 uid="uid://cac4p8rh45l2s"]
 
-[ext_resource type="PackedScene" uid="uid://dyag5lgouhbfi" path="res://player/weaponmanager/bullets/default_bullet.tscn" id="1_cuj0d"]
 [ext_resource type="Script" uid="uid://oo5lyqfok7fi" path="res://player/weaponmanager/weapon.gd" id="1_yern4"]
 [ext_resource type="AudioStream" uid="uid://b4rtqfscq5v8h" path="res://assets/sound_effects/weapons/pistol_reload.mp3" id="2_gpl3l"]
 [ext_resource type="AudioStream" uid="uid://b7tka2xqffeu0" path="res://assets/sound_effects/weapons/shoot.wav" id="3_6cjfu"]
@@ -25,5 +24,4 @@ ammo_reserve = 5
 ammo_magazine = 10
 ammo_max = 10
 auto_fire = true
-bullet_scene = ExtResource("1_cuj0d")
 metadata/_custom_type_script = "uid://oo5lyqfok7fi"

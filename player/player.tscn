@@ -90,6 +90,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 2)
 cull_mask = 1
 
 [node name="bullet_raycast" type="RayCast3D" parent="camera_controller/Camera3D" unique_id=993476726]
+enabled = false
+collision_mask = 6
 
 [node name="ShapeCast3D" type="ShapeCast3D" parent="camera_controller" unique_id=904858338]
 shape = SubResource("SphereShape3D_d1dig")

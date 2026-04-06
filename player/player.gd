@@ -14,7 +14,7 @@ class_name PlayerController extends CharacterBody3D
 @export var AIR_CONTROL: float = 1.5 # higher is snappier, lower is more sluggish
 
 func _ready() -> void:
-	camera_controller.horizontal_rotation_changed.connect(_on_horizontal_rotation_changed)
+	camera_controller.camera_rotation_changed.connect(_on_camera_rotation_changed)
 
 func Physics_Update(delta):
   # Apply reduced gravity for falling effect
@@ -79,5 +79,6 @@ func check_idle_state() -> void:
 # ---------------------------------------------------------
 
 
-func _on_horizontal_rotation_changed(angle: float):
-	mesh.rotation.y = angle
+func _on_camera_rotation_changed(horizontal: float, vertical: float):
+	mesh.rotation.y = horizontal
+	mesh.rotation.x = -vertical

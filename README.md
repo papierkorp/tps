@@ -22,9 +22,9 @@
   - meshinstance3d
   - animationplayer
   - bulletspawn - marker3d
-- defaultbullet - rigidbody3d
-  - meshinstance3d
-  - collisionshape3d
+- impact_articles - gpuparticles3d
+  - draw passes: 1
+  - pass1: quadmesh
 
 # graphics
 

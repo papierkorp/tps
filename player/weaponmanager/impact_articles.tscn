@@ -16,7 +16,14 @@ billboard_mode = 1
 [sub_resource type="QuadMesh" id="QuadMesh_iyhn8"]
 material = SubResource("StandardMaterial3D_0k3cu")
 
-[node name="ImpactArticles" type="GPUParticles3D" unique_id=1542024763]
+[sub_resource type="Gradient" id="Gradient_0k3cu"]
+offsets = PackedFloat32Array(0, 0.49402392, 1)
+colors = PackedColorArray(0.5019608, 0.5019608, 0.5019608, 1, 0, 0, 0, 1, 0.5019608, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_iyhn8"]
+gradient = SubResource("Gradient_0k3cu")
+
+[node name="ImpactArticles" type="GPUParticles3D" unique_id=1542024763 node_paths=PackedStringArray("decal")]
 emitting = false
 amount = 15
 lifetime = 0.3
@@ -25,5 +32,10 @@ explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_0k3cu")
 draw_pass_1 = SubResource("QuadMesh_iyhn8")
 script = ExtResource("1_0k3cu")
+decal = NodePath("Decal")
 
 [node name="Decal" type="Decal" parent="." unique_id=1587055767]
+size = Vector3(1, 1, 1)
+texture_albedo = SubResource("GradientTexture1D_iyhn8")
+upper_fade = 0.1
+lower_fade = 0.1

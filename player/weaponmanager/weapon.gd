@@ -29,9 +29,9 @@ class_name Weapon extends Resource
 @export var auto_fire: bool
 @export var shots_per_second: float = 10.0
 
-@export_category("Projectile")
-@export var bullet_scene: PackedScene
-@export var bullet_speed: float = 50.0
+#@export_category("Projectile")
+#@export var bullet_scene: PackedScene
+#@export var bullet_speed: float = 50.0
 
 var RAYCAST_DIST: float = 999.0 # is used for do_raycast()
 

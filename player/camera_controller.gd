@@ -16,7 +16,7 @@ class_name CameraController extends Node3D
 var camera_horizontal: float = 0.0
 var camera_vertical: float = 0.0
 var camera_offset: Vector3
-signal horizontal_rotation_changed(angle: float)
+signal camera_rotation_changed(horizontal: float, vertical: float)
 
 # ---------------------------------------------------------
 # ------------------------ Runtime ------------------------
@@ -80,7 +80,7 @@ func _update_camera(delta: float) -> void:
 	camera.rotation.y = camera_horizontal
 	camera.rotation.x = -camera_vertical
 	# player.rotation.y = camera_horizontal
-	horizontal_rotation_changed.emit(camera_horizontal)
+	camera_rotation_changed.emit(camera_horizontal, camera_vertical)
 
 func _toggle_mouse() -> void:
 	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:

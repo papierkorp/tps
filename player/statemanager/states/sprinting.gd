@@ -29,7 +29,8 @@ func Physics_Update(_delta):
 	if direction:
 		player.velocity.x = direction.x * player.SPRINT_SPEED
 		player.velocity.z = direction.z * player.SPRINT_SPEED
-	else:
+	
+	if player.get_input_dir().length() < 0.1:
 		_emit_transition(State.States.IDLE)
 
 	player.move_and_slide()

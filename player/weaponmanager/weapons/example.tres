@@ -1,24 +1,24 @@
 [gd_resource type="Resource" script_class="Weapon" format=3 uid="uid://cac4p8rh45l2s"]
 
 [ext_resource type="Script" uid="uid://oo5lyqfok7fi" path="res://player/weaponmanager/weapon.gd" id="1_yern4"]
-[ext_resource type="AudioStream" uid="uid://b4rtqfscq5v8h" path="res://assets/sound_effects/weapons/pistol_reload.mp3" id="2_gpl3l"]
-[ext_resource type="AudioStream" uid="uid://b7tka2xqffeu0" path="res://assets/sound_effects/weapons/shoot.wav" id="3_6cjfu"]
-[ext_resource type="AudioStream" uid="uid://dwhc3cjmngpwb" path="res://assets/sound_effects/weapons/out_of_magazine.mp3" id="4_cuj0d"]
+[ext_resource type="AudioStream" uid="uid://b4rtqfscq5v8h" path="res://assets/weapons/sound_effects/pistol_reload.mp3" id="2_6cjfu"]
+[ext_resource type="AudioStream" uid="uid://b7tka2xqffeu0" path="res://assets/weapons/sound_effects/shoot.wav" id="3_cuj0d"]
+[ext_resource type="AudioStream" uid="uid://dwhc3cjmngpwb" path="res://assets/weapons/sound_effects/out_of_magazine.mp3" id="4_wxrcq"]
 [ext_resource type="PackedScene" uid="uid://bl8g12kagoc2p" path="res://player/weaponmanager/weapons/example.tscn" id="5_6cjfu"]
 
 [resource]
 script = ExtResource("1_yern4")
 weapon_name = "example"
 weapon_scene = ExtResource("5_6cjfu")
-weapon_position = Vector3(0.6, -0.2, -0.4)
+weapon_position = Vector3(0.6, 0.1, -0.4)
 anim_idle = "idle"
 anim_equip = "equip"
 anim_shoot = "shoot"
 anim_reload = "reload"
 anim_outofammo = "outofammo"
-sound_shoot = ExtResource("3_6cjfu")
-sound_reload = ExtResource("2_gpl3l")
-sound_unholster = ExtResource("4_cuj0d")
+sound_shoot = ExtResource("3_cuj0d")
+sound_reload = ExtResource("2_6cjfu")
+sound_unholster = ExtResource("4_wxrcq")
 ammo_current = 10
 ammo_reserve = 5
 ammo_magazine = 10

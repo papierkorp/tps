@@ -5,6 +5,7 @@ extends State
 
 @export_category("Settings")
 @export var min_aim_down: float = -0.2
+@export var air_charge_max_distance: float = 100.0
 
 const ALLOWED: Array[State.States] = [State.States.GLIDING, State.States.AIR_CHARGE]
 
@@ -27,6 +28,5 @@ func Physics_Update(_delta):
 		return
 
 	if Input.is_action_just_pressed("aircharge"):
-		var cam_forward := -player.camera_controller.camera.global_transform.basis.z
-		if cam_forward.y < min_aim_down:
+		if player.can_air_charge():
 			_emit_transition(State.States.AIR_CHARGE)

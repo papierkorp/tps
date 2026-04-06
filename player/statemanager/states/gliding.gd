@@ -27,7 +27,8 @@ func Physics_Update(delta):
 		return
 
 	if Input.is_action_just_pressed("aircharge"):
-		_emit_transition(State.States.AIR_CHARGE)
+		if player.can_air_charge():
+			_emit_transition(State.States.AIR_CHARGE)
 
 	if Input.is_action_just_pressed("jump"):
 		_emit_transition(State.States.FALLING)

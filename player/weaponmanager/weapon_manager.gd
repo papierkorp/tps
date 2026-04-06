@@ -2,7 +2,6 @@ class_name WeaponManager extends Node3D
 
 @export_category("References")
 @export var player: CharacterBody3D
-@export var bullet_raycast: RayCast3D
 @export var camera_controller: CameraController
 @export var camera: Camera3D
 @export var impact_scene: PackedScene
@@ -72,69 +71,26 @@ func fire_shot():
 	current_weapon.ammo_current -= 1
 	do_raycast()
 
-func spawn_bullet():
-	if not current_weapon.bullet_scene or not bullet_spawn:
-		return
-	var bullet = current_weapon.bullet_scene.instantiate()
-	bullet.speed = current_weapon.bullet_speed
-
-	# Project crosshair (screen center) into 3D world space
-	var screen_center = get_viewport().get_visible_rect().size / 2
-	var ray_origin = camera.project_ray_origin(screen_center)
-	var ray_dir = camera.project_ray_normal(screen_center)
-	var crosshair_target = ray_origin + ray_dir * 1000.0
-
-	# Check if raycast hits something closer
-	bullet_raycast.force_raycast_update()
-	if bullet_raycast.is_colliding():
-		crosshair_target = bullet_raycast.get_collision_point()
-
-	var t = Transform3D()
-	t.origin = bullet_spawn.global_position
-	bullet.global_transform = t.looking_at(crosshair_target, Vector3.UP)
-
-	get_tree().root.add_child(bullet)
-
 func do_raycast():
-	var raycast = bullet_raycast
-	raycast.enabled = true 
-	raycast.target_position = Vector3(0, 0, -abs(current_weapon.RAYCAST_DIST))
-	raycast.force_raycast_update()
+	var cam_forward := -camera.global_transform.basis.z
+	var hit = player.do_raycast(cam_forward, current_weapon.RAYCAST_DIST, camera.global_position)
 	
-	print("enabled: ", raycast.enabled)
-	print("collision mask: ", raycast.collision_mask)
-	print("global pos: ", raycast.global_position)
-	print("global target: ", raycast.global_transform * raycast.target_position)
-	print("is_colliding: ", raycast.is_colliding())
-
-	if raycast.is_colliding():
-		print("raycast hit")
-		
-		var obj = raycast.get_collider()
-		var nrml = raycast.get_collision_normal()
-		var pt = raycast.get_collision_point()
-
+	if hit.colliding:
 		if impact_scene:
 			var impact = impact_scene.instantiate()
 			get_tree().root.add_child(impact)
-			
-			# Build a basis where +Y aligns with the surface normal
-			var up = nrml
+			var up = hit.normal
 			var right = up.cross(Vector3.FORWARD)
 			if right.length_squared() < 0.001:
-				right = up.cross(Vector3.RIGHT)  # fallback if normal is near-parallel to FORWARD
+				right = up.cross(Vector3.RIGHT)
 			right = right.normalized()
 			var forward = right.cross(up).normalized()
-			
-			impact.global_transform = Transform3D(
-				Basis(right, up, forward),
-				pt
-			)
-		if obj is RigidBody3D:
-			obj.apply_impulse(-nrml * 55.0 / obj.mass, pt - obj.global_position)
-		if obj.has_method("take_damage"):
-			obj.take_damage(current_weapon.damage)
-	raycast.enabled = false 
+			impact.global_transform = Transform3D(Basis(right, up, forward), hit.point)
+
+		if hit.collider is RigidBody3D:
+			hit.collider.apply_impulse(-hit.normal * 55.0 / hit.collider.mass, hit.point - hit.collider.global_position)
+		if hit.collider.has_method("take_damage"):
+			hit.collider.take_damage(current_weapon.damage)
 
 # --------------------------------------------------------
 # ------------------------ sounds ------------------------

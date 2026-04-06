@@ -3,6 +3,9 @@
 [sub_resource type="BoxMesh" id="BoxMesh_o3sr5"]
 size = Vector3(0.2, 0.2, 1)
 
+[sub_resource type="BoxMesh" id="BoxMesh_8drdh"]
+size = Vector3(0.2, 0.2, 0.4)
+
 [sub_resource type="Animation" id="Animation_t6022"]
 length = 0.001
 tracks/0/type = "value"
@@ -60,6 +63,10 @@ _data = {
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=326421944]
 mesh = SubResource("BoxMesh_o3sr5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" unique_id=261953018]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -0.1360032, 0.3999313)
+mesh = SubResource("BoxMesh_8drdh")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1437044132]
 libraries/ = SubResource("AnimationLibrary_t6022")

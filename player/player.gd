@@ -12,6 +12,7 @@ class_name PlayerController extends CharacterBody3D
 @export var JUMP_VELOCITY: float = 8.0
 @export var SPRINT_JUMP_MULTI: float = 1.5
 @export var AIR_CONTROL: float = 1.5 # higher is snappier, lower is more sluggish
+@export var air_charge_max_distance: float = 100.0
 
 func _ready() -> void:
 	camera_controller.camera_rotation_changed.connect(_on_camera_rotation_changed)
@@ -32,6 +33,31 @@ func get_movement_direction() -> Vector3:
 
 func get_input_dir() -> Vector2:
 	return Input.get_vector("move_left", "move_right", "move_forwards", "move_backwards")
+
+# player.gd
+func do_raycast(direction: Vector3, distance: float, origin: Vector3 = global_position) -> Dictionary:
+	var space = get_world_3d().direct_space_state
+	var query = PhysicsRayQueryParameters3D.create(
+		origin,
+		origin + direction * distance
+	)
+	query.exclude = [self]  # don't hit yourself
+	
+	var result = space.intersect_ray(query)
+	
+	if result:
+		return {
+			"colliding": true,
+			"point": result.position,
+			"normal": result.normal,
+			"collider": result.collider
+		}
+	return {
+		"colliding": false,
+		"point": Vector3.ZERO,
+		"normal": Vector3.ZERO,
+		"collider": null
+	}
 
 # ---------------------------------------------------------
 # --------------------- Player Control ---------------------
@@ -73,6 +99,12 @@ func check_idle_state() -> void:
 			state._emit_transition(State.States.MOVEMENT)
 		else:
 			state._emit_transition(State.States.IDLE)
+
+func can_air_charge() -> bool:
+	var cam_forward := -camera_controller.camera.global_transform.basis.z
+	var cam_origin := camera_controller.camera.global_position
+	var hit := do_raycast(cam_forward, air_charge_max_distance, cam_origin)
+	return hit.colliding
 
 # ---------------------------------------------------------
 # ---------------------- Signals ----------------------

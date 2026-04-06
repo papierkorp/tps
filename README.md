@@ -11,6 +11,7 @@
     - idle
     - movement
     - jump
+    - air_charge
     - ...
   - animationplayer (which just hase zoom_in animation atm)
   - ui (canvas - instantiated with editable children)
@@ -18,6 +19,10 @@
       - meshinstance2d
   - weapon_manager (node3d - instantiated)
     - audiostreamplayer3d
+
+- air_charge_impact_articles - gupparticles3d
+
+
 - exampleWeapon - node3d
   - meshinstance3d
   - animationplayer
@@ -202,7 +207,8 @@ White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runete
 Oversized matte black assault rifle, both hands — ACR/SCAR/G36 hybrid, angular polymer body, darkened rail system, chunky foregrip, thick blackened barrel with muzzle brake. Near-black finish with minimal metallic sheen.
 ```
 
-# sound effects
+# licenses
 
 magazine out: https://pixabay.com/de/sound-effects/film-spezialeffekte-gun-magazine-out-384504/
 pistol reload: https://pixabay.com/de/sound-effects/film-spezialeffekte-1911-reload-6248/
+bullet hole: https://opengameart.org/content/bullet-decal

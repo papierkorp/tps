@@ -1,41 +1,38 @@
 [gd_scene format=3 uid="uid://cvxr4eyr44h5l"]
 
 [ext_resource type="Script" uid="uid://dp4d64o7l7gq7" path="res://player/weaponmanager/impact_articles.gd" id="1_0k3cu"]
+[ext_resource type="Texture2D" uid="uid://bsc08htneosod" path="res://assets/weapons/bullets/bullet_hole.png" id="2_iyhn8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iyhn8"]
+albedo_color = Color(0.9372549, 0.99607843, 0.32156864, 1)
+emission_enabled = true
+emission = Color(0.89882976, 0.77778965, 0, 1)
+emission_energy_multiplier = 8.0
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0k3cu"]
 direction = Vector3(0, 1, 0)
-spread = 60.0
-initial_velocity_min = 1.5
-initial_velocity_max = 3.0
+spread = 30.0
+initial_velocity_min = 3.0
+initial_velocity_max = 5.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0k3cu"]
-shading_mode = 0
-albedo_color = Color(0.92274994, 0.7597495, 0, 1)
-billboard_mode = 1
-
-[sub_resource type="QuadMesh" id="QuadMesh_iyhn8"]
-material = SubResource("StandardMaterial3D_0k3cu")
-
-[sub_resource type="Gradient" id="Gradient_0k3cu"]
-offsets = PackedFloat32Array(0, 0.49402392, 1)
-colors = PackedColorArray(0.5019608, 0.5019608, 0.5019608, 1, 0, 0, 0, 1, 0.5019608, 0.5019608, 0.5019608, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_iyhn8"]
-gradient = SubResource("Gradient_0k3cu")
+[sub_resource type="BoxMesh" id="BoxMesh_i7ogn"]
+size = Vector3(0.04, 0.04, 0.04)
 
 [node name="ImpactArticles" type="GPUParticles3D" unique_id=1542024763 node_paths=PackedStringArray("decal")]
+material_override = SubResource("StandardMaterial3D_iyhn8")
 emitting = false
 amount = 15
 lifetime = 0.3
 one_shot = true
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_0k3cu")
-draw_pass_1 = SubResource("QuadMesh_iyhn8")
+draw_pass_1 = SubResource("BoxMesh_i7ogn")
 script = ExtResource("1_0k3cu")
 decal = NodePath("Decal")
 
 [node name="Decal" type="Decal" parent="." unique_id=1587055767]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 size = Vector3(1, 1, 1)
-texture_albedo = SubResource("GradientTexture1D_iyhn8")
+texture_albedo = ExtResource("2_iyhn8")
 upper_fade = 0.1
 lower_fade = 0.1

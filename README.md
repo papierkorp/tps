@@ -1,4 +1,39 @@
+# tps
+
 # todo
+
+
+- player
+  - statemanager
+    - crouch
+    - rolling
+    - air_charge
+      - impact scene
+      - add damage area
+  - shooting
+    - reload mechanic
+    - show ammuniation in ui
+    - implement health + damage system
+- environment
+  - basic world with
+    - grass
+    - forest
+    - boulders
+    - hills
+    - slopes
+- graphics
+  - concept art
+    - worker ant
+    - soldier ant
+    - acid splitter ant
+    - queen bodyguard ant
+    - queen ant
+    - rifle
+  - retopolgy + uv + baking + texturing
+    - main char
+  - add graphics ingame
+
+# overview
 
 - player - characterbody3d
   - meshinstance3d
@@ -71,15 +106,16 @@ White background. Clean lineart, flat cel shading, Hearthstone/LoR card art styl
 NEGATIVE: no groin cover, no loincloth, no skirt, no belly plate, no crotch plate, no armor below mid-thigh, no greaves, no cuisses.
 ```
 
+**favorites**
+- [Details](https://www.seaart.ai/explore/detail/d76fl45e878c73cj0f80?pt=) - [Direct](https://image.cdn2.seaart.me/2026-04-01/d76fk6te878c739jsg20/b535d949b049b05036fe85ab334c611a_high.webp)
+- [Details](https://www.seaart.ai/explore/detail/d77cfv5e878c738g1ld0?pt=) - [Direct](https://image.cdn2.seaart.me/2026-04-02/d77b6pde878c73c5p2ag/2e6e165b232dcc2a8e56ada3f78c26b0_high.webp)
 
-[Details]() - [Direct]()
+**other versions**
 - [Details](https://www.seaart.ai/create/image?id=d4kssode878c7387fae0&model_ver_no=ef24b47a8d618127c9342fd0635aedb9) - [Direct](https://image.cdn2.seaart.me/2026-04-01/d76fjgde878c739jns60/fa8ef0bbee128c4a5abc597b7d37e2b3_high.webp)
 - [Details](https://www.seaart.ai/create/image?id=d4kssode878c7387fae0&model_ver_no=ef24b47a8d618127c9342fd0635aedb9) - [Direct](https://image.cdn2.seaart.me/2026-04-01/d76fm15e878c739k8bqg/125a63ba58d364bb3a59a3337e6bfef5_high.webp)
-- [Details](https://www.seaart.ai/explore/detail/d76fl45e878c73cj0f80?pt=) - [Direct](https://image.cdn2.seaart.me/2026-04-01/d76fk6te878c739jsg20/b535d949b049b05036fe85ab334c611a_high.webp)
 - [Details](https://www.seaart.ai/create/image?id=d4kssode878c7387fae0&model_ver_no=ef24b47a8d618127c9342fd0635aedb9) - [Direct](https://image.cdn2.seaart.me/2026-04-01/d76fakde878c73c6gs8g/e0597d336a97ec5cec37fbc2ee7c5da2_high.webp)
 - [Details](https://www.seaart.ai/explore/detail/d73gl9de878c738mf1lg?pt=) - [Direct](https://image.cdn2.seaart.me/2026-03-27/d73g1dde878c739d84p0/f52deebf5c821bb8f7798921b9c3f04c_high.webp)
 - [Details](https://www.seaart.ai/create/image?id=d4kssode878c7387fae0&model_ver_no=ef24b47a8d618127c9342fd0635aedb9) - [Direct](https://image.cdn2.seaart.me/2026-04-02/d775igde878c738n6j3g/b2138647e4dfb1c8dba6d0567af19aab_high.webp)
-- [Details](https://www.seaart.ai/explore/detail/d77cfv5e878c738g1ld0?pt=) - [Direct](https://image.cdn2.seaart.me/2026-04-02/d77b6pde878c73c5p2ag/2e6e165b232dcc2a8e56ada3f78c26b0_high.webp)
 - [Details]() - [Direct]()
 
 

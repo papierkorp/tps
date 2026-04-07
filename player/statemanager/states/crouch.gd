@@ -2,14 +2,58 @@ extends State
 
 @export_category("References")
 @export var player: PlayerController
+@export var mesh: MeshInstance3D
+@export var stand_collision: CollisionShape3D
+@export var crouch_collision: CollisionShape3D
+@export var camera3d: Camera3D
+@export var weapon_manager: WeaponManager
 
+const ALLOWED: Array[State.States] = [State.States.IDLE, State.States.MOVEMENT, State.States.SPRINT_JUMP, State.States.AIR_RISE]
 
+const CROUCH_SCALE := 0.5
 
 func Enter():
 	print("crouch state")
 	if !player:
 		return
-
+	stand_collision.disabled = true
+	crouch_collision.disabled = false
+	mesh.scale.y = CROUCH_SCALE
+	mesh.position.y = -CROUCH_SCALE/2
+	camera3d.position.y = 0.5
+	
+	var current_weapon_y = weapon_manager.current_weapon_instance.position.y
+	var current_weapon_x = weapon_manager.current_weapon_instance.position.x
+	var current_weapon_z = weapon_manager.current_weapon_instance.position.z
+	
+	weapon_manager.current_weapon_instance.position=Vector3(current_weapon_x, current_weapon_y - 0.5, current_weapon_z)
 
 func Physics_Update(_delta):
-	pass
+	if !player:
+		return
+
+	if not Input.is_action_pressed("crouch"):
+		_emit_transition(State.States.MOVEMENT)
+
+	var direction := player.get_movement_direction()
+	
+	if direction:
+		player.velocity.x = direction.x * player.CROUCH_SPEED
+		player.velocity.z = direction.z * player.CROUCH_SPEED
+	
+	if player.get_input_dir().length() < 0.1 and not Input.is_action_pressed("crouch"):
+		_emit_transition(State.States.IDLE)
+
+	player.move_and_slide()
+
+func Exit():
+	stand_collision.disabled = false
+	crouch_collision.disabled = true
+	mesh.scale.y = CROUCH_SCALE*2
+	mesh.position.y = 0.0
+	camera3d.position.y = 1.0
+	var current_weapon_y = weapon_manager.current_weapon_instance.position.y
+	var current_weapon_x = weapon_manager.current_weapon_instance.position.x
+	var current_weapon_z = weapon_manager.current_weapon_instance.position.z
+	
+	weapon_manager.current_weapon_instance.position=Vector3(current_weapon_x, current_weapon_y + 0.5, current_weapon_z)

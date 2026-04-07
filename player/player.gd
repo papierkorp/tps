@@ -8,6 +8,7 @@ class_name PlayerController extends CharacterBody3D
 @export_category("Movement Settings")
 @export var SPEED: float = 7.0
 @export var SPRINT_SPEED: float = 15.0
+@export var CROUCH_SPEED: float = 3.0
 @export var ACCELERATION: float = 2.0
 @export var JUMP_VELOCITY: float = 8.0
 @export var SPRINT_JUMP_MULTI: float = 1.5

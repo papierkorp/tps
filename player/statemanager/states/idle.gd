@@ -3,7 +3,7 @@ extends State
 @export_category("References")
 @export var player: PlayerController
 
-const ALLOWED: Array[State.States] = [State.States.MOVEMENT ,State.States.IDLE ,State.States.FALLING, State.States.AIR_RISE, State.States.JUMP]
+const ALLOWED: Array[State.States] = [State.States.MOVEMENT ,State.States.IDLE ,State.States.FALLING, State.States.AIR_RISE, State.States.JUMP, State.States.CROUCH]
 
 func Enter():
 	print("idle state")
@@ -30,6 +30,9 @@ func Physics_Update(delta):
 
 	if Input.is_action_just_pressed("aircharge"):
 		_emit_transition(State.States.AIR_RISE)
+
+	if Input.is_action_just_pressed("crouch"):
+		_emit_transition(State.States.CROUCH)
 
 	# Check for jump
 	if Input.is_action_just_pressed("jump") and player.is_on_floor():

@@ -3,7 +3,7 @@ extends State
 @export_category("References")
 @export var player: PlayerController
 
-const ALLOWED: Array[State.States] = [State.States.AIR_RISE, State.States.JUMP, State.States.SPRINTING, State.States.IDLE, State.States.FALLING]
+const ALLOWED: Array[State.States] = [State.States.AIR_RISE, State.States.JUMP, State.States.CROUCH, State.States.SPRINTING, State.States.IDLE, State.States.FALLING]
 
 func Enter():
 	if !player:
@@ -27,6 +27,9 @@ func Physics_Update(delta):
 	# Transition to sprint state
 	if Input.is_action_pressed("sprint"):
 		_emit_transition(State.States.SPRINTING)
+
+	if Input.is_action_just_pressed("crouch"):
+		_emit_transition(State.States.CROUCH)
 
 	var direction := player.get_movement_direction()
 	

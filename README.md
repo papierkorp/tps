@@ -32,6 +32,11 @@
   - retopolgy + uv + baking + texturing
     - main char
   - add graphics ingame
+- enemies
+  - implement a basic enemy
+  - capsule shape
+  - moving towards player
+  - takes damage
 
 # overview
 

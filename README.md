@@ -53,7 +53,7 @@
     - jump
     - air_charge
     - ...
-  - animationplayer (which just hase zoom_in animation atm)
+  - animationplayer
   - ui (canvas - instantiated with editable children)
     - crosshair (control)
       - meshinstance2d

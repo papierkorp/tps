@@ -14,8 +14,15 @@ var dash_direction: Vector3
 func Enter():
 	if !player:
 		return
-	# Snapshot the camera direction at the moment of input
-	dash_direction = -player.camera_controller.camera.global_transform.basis.z
+
+	var cam := player.camera_controller.camera
+	var cam_forward := -cam.global_transform.basis.z
+	var cam_origin := cam.global_position
+	# crosshair target
+	var hit := player.do_raycast(cam_forward, player.air_charge_max_distance, cam_origin)
+	# crosshair target - offset
+	dash_direction = (hit.point - player.global_position).normalized()
+	
 	player.velocity = dash_direction * dash_speed
 
 func Physics_Update(_delta):

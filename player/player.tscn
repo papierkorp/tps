@@ -46,6 +46,34 @@ tracks/0/keys = {
 "update": 0,
 "values": [75.0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_65viv"]
+resource_name = "crouch"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(0.55478483, 0.46651652, 0.39229217),
+"update": 0,
+"values": [1.0, 0.75, 0.5]
+}
 
 [sub_resource type="Animation" id="Animation_c35mf"]
 resource_name = "zoom_in"
@@ -66,6 +94,7 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_65viv"]
 _data = {
 &"RESET": SubResource("Animation_e7oew"),
+&"crouch": SubResource("Animation_65viv"),
 &"zoom_in": SubResource("Animation_c35mf")
 }
 
@@ -95,7 +124,7 @@ animation_player = NodePath("../AnimationPlayer")
 mouse_sensitivity = 0.001
 
 [node name="Camera3D" type="Camera3D" parent="camera_controller" unique_id=220676002]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 3)
 cull_mask = 1
 
 [node name="bullet_raycast" type="RayCast3D" parent="camera_controller/Camera3D" unique_id=993476726]
@@ -141,14 +170,14 @@ player = NodePath("../..")
 script = ExtResource("10_tqiix")
 player = NodePath("../..")
 
-[node name="crouch" type="Node3D" parent="state_manager" unique_id=160658173 node_paths=PackedStringArray("player", "mesh", "stand_collision", "crouch_collision", "camera3d", "weapon_manager")]
+[node name="crouch" type="Node3D" parent="state_manager" unique_id=160658173 node_paths=PackedStringArray("player", "mesh", "stand_collision", "crouch_collision", "weapon_manager", "animation_player")]
 script = ExtResource("8_yllr7")
 player = NodePath("../..")
 mesh = NodePath("../../MeshInstance3D")
 stand_collision = NodePath("../../StandingCollisionShape3D")
 crouch_collision = NodePath("../../CrouchingCollisionShape3D")
-camera3d = NodePath("../../camera_controller/Camera3D")
 weapon_manager = NodePath("../../weapon_manager")
+animation_player = NodePath("../../AnimationPlayer")
 
 [node name="air_hover" type="Node3D" parent="state_manager" unique_id=128259962 node_paths=PackedStringArray("player")]
 script = ExtResource("10_wodsf")

@@ -8,7 +8,6 @@ var calculated_speed: float
 const ALLOWED: Array[State.States] = [State.States.AIR_RISE, State.States.GLIDING]
 
 func Enter():
-	print("falling state")
 	if !player:
 		return
 	calculated_speed = player.SPEED

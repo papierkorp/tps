@@ -12,7 +12,6 @@ const ALLOWED: Array[State.States] = [State.States.AIR_HOVER]
 var target_y: float
 
 func Enter():
-	print("air rise state")
 	if !player:
 		return
 	target_y = player.global_position.y + charge_height

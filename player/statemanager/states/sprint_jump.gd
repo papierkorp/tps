@@ -11,7 +11,6 @@ var calculated_speed: float
 const ALLOWED: Array[State.States] = [State.States.GLIDING, State.States.AIR_RISE]
 
 func Enter():
-	print("sprintjump state")
 	if !player:
 		return
 

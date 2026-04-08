@@ -86,12 +86,14 @@ func do_raycast():
 			right = right.normalized()
 			var forward = right.cross(up).normalized()
 			impact.global_transform = Transform3D(Basis(right, up, forward), hit.point)
-
+		var health_component = hit.collider.get_node_or_null("HealthComponent")
+		if health_component and health_component.has_method("take_damage"):
+			health_component.take_damage(current_weapon.damage, owner)
+		
 		if hit.collider is RigidBody3D:
 			hit.collider.apply_impulse(-hit.normal * 55.0 / hit.collider.mass, hit.point - hit.collider.global_position)
 		if hit.collider.has_method("take_damage"):
 			hit.collider.take_damage(current_weapon.damage)
-
 # --------------------------------------------------------
 # ------------------------ sounds ------------------------
 # --------------------------------------------------------

@@ -13,7 +13,6 @@ extends State
 const ALLOWED: Array[State.States] = [State.States.AIR_CHARGE, State.States.FALLING]
 
 func Enter():
-	print("gliding state")
 	if !player:
 		return
 		

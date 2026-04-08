@@ -10,7 +10,6 @@ extends State
 const ALLOWED: Array[State.States] = [State.States.GLIDING, State.States.AIR_CHARGE]
 
 func Enter():
-	print("air hover state")
 	if !player:
 		return
 	player.velocity = Vector3.ZERO

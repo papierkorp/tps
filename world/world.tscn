@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ct1rrnac4iddf" path="res://assets/prototype_textures/Orange/texture_01.png" id="2_h5o24"]
 [ext_resource type="Texture2D" uid="uid://c2031clbgy85q" path="res://assets/prototype_textures/Purple/texture_01.png" id="3_mmdvd"]
 [ext_resource type="PackedScene" uid="uid://waxnia675j70" path="res://player/player.tscn" id="4_h5o24"]
+[ext_resource type="PackedScene" uid="uid://bavyd6koc7ce5" path="res://world/props/ball.tscn" id="5_mmdvd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6xmxd"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -29,10 +30,6 @@ uv1_triplanar = true
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ai45w"]
 albedo_texture = ExtResource("3_mmdvd")
 uv1_triplanar = true
-
-[sub_resource type="SphereMesh" id="SphereMesh_h5o24"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_mmdvd"]
 
 [node name="world" type="Node3D" unique_id=1810105729]
 
@@ -70,16 +67,17 @@ layers = 4
 radius = 1.0
 material = SubResource("StandardMaterial3D_ai45w")
 
-[node name="RigidBody3D" type="RigidBody3D" parent="wall" unique_id=1946180189]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.853354, 1.9828317, 0)
-collision_layer = 4
-collision_mask = 7
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="wall/RigidBody3D" unique_id=332495778]
-mesh = SubResource("SphereMesh_h5o24")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="wall/RigidBody3D" unique_id=1664386142]
-shape = SubResource("SphereShape3D_mmdvd")
-
 [node name="player" parent="." unique_id=2066123868 instance=ExtResource("4_h5o24")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
+
+[node name="ball" parent="." unique_id=1315259496 instance=ExtResource("5_mmdvd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 5, 0)
+
+[node name="ball4" parent="." unique_id=1010733076 instance=ExtResource("5_mmdvd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 5, -4.2153935)
+
+[node name="ball2" parent="." unique_id=1725550029 instance=ExtResource("5_mmdvd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6714468, 5, 0)
+
+[node name="ball3" parent="." unique_id=1113946793 instance=ExtResource("5_mmdvd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 5, 3.714902)

@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://lvyfvt3cty23" path="res://player/weaponmanager/weapon_manager.tscn" id="17_tqiix"]
 [ext_resource type="PackedScene" uid="uid://cvxr4eyr44h5l" path="res://player/weaponmanager/impact_articles.tscn" id="18_c35mf"]
 [ext_resource type="Resource" uid="uid://cac4p8rh45l2s" path="res://player/weaponmanager/weapons/example.tres" id="18_e7oew"]
+[ext_resource type="Script" uid="uid://cer1ch1uw6uek" path="res://modules/health_component.gd" id="20_65viv"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_kqu6x"]
 
@@ -179,6 +180,12 @@ camera_controller = NodePath("../camera_controller")
 camera = NodePath("../camera_controller/Camera3D")
 impact_scene = ExtResource("18_c35mf")
 current_weapon = ExtResource("18_e7oew")
+
+[node name="HealthComponent" type="Node" parent="." unique_id=1048145455]
+script = ExtResource("20_65viv")
+max_health = 500.0
+starting_health = 500.0
+metadata/_custom_type_script = "uid://cer1ch1uw6uek"
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 

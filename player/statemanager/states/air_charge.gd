@@ -12,7 +12,6 @@ const ALLOWED: Array[State.States] = [State.States.IDLE, State.States.MOVEMENT]
 var dash_direction: Vector3
 
 func Enter():
-	print("aircharge state")
 	if !player:
 		return
 	# Snapshot the camera direction at the moment of input

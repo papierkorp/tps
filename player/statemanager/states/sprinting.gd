@@ -6,7 +6,6 @@ extends State
 const ALLOWED: Array[State.States] = [State.States.IDLE, State.States.MOVEMENT, State.States.SPRINT_JUMP, State.States.AIR_RISE]
 
 func Enter():
-	print("sprinting state")
 	if !player:
 		return
 

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bavyd6koc7ce5"]
+
+[ext_resource type="Script" uid="uid://b8x5n6q5ovytm" path="res://world/props/ball.gd" id="1_hutev"]
+[ext_resource type="Script" uid="uid://cer1ch1uw6uek" path="res://modules/health_component.gd" id="1_o6jyw"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_h5o24"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mmdvd"]
+
+[node name="ball" type="RigidBody3D" unique_id=1315259496]
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("1_hutev")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1316328831]
+mesh = SubResource("SphereMesh_h5o24")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1669809830]
+shape = SubResource("SphereShape3D_mmdvd")
+
+[node name="HealthComponent" type="Node" parent="." unique_id=1900943933]
+script = ExtResource("1_o6jyw")
+metadata/_custom_type_script = "uid://cer1ch1uw6uek"
+
+[connection signal="died" from="HealthComponent" to="." method="_on_health_component_died"]

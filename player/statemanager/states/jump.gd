@@ -8,7 +8,6 @@ var calculated_speed: float
 const ALLOWED: Array[State.States] = [State.States.FALLING, State.States.AIR_RISE]
 
 func Enter():
-	print("jump state")
 	if !player:
 		return
 	

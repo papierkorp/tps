@@ -13,7 +13,6 @@ const ALLOWED: Array[State.States] = [State.States.IDLE, State.States.MOVEMENT, 
 const CROUCH_SCALE := 0.5
 
 func Enter():
-	print("crouch state")
 	if !player:
 		return
 	stand_collision.disabled = true

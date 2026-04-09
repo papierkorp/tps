@@ -68,8 +68,10 @@ func fire_shot():
 	play_sound(current_weapon.sound_shoot)
 	play_anim(current_weapon.anim_shoot)
 	queue_anim(current_weapon.anim_idle)
-	current_weapon.ammo_current -= 1
+	current_weapon.ammo_currently_loaded -= 1
 	do_raycast()
+	if current_weapon.ammo_currently_loaded <= 0:
+		current_weapon.reload=true
 
 func do_raycast():
 	var cam_forward := -camera.global_transform.basis.z

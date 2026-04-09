@@ -42,15 +42,15 @@ func Physics_Update(_delta):
 		_emit_transition(State.States.JUMP)
 
 	var direction := player.get_movement_direction()
-	
-	if direction:
-		player.velocity.x = direction.x * player.CROUCH_SPEED
-		player.velocity.z = direction.z * player.CROUCH_SPEED
-	
+		
 	if player.get_input_dir().length() < 0.1 and not Input.is_action_pressed("crouch"):
 		_emit_transition(State.States.IDLE)
 
-	player.move_and_slide()
+	if direction:
+		player.velocity.x = direction.x * player.CROUCH_SPEED
+		player.velocity.z = direction.z * player.CROUCH_SPEED
+		
+		player.move_and_slide()
 
 func Exit():
 	stand_collision.disabled = false

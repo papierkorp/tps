@@ -124,7 +124,7 @@ animation_player = NodePath("../AnimationPlayer")
 mouse_sensitivity = 0.001
 
 [node name="Camera3D" type="Camera3D" parent="camera_controller" unique_id=220676002]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1, 2.5)
 cull_mask = 1
 
 [node name="bullet_raycast" type="RayCast3D" parent="camera_controller/Camera3D" unique_id=993476726]
@@ -202,6 +202,9 @@ player = NodePath("../../../../../..")
 
 [node name="all_states" parent="ui/debug_panel/MarginContainer/ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(20229051, 1103326045) index="2" unique_id=2025488691 node_paths=PackedStringArray("player_state_machine")]
 player_state_machine = NodePath("../../../../../../state_manager")
+
+[node name="ammuniation" parent="ui" index="2" unique_id=640421984 node_paths=PackedStringArray("weapon_manager")]
+weapon_manager = NodePath("../../weapon_manager")
 
 [node name="weapon_manager" parent="." unique_id=2112504327 node_paths=PackedStringArray("player", "camera_controller", "camera") instance=ExtResource("17_tqiix")]
 player = NodePath("..")

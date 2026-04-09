@@ -2,7 +2,6 @@
 
 # todo
 
-
 - player
   - statemanager
     - crouch
@@ -12,6 +11,7 @@
       - add damage area
   - shooting
     - reload mechanic
+      - dont allow shooting while reloading
     - show ammuniation in ui
     - implement health + damage system
 - environment

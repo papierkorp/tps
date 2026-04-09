@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bd58tnsrf5wsu" path="res://player/ui/fps_label.gd" id="1_la5p8"]
 [ext_resource type="Script" uid="uid://hewvdrd1wjgm" path="res://player/ui/speed.gd" id="2_8dee0"]
 [ext_resource type="Script" uid="uid://30byeasccrig" path="res://player/ui/all_states.gd" id="3_2yc2l"]
+[ext_resource type="Script" uid="uid://bj4tav3tbqmit" path="res://player/ui/ammuniation.gd" id="4_8dee0"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_la5p8"]
 
@@ -87,3 +88,18 @@ mesh = SubResource("BoxMesh_la5p8")
 position = Vector2(60, 50)
 scale = Vector2(10, 1.525)
 mesh = SubResource("BoxMesh_la5p8")
+
+[node name="ammuniation" type="Label" parent="." unique_id=640421984]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -55.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 24
+script = ExtResource("4_8dee0")

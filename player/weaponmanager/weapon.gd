@@ -20,10 +20,9 @@ class_name Weapon extends Resource
 @export var sound_unholster: AudioStream
 
 @export_category("Ammo")
-@export var ammo_current: int
+@export var ammo_currently_loaded: int
 @export var ammo_reserve: int
-@export var ammo_magazine: int
-@export var ammo_max: int
+@export var ammo_able_to_load: int
 
 @export_category("Auto Fire")
 @export var auto_fire: bool
@@ -43,7 +42,7 @@ var weapon_manager: WeaponManager
 # --------------------------------------------------------
 
 func can_shoot() -> bool:
-	return ammo_current > 0 and not reload and is_equiped
+	return ammo_currently_loaded > 0 and not reload and is_equiped
 
 var fire_delay_timer: float = 0.0
 var can_fire: bool = true
@@ -58,29 +57,27 @@ var trigger_down := false :
 				on_trigger_up()
 
 func on_trigger_down():
-	if can_shoot():
-		if auto_fire:
+	if auto_fire:
+		pass  # is handled by process_auto_fire
+	else:
+		if can_shoot():
 			weapon_manager.fire_shot()
-			can_fire = false
-			fire_delay_timer = 1.0 / shots_per_second
-		else:
-			weapon_manager.fire_shot()
-			
 
 func on_trigger_up():
 	fire_delay_timer = 0.0
 	can_fire = true
 
 func process_auto_fire(delta: float):
-	if auto_fire and trigger_down:
-		if not can_fire:
-			fire_delay_timer -= delta
-			if fire_delay_timer <= 0.0:
-				can_fire = true
-		if can_fire:
-			weapon_manager.fire_shot()
-			can_fire = false
-			fire_delay_timer = 1.0 / shots_per_second
+	if not trigger_down:
+		return
+	if not can_fire:
+		fire_delay_timer -= delta
+		if fire_delay_timer <= 0.0:
+			can_fire = true
+	if can_fire and can_shoot():
+		weapon_manager.fire_shot()
+		can_fire = false
+		fire_delay_timer = 1.0 / shots_per_second
 
 # --------------------------------------------------------
 # ----------------------- inventory -----------------------
@@ -127,4 +124,13 @@ func reload_ammo():
 	weapon_manager.play_sound(sound_reload)
 	weapon_manager.play_anim(anim_reload)
 	weapon_manager.queue_anim(anim_idle)
+	
+	var needed_ammo = ammo_currently_loaded
+	
+	if ammo_reserve > ammo_able_to_load:
+		ammo_currently_loaded = ammo_able_to_load
+		ammo_reserve =  ammo_reserve - ammo_able_to_load + needed_ammo
+	else:
+		ammo_currently_loaded = ammo_reserve
+		ammo_reserve = 0
 	reload = false

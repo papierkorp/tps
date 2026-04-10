@@ -4,16 +4,12 @@
 
 - player
   - statemanager
-    - crouch
     - rolling
     - air_charge
       - impact scene
       - add damage area
   - shooting
-    - reload mechanic
-      - dont allow shooting while reloading
-    - show ammuniation in ui
-    - implement health + damage system
+    - reload mechanic -> dont allow shooting while reloading
 - environment
   - basic world with
     - grass

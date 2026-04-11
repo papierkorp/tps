@@ -124,24 +124,26 @@ NEGATIVE: no groin cover, no loincloth, no skirt, no belly plate, no crotch plat
 All fours, pure melee rush. The "feel good to mow down" enemy. Fast, fragile, swarms in groups. Your ground-dash ability should one-shot clusters of these — that's the satisfying payoff loop.
 
 ```
-Anthropomorphic worker ant, all four legs on the ground, small and wiry build,
-low to the ground, fast and feral posture.
+Quadrupedal worker ant, all four legs on the ground, small wiry build,
+low to the ground, fast feral posture.
 
-Sleek dark chitinous exoskeleton — near-void dark grey with a faint iridescent sheen.
-No armor plating, no equipment.
+Sleek dark chitinous exoskeleton — near-void dark grey with faint iridescent sheen.
+No armor, no equipment. Segmented body — head, thorax, abdomen clearly readable.
 
-Segmented body clearly readable — head, thorax, abdomen.
-Large compound eyes, bright acid-yellow, blank and hungry.
-Short sharp mandibles pulled wide open in an aggressive snarl —
-small jagged teeth visible inside the open mouth, feral and mean.
+Large compound eyes, solid glowing acid-yellow — no pupil, no iris, no visible eyeball structure, just blank glowing yellow orbs.
+
+Short sharp mandibles pulled wide open in an aggressive snarl.
+Inside the open mouth: exactly four small jagged teeth — two on top, two on bottom — with a visible gap in the middle. No other teeth.
+
 Two short antennae angled forward aggressively.
 
-Legs are articulated and spindly but powerful at the haunches.
+Legs articulated and spindly but powerful at the haunches.
 Expression is mindless aggression — pure instinct, no intelligence.
 
-White background.
-Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style,
-low heroic silhouette, warmer lighting, soft rim light from above.
+White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style.
+Low heroic silhouette, warmer lighting, soft rim light from above.
+
+No human posture, no bipedal, no arms, no hands, no upright stance.
 ```
 
 #### Soldier Ant
@@ -222,17 +224,27 @@ heroic silhouette, warmer lighting, soft rim light from above.
 One beefier enemy type — heavily armored, slow, used sparingly as a room gate or before the final boss. Doesn't need complex AI. Just a damage sponge that makes the player burn resources. Could carry an oversized weapon or have a charge attack.
 
 ```
-Anthropomorphic queen's guard ant, bipedal, massive imposing frame — nearly twice the width of the soldier ant, barrel thorax, thick trunk-like legs, immovable stance. 
-Uses rear two legs to stand firmly planted. 
-Middle limbs are enormous armored arms holding an oversized blunt weapon — a great mandible club or a thick carved obsidian maul. 
-Front limbs are smaller, tucked against chest. 
-Full heavy armor coverage — pitch black carbon plate panels bolted across the entire thorax, shoulder caps, forearm guards, shin plates, rust-orange trim and accents throughout, matching the squirrel protagonist's armor language but far more coverage and mass. 
-Compound eyes small and deep-set beneath a heavy armored brow — acid-yellow, cold and unreadable. Large powerful mandibles locked shut. 
-Two thick antennae swept back flat against the head. 
-Expression is absolute stillness — not angry, not feral, just immovable duty. 
-A wall in ant form.
+Anthropomorphic queen's guard ant, bipedal, massive imposing frame — nearly twice the width of a normal ant, barrel thorax, thick trunk-like legs, immovable stance.
 
-White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style, heroic silhouette, warmer lighting, soft rim light from above.
+Uses rear two legs to stand firmly planted.
+
+No exposed chitin visible anywhere — completely encased in armor from head to toe. Full heavy armor coverage: pitch black carbon plate panels bolted across the entire body including head, thorax, arms, legs. Rust-orange trim and heavy rivets throughout. Armor is extremely dark — near-void black, almost light-absorbing, with only the faintest weathered charcoal undertones and minimal rust-orange corrosion streaks. Edges of every armor plate are significantly darker — deep charcoal to near-black gradients at the rims, almost no light catching the borders.
+
+Helmet-like full head casing with only narrow horizontal eye slits. No mandibles visible — mouth area is a solid sealed armored plate.
+
+Two thick antennae snapped off and protruding outward through the sides of the helmet — broken stumps of chitin jutting out at jagged angles, piercing through the armor plating. The breaks are rough and splintered, not clean cuts.
+
+Compound eyes small and deep-set behind the narrow armored slits — acid-yellow glow barely visible, cold and unreadable.
+
+Middle limbs are enormous armored arms holding an oversized blunt weapon — a great mandible club or thick carved obsidian maul.
+
+Front limbs are smaller, tucked against chest.
+
+Expression is absolute stillness — not angry, not feral, just immovable duty. A wall in ant form.
+
+Blunt, brutal silhouette — no sharp edges, all curves and mass, except for the jagged broken antennae stabs.
+
+White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style, heroic silhouette, warmer lighting, soft rim light from above. Armor edges remain dark despite rim light — rim light wraps softly across the center of plates but fades completely before reaching the borders.
 ```
 
 ### rifles

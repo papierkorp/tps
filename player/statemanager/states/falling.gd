@@ -27,4 +27,3 @@ func Physics_Update(delta):
 	player.air_control(calculated_speed, delta)
 
 	player.move_and_slide()
-	player.check_idle_state()

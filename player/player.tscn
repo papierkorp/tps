@@ -152,8 +152,9 @@ player = NodePath("../..")
 script = ExtResource("9_kb6p2")
 player = NodePath("../..")
 
-[node name="rolling" type="Node3D" parent="state_manager" unique_id=1086312837]
+[node name="rolling" type="Node3D" parent="state_manager" unique_id=1086312837 node_paths=PackedStringArray("player")]
 script = ExtResource("7_32hag")
+player = NodePath("../..")
 
 [node name="jump" type="Node3D" parent="state_manager" unique_id=401070768 node_paths=PackedStringArray("player")]
 script = ExtResource("6_2ieo8")

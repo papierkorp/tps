@@ -13,7 +13,8 @@ enum States {
 	AIR_HOVER,
 	AIR_RISE,
 	AIR_CHARGE,
-	CROUCH
+	CROUCH,
+	ROLLING
 }
 
 func _emit_transition(new_state: States) -> void:

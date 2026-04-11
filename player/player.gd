@@ -9,19 +9,15 @@ class_name PlayerController extends CharacterBody3D
 @export var SPEED: float = 7.0
 @export var SPRINT_SPEED: float = 15.0
 @export var CROUCH_SPEED: float = 3.0
-@export var ACCELERATION: float = 2.0
+@export var ACCELERATION: float = 1.4
 @export var JUMP_VELOCITY: float = 8.0
 @export var SPRINT_JUMP_MULTI: float = 1.5
-@export var AIR_CONTROL: float = 1.5 # higher is snappier, lower is more sluggish
+@export var AIR_CONTROL: float = 5.0 # higher is snappier, lower is more sluggish
 @export var air_charge_max_distance: float = 100.0
 
 func _ready() -> void:
 	camera_controller.camera_rotation_changed.connect(_on_camera_rotation_changed)
 
-func Physics_Update(delta):
-  # Apply reduced gravity for falling effect
-	if not is_on_floor():
-		velocity += get_gravity() * JUMP_VELOCITY * delta
 
 # ---------------------------------------------------------
 # ------------------------- Helper -------------------------
@@ -77,7 +73,7 @@ func air_control(calculated_speed: float, delta: float) -> void:
 	var target_velocity := Vector2(direction.x, direction.z) * calculated_speed * input_strength  
 
 	# Check if input is opposing current momentum
-	var dot := current_velocity.dot(target_velocity.normalized() * Vector2(2.0, 2.0))  
+	var dot := current_velocity.dot(target_velocity.normalized()) 
 
 	if dot < 0:
 		# Input is backwards — only bleed off speed, don't propel backward

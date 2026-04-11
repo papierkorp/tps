@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://xjb5vtxjeq1e" path="res://player/statemanager/states/air_hover.gd" id="10_wodsf"]
 [ext_resource type="Script" uid="uid://8accbxu7uycl" path="res://player/statemanager/states/air_charge.gd" id="11_32hag"]
 [ext_resource type="Script" uid="uid://dvanfud05qfka" path="res://player/statemanager/states/air_rise.gd" id="15_c35mf"]
+[ext_resource type="PackedScene" uid="uid://cskq2japwlrg6" path="res://player/statemanager/air_charge/air_charge_impact_articles.tscn" id="15_x7c3f"]
 [ext_resource type="PackedScene" uid="uid://lvyfvt3cty23" path="res://player/weaponmanager/weapon_manager.tscn" id="17_tqiix"]
 [ext_resource type="PackedScene" uid="uid://cvxr4eyr44h5l" path="res://player/weaponmanager/impact_articles.tscn" id="18_c35mf"]
 [ext_resource type="Resource" uid="uid://cac4p8rh45l2s" path="res://player/weaponmanager/weapons/example.tres" id="18_e7oew"]
@@ -186,6 +187,7 @@ player = NodePath("../..")
 [node name="air_charge" type="Node3D" parent="state_manager" unique_id=567399489 node_paths=PackedStringArray("player")]
 script = ExtResource("11_32hag")
 player = NodePath("../..")
+impact_scene = ExtResource("15_x7c3f")
 
 [node name="air_rise" type="Node3D" parent="state_manager" unique_id=316163710 node_paths=PackedStringArray("player")]
 script = ExtResource("15_c35mf")

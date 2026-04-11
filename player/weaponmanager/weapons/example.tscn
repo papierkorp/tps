@@ -32,6 +32,7 @@ resource_name = "outofammo"
 
 [sub_resource type="Animation" id="Animation_6sq50"]
 resource_name = "reload"
+length = 0.61
 
 [sub_resource type="Animation" id="Animation_0c1f1"]
 resource_name = "shoot"

@@ -128,15 +128,16 @@ func _setup_animations() -> void:
 
 func play_anim(anim_name: String, finished_callback = null, cancelled_callback = null):
 	if last_played_anim and get_anim() == last_played_anim and current_anim_cancelled_callback is Callable:
-		current_anim_cancelled_callback.call() # last anim didnt finish yet
+		current_anim_cancelled_callback.call()
 
 	if not anim_player or not anim_player.has_animation(anim_name):
 		if finished_callback is Callable:
-			finished_callback.call() # treat empty anim as finishing immediately
+			finished_callback.call()
 		return
 
 	current_anim_finished_callback = finished_callback
 	current_anim_cancelled_callback = cancelled_callback
+	last_played_anim = anim_name  # ← set BEFORE play()
 
 	anim_player.clear_queue()
 	anim_player.seek(0.0)

@@ -42,7 +42,7 @@ var weapon_manager: WeaponManager
 # --------------------------------------------------------
 
 func can_shoot() -> bool:
-	return ammo_currently_loaded > 0 and not reload and is_equiped
+	return ammo_currently_loaded > 0 and is_equiped
 
 var fire_delay_timer: float = 0.0
 var can_fire: bool = true
@@ -114,23 +114,34 @@ var reload := false :
 
 func on_reload():
 	print("on_reload()")
-	reload_ammo()
-
-func on_reload_finished():
-	pass
-
-func reload_ammo():
-	print("reload")
-	weapon_manager.play_sound(sound_reload)
-	weapon_manager.play_anim(anim_reload)
-	weapon_manager.queue_anim(anim_idle)
+	if anim_reload and weapon_manager.get_anim() == anim_reload:
+		return
+	if ammo_reserve <= 0:
+		return
 	
+	var cancel_reload = (func(): 
+		weapon_manager.stop_sounds()
+		reload=false)
+	print("reload")
+	
+	weapon_manager.play_anim(anim_reload, reload_ammo, cancel_reload)
+	weapon_manager.play_sound(sound_reload)
+	weapon_manager.queue_anim(anim_idle)
+
+func reload_ammo() -> void:
+	print("reload_ammo")
+	print("reload var: ", reload)
 	var needed_ammo = ammo_currently_loaded
 	
 	if ammo_reserve > ammo_able_to_load:
+		print("in if")
 		ammo_currently_loaded = ammo_able_to_load
 		ammo_reserve =  ammo_reserve - ammo_able_to_load + needed_ammo
 	else:
+		print("in else")
 		ammo_currently_loaded = ammo_reserve
 		ammo_reserve = 0
 	reload = false
+
+func on_reload_finished():
+	pass

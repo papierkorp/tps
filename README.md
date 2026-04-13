@@ -151,37 +151,23 @@ No human posture, no bipedal, no arms, no hands, no upright stance.
 Stands upright on two legs, bigger and armored. Slower than workers but hits hard with a mandible bite or a small shield bash. Forces the player to think a bit instead of just sprinting through. Two or three of these mixed with workers already creates interesting encounters.
 
 ```
-Anthropomorphic soldier ant, bipedal, powerfully built —
-wide thorax, thick forearms, hunched aggressive stance.
-Small to medium height — compact and dense rather than towering,
-closer to a short stocky brawler than a large heavy.
+Soldier ant. Insectoid quadruped. Six total limbs: four walking legs on the ground, two arms rising from the front of the thorax.
 
-Uses rear two legs to stand —
-the thighs are enormously thick and overdeveloped, almost comically muscular,
-like tree trunks wrapped in chitin.
-The feet are huge, wide and heavy — oversized flat stompers
-that grip the ground with visible weight and authority.
-This ant is built from the waist down like a powerlifter.
-Low stable center of gravity, planted and immovable.
+POSTURE: All four legs touch the ground. The front pair of walking legs are positioned directly behind the arms. The middle and rear walking legs are spaced evenly along the thorax and abdomen. The ant is low to the ground — belly almost parallel to the surface. The abdomen extends straight back behind the rear legs. This is NOT bipedal. All four walking legs bear weight equally.
 
-Middle pair of limbs serve as arms — thick armored brawler arms.
-Front limbs are smaller and tucked.
+LOWER BODY (four walking legs): Four thick articulated legs planted wide. Strong haunches at the hips. Spindled lower segments. Clawed tarsi gripping the ground. The legs are arranged in two pairs — front walking pair and rear walking pair. Posture is coiled, stable, ready to charge.
 
-Dark chitinous exoskeleton — near-void dark grey base.
-Armor plating bolted over the thorax and shoulders in pitch black carbon panels
-with rust-orange rivets and trim accents only —
-mirroring a heavily armored warrior aesthetic.
+UPPER BODY (two arms + thorax): From the front of the thorax, the body rises upward into a muscular torso. Broad shoulders. Two thick armored arms. Hands are chitinous claws. The arms do NOT touch the ground. They are raised.
 
-Large compound eyes, acid-yellow.
-Broad flat head, heavy mandibles — closed in a firm locked jaw, radiating brute confidence.
-Two antennae swept back like horns.
-Abdomen tucked behind, not dominant.
-Meaty clenched fists.
-Slow confident footing — the bruiser who has won a lot of fights.
+WEAPON: One very long spear held in both hands. Wooden haft. Stone or chitin tip. Spear angled forward in low guard position, tip pointing toward the viewer. No shield.
 
-White background.
-Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style,
-heroic silhouette, warmer lighting, soft rim light from above.
+HEAD: Ant head. Short sharp mandibles clamped shut or slightly parted. Large compound eyes, bright acid-yellow, cold and calculating. Two short antennae angled forward, rigid and alert.
+
+EXOSKELETON: Sleek dark chitin — near-void dark grey with faint iridescent sheen. Segmented body clearly visible: head at front, thorax in middle (arms and front walking legs attach here), abdomen extending behind (rear walking legs attach here).
+
+EXPRESSION: Disciplined aggression. Alert, professional, dangerous.
+
+White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style. Warmer lighting, soft rim light from above.
 ```
 
 #### Acid Spitter Ant

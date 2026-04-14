@@ -307,13 +307,72 @@ White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runete
 - [Details]() - [Direct]()
 - [Details]() - [Direct]()
 
-### rifles
+### weapons
+
+#### rifle
 
 ```
 Oversized matte black assault rifle, ACR/SCAR/G36 hybrid, angular polymer body, darkened rail system, chunky foregrip, thick blackened barrel with muzzle brake. Near-black finish with minimal metallic sheen.
 
 White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style, heroic silhouette, warmer lighting, soft rim light from above.
 ```
+
+- [Details](https://www.seaart.ai/explore/detail/d7f30u5e878c738kbk3g?pt=) - [Direct](https://image.cdn2.seaart.me/2026-04-14/d7f25tde878c73bjup00/5ec54ee411d899d86fcd750d36b7d600_high.webp)
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+
+#### hammer
+
+```
+Oversized war hammer, brutally simple. Unnaturally long haft — far longer than any practical weapon, exaggerated and surreal, like a cartoon or tarot card weapon. The haft is thick, dark stained hardwood wrapped in black leather along the lower grip zone only. The upper two-thirds of the haft is bare dark wood, unnaturally straight and uniform.
+
+Hammer head is massive — carved from near-black jagged obsidian or dark volcanic stone, not polished iron. The stone has a matte, slightly granular surface with faint ashy grey undertones and minimal rust-orange streaks.
+
+Hammer head shape: symmetrical blunt block on both sides. No beak, no spike, no point. Just a rectangular or slightly tapered crushing block. Both striking faces are flat and clean — unmarked, fresh.
+
+Shaft reinforced with two dark iron bands wrapped around the haft just below the head. No metal elsewhere on the shaft.
+
+Butt cap: simple flat dark iron ring, no spike.
+
+Silhouette: surreal and top-heavy. The hammer head is a massive dark block. The haft extends far downward past where a normal weapon would end — unnaturally long, creating a strange elegant line beneath a brutal crushing head.
+
+White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style, heroic silhouette, warmer lighting, soft rim light from above.
+
+NEGATIVE: no beak, no spike, no point on the hammer head, no glowing elements, no ornate details, no chains, no skulls, no wrap above the lower grip, no polished metal surfaces, no wear marks or chips.
+```
+
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+
+#### spear
+
+```
+A medium-length war spear — not a pike, not a short javelin. Balanced for one-handed use behind a shield and overhand throwing. Total length roughly equal to a tall human's standing height.
+
+Shaft: thick hexagonal haft of darkened oiled wood, wrapped in segments of blackened leather and rough cord grip just below the midpoint. No metal along the shaft — lightweight for throwing, but sturdy enough to brace against a charge.
+
+Head: angular blackened steel, narrow leaf-shaped blade with a reinforced central ridge. Blade is moderately sized — not oversized like the hammer, not slender like an elf spear. Practical, brutal, military. The steel is near-black with faint charcoal wear marks. Minimal rust-orange corrosion near the socket.
+
+Butt cap: small conical dark iron spike for planting into the ground or a secondary striking point.
+
+Socket: reinforced black iron with two small rivets visible. Sits flush against the shaft — no frills, no decoration.
+
+Silhouette: clean, sharp, dangerous. A middle ground between the rifle's angular polymer and the hammer's crushing mass.
+
+White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style, heroic silhouette, warmer lighting, soft rim light from above.
+
+NEGATIVE: no barbs, no serrated edges, no glowing elements, no tassels or dangly bits, no oversized head, no split blade, no ornate filigree.
+```
+
+- [Details](https://www.seaart.ai/explore/detail/d7f37sde878c739va5l0?pt=) - [Direct](https://image.cdn2.seaart.me/2026-04-14/d7f35ide878c73b0l3kg/bce9e46ed23d19047f2535e03398b739_high.webp)
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+
+
 
 # licenses
 

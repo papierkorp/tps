@@ -78,6 +78,7 @@
 * the main weapon will be a (a bit bulkier) assault rifle in the style of a ACR/SCAR21/G36
 * no background needed
 
+Model: Z Image Turbo
 
 ```
 Anthropomorphic squirrel warrior, male, bipedal, medium height, powerfully built — broad chest, defined biceps with visible cream/tan fur, stocky muscular frame. 
@@ -123,6 +124,8 @@ NEGATIVE: no groin cover, no loincloth, no skirt, no belly plate, no crotch plat
 
 All fours, pure melee rush. The "feel good to mow down" enemy. Fast, fragile, swarms in groups. Your ground-dash ability should one-shot clusters of these — that's the satisfying payoff loop.
 
+Model: Z Image Turbo
+
 ```
 Quadrupedal worker ant, all four legs on the ground, small wiry build,
 low to the ground, fast feral posture.
@@ -156,6 +159,8 @@ No human posture, no bipedal, no arms, no hands, no upright stance.
 
 **on 4 feets like a centaur**
 
+Model: Z Image Turbo
+
 Stands upright on two legs, bigger and armored. Slower than workers but hits hard with a mandible bite or a small shield bash. Forces the player to think a bit instead of just sprinting through. Two or three of these mixed with workers already creates interesting encounters.
 
 ```
@@ -188,6 +193,8 @@ White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runete
 ---
 
 **on 2 feets**
+
+Model: Z Image Turbo
 
 ```
 Anthropomorphic soldier ant, bipedal, powerfully built —
@@ -238,6 +245,8 @@ https://www.seaart.ai/explore/detail/d7daecte878c73c4n4qg?pt=
 
 Stays back and lobs acid blobs in an arc — think mortar-style projectiles that leave a puddle. This is the enemy that forces you to use your aerial ability to reposition. It directly justifies your core mechanic: sprint-jump-float to dodge the puddles, then ground-slam onto the spitter. Perfect design synergy.
 
+Model: Z Image Turbo
+
 ```
 Anthropomorphic spitter ant, all four legs on the ground, low crouched stance.
 
@@ -277,6 +286,8 @@ White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runete
 
 One beefier enemy type — heavily armored, slow, used sparingly as a room gate or before the final boss. Doesn't need complex AI. Just a damage sponge that makes the player burn resources. Could carry an oversized weapon or have a charge attack.
 
+Model: Z Image Turbo
+
 ```
 Anthropomorphic queen's guard ant, bipedal, massive imposing frame — nearly twice the width of a normal ant, barrel thorax, thick trunk-like legs, immovable stance.
 
@@ -311,6 +322,8 @@ White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runete
 
 #### rifle
 
+Model: Z Image Turbo
+
 ```
 Oversized matte black assault rifle, ACR/SCAR/G36 hybrid, angular polymer body, darkened rail system, chunky foregrip, thick blackened barrel with muzzle brake. Near-black finish with minimal metallic sheen.
 
@@ -324,22 +337,26 @@ White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runete
 
 #### hammer
 
+Model: Z Image Turbo
+
 ```
-Oversized war hammer, brutally simple. Unnaturally long haft — far longer than any practical weapon, exaggerated and surreal, like a cartoon or tarot card weapon. The haft is thick, dark stained hardwood wrapped in black leather along the lower grip zone only. The upper two-thirds of the haft is bare dark wood, unnaturally straight and uniform.
+Oversized war hammer, brutally simple. The haft is ABSURDLY LONG — three to four times longer than the hammer head is wide. Visually: the haft takes up 80% of the weapon's total height, the head only 20%. A tiny head perched on a comically long pole, yet still reads as heavy and crushing.
 
-Hammer head is massive — carved from near-black jagged obsidian or dark volcanic stone, not polished iron. The stone has a matte, slightly granular surface with faint ashy grey undertones and minimal rust-orange streaks.
+Dark stained hardwood haft, unnaturally straight and uniform, as thick as a shovel handle. Only the bottom third is wrapped in black leather for grip. The upper two-thirds is bare dark wood.
 
-Hammer head shape: symmetrical blunt block on both sides. No beak, no spike, no point. Just a rectangular or slightly tapered crushing block. Both striking faces are flat and clean — unmarked, fresh.
+Hammer head is moderately sized (not tiny, but not enormous) — carved from near-black jagged obsidian or dark volcanic stone. Symmetrical blunt block on both sides. No beak, no spike, no point. Flat clean striking faces.
 
-Shaft reinforced with two dark iron bands wrapped around the haft just below the head. No metal elsewhere on the shaft.
+Two dark iron bands just below the head.
 
-Butt cap: simple flat dark iron ring, no spike.
+Butt cap: flat dark iron ring.
 
-Silhouette: surreal and top-heavy. The hammer head is a massive dark block. The haft extends far downward past where a normal weapon would end — unnaturally long, creating a strange elegant line beneath a brutal crushing head.
+CRITICAL PROPORTIONS: If the hammer head is 1 unit tall, the haft is 5 to 6 units long. The haft should extend past the bottom of the frame or nearly touch the bottom edge. The weapon reads as intentionally, unnaturally stretched.
+
+The hammer head is small relative to the haft. Emphasize the LENGTH. Draw the haft first, then put the head at the very top as an afterthought.
 
 White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style, heroic silhouette, warmer lighting, soft rim light from above.
 
-NEGATIVE: no beak, no spike, no point on the hammer head, no glowing elements, no ornate details, no chains, no skulls, no wrap above the lower grip, no polished metal surfaces, no wear marks or chips.
+NEGATIVE: no normal proportions, no short haft, no beak, no spike, no glowing elements, no chains, no skulls, no wear marks.
 ```
 
 - [Details]() - [Direct]()
@@ -348,6 +365,8 @@ NEGATIVE: no beak, no spike, no point on the hammer head, no glowing elements, n
 - [Details]() - [Direct]()
 
 #### spear
+
+Model: Z Image Turbo
 
 ```
 A medium-length war spear — not a pike, not a short javelin. Balanced for one-handed use behind a shield and overhand throwing. Total length roughly equal to a tall human's standing height.

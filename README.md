@@ -146,29 +146,93 @@ Low heroic silhouette, warmer lighting, soft rim light from above.
 No human posture, no bipedal, no arms, no hands, no upright stance.
 ```
 
+- [Details](https://www.seaart.ai/explore/detail/d7eem9de878c73bgncf0?pt) - [Direct](https://image.cdn2.seaart.me/2026-04-13/d7edlcle878c7398sseg/d19d060efbf131c55cd094b60feb3821_high.webp)
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+
 #### Soldier Ant
+
+**on 4 feets like a centaur**
 
 Stands upright on two legs, bigger and armored. Slower than workers but hits hard with a mandible bite or a small shield bash. Forces the player to think a bit instead of just sprinting through. Two or three of these mixed with workers already creates interesting encounters.
 
 ```
-Soldier ant. Insectoid quadruped. Six total limbs: four walking legs on the ground, two arms rising from the front of the thorax.
+Soldier ant. Insectoid quadruped. Six total limbs: four walking legs on the ground, two arms.
 
-POSTURE: All four legs touch the ground. The front pair of walking legs are positioned directly behind the arms. The middle and rear walking legs are spaced evenly along the thorax and abdomen. The ant is low to the ground — belly almost parallel to the surface. The abdomen extends straight back behind the rear legs. This is NOT bipedal. All four walking legs bear weight equally.
+CRITICAL BODY PLAN: This creature has a HUMAN-SIZED TORSO attached to the FRONT of an ant body. The torso is MUSCULAR, BROAD-CHESTED, and THICK. Think: a bodybuilder's  and shoulders mounted onto an ant chassis. The torso is NOT small. The torso is NOT ant-sized. The torso is LARGE and POWERFUL.
 
-LOWER BODY (four walking legs): Four thick articulated legs planted wide. Strong haunches at the hips. Spindled lower segments. Clawed tarsi gripping the ground. The legs are arranged in two pairs — front walking pair and rear walking pair. Posture is coiled, stable, ready to charge.
+POSTURE: All four walking legs on the ground. The ant is low to the ground — belly parallel to surface. Abdomen extends behind. From the FRONT of the body, a muscular humanoid torso rises upward vertically, like a centaur. This torso has TWO ARMS.
 
-UPPER BODY (two arms + thorax): From the front of the thorax, the body rises upward into a muscular torso. Broad shoulders. Two thick armored arms. Hands are chitinous claws. The arms do NOT touch the ground. They are raised.
+LOWER BODY (ant part): Four thick articulated legs planted wide. Strong haunches. Spindled lower segments. Clawed tarsi. Posture coiled and ready.
 
-WEAPON: One very long spear held in both hands. Wooden haft. Stone or chitin tip. Spear angled forward in low guard position, tip pointing toward the viewer. No shield.
+UPPER BODY (humanoid part — THIS MUST BE LARGE AND MUSCULAR): A massive, thick . Broad shoulders twice the width of the ant's head. Visible pectoral muscles. Thick neck. Two heavily muscled arms with chitinous claw hands. This torso is NOT small. It dominates the front of the creature.
 
-HEAD: Ant head. Short sharp mandibles clamped shut or slightly parted. Large compound eyes, bright acid-yellow, cold and calculating. Two short antennae angled forward, rigid and alert.
+HEAD: Ant head directly above the muscular torso. Short sharp mandibles clamped shut. Large compound eyes, bright acid-yellow, cold and calculating. Two short antennae angled forward.
 
-EXOSKELETON: Sleek dark chitin — near-void dark grey with faint iridescent sheen. Segmented body clearly visible: head at front, thorax in middle (arms and front walking legs attach here), abdomen extending behind (rear walking legs attach here).
+EXOSKELETON: Sleek dark chitin — near-void dark grey with faint iridescent sheen. The muscular torso is also covered in chitin, but the shape underneath is clearly a broad humanoid .
 
-EXPRESSION: Disciplined aggression. Alert, professional, dangerous.
+EXPRESSION: Disciplined aggression. Alert, professional.
 
 White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style. Warmer lighting, soft rim light from above.
 ```
+
+- [Details](https://www.seaart.ai/explore/detail/d7f00cde878c73955opg?pt=) - [Direct]()
+
+- [Details](https://www.seaart.ai/explore/detail/d7daecte878c73c4n4qg?pt=) - [Direct](https://image.cdn2.seaart.me/2026-04-11/d7da9i5e878c738kfjn0/d393ec2cee9b6279a028f262e77047f3_high.webp)
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+
+---
+
+**on 2 feets**
+
+```
+Anthropomorphic soldier ant, bipedal, powerfully built —
+wide thorax, thick forearms, hunched aggressive stance.
+Small to medium height — compact and dense rather than towering,
+closer to a short stocky brawler than a large heavy.
+
+Uses rear two legs to stand —
+the thighs are enormously thick and overdeveloped, almost comically muscular,
+like tree trunks wrapped in chitin.
+The feet are huge, wide and heavy — oversized flat stompers
+that grip the ground with visible weight and authority.
+This ant is built from the waist down like a powerlifter.
+Low stable center of gravity, planted and immovable.
+
+Middle pair of limbs serve as arms — thick armored brawler arms.
+Front limbs are smaller and tucked.
+
+Dark chitinous exoskeleton — near-void dark grey base.
+Armor plating bolted over the thorax and shoulders in pitch black carbon panels
+with rust-orange rivets and trim accents only —
+mirroring a heavily armored warrior aesthetic.
+
+Large compound eyes, acid-yellow.
+Broad flat head, heavy mandibles — clamped tightly shut, mouth completely closed,
+jaw locked firm, radiating brute confidence and silent menace.
+No teeth visible, no open mouth.
+
+Two antennae swept back like horns.
+Abdomen tucked behind, not dominant.
+Meaty clenched fists.
+Slow confident footing — the bruiser who has won a lot of fights.
+
+White background.
+Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style,
+heroic silhouette, warmer lighting, soft rim light from above.
+```
+
+- [Details](https://www.seaart.ai/explore/detail/d7daecte878c73c4n4qg?pt=) - [Direct](https://image.cdn2.seaart.me/2026-04-11/d7da9i5e878c738kfjn0/d393ec2cee9b6279a028f262e77047f3_high.webp)
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+
+https://www.seaart.ai/explore/detail/d7daecte878c73c4n4qg?pt=
 
 #### Acid Spitter Ant
 
@@ -200,10 +264,14 @@ Antennae swept back flat from the effort.
 Dark chitinous exoskeleton — near-void dark grey with acid-green accent glow
 along the bladder seams, the connection points to the body, and around the mouth.
 
-White background.
-Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style,
-heroic silhouette, warmer lighting, soft rim light from above.
+White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style, heroic silhouette, warmer lighting, soft rim light from above.
 ```
+
+- [Details](https://www.seaart.ai/explore/detail/d7dak2le878c73flpvbg?pt) - [Direct](https://image.cdn2.seaart.me/2026-04-11/d7daejle878c738l9i1g/d2484926fd83dfd587e9eea24368ca0b_high.webp)
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
 
 #### Queen's Guard (heavy / mini-boss)
 
@@ -233,10 +301,18 @@ Blunt, brutal silhouette — no sharp edges, all curves and mass, except for the
 White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style, heroic silhouette, warmer lighting, soft rim light from above. Armor edges remain dark despite rim light — rim light wraps softly across the center of plates but fades completely before reaching the borders.
 ```
 
+- [Details](https://www.seaart.ai/explore/detail/d7edk7te878c73f9p58g?pt) - [Direct](https://image.cdn2.seaart.me/2026-04-13/d7ed85de878c73e3p5ng/30d74d3f6c224769207d958f6afdc24b_high.webp)
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
+
 ### rifles
 
 ```
-Oversized matte black assault rifle, both hands — ACR/SCAR/G36 hybrid, angular polymer body, darkened rail system, chunky foregrip, thick blackened barrel with muzzle brake. Near-black finish with minimal metallic sheen.
+Oversized matte black assault rifle, ACR/SCAR/G36 hybrid, angular polymer body, darkened rail system, chunky foregrip, thick blackened barrel with muzzle brake. Near-black finish with minimal metallic sheen.
+
+White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style, heroic silhouette, warmer lighting, soft rim light from above.
 ```
 
 # licenses

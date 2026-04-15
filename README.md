@@ -359,7 +359,7 @@ White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runete
 NEGATIVE: no normal proportions, no short haft, no beak, no spike, no glowing elements, no chains, no skulls, no wear marks.
 ```
 
-- [Details]() - [Direct]()
+- [Details](https://www.seaart.ai/explore/detail/d7fojqte878c7399hmcg?pt=) - [Direct](https://image.cdn2.seaart.me/2026-04-15/d7fn07le878c73eh125g/7401eeb7249d235b2ae078d16882f3a3_high.webp)
 - [Details]() - [Direct]()
 - [Details]() - [Direct]()
 - [Details]() - [Direct]()
@@ -386,12 +386,42 @@ White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runete
 NEGATIVE: no barbs, no serrated edges, no glowing elements, no tassels or dangly bits, no oversized head, no split blade, no ornate filigree.
 ```
 
+- [Details](https://www.seaart.ai/explore/detail/d7fp1fte878c73bo425g?pt=) - [Direct](https://image.cdn2.seaart.me/2026-04-15/d7fl3bte878c73etbspg/87a3caa56cf7b15191d9bc84ab11e96e_high.webp)
+
 - [Details](https://www.seaart.ai/explore/detail/d7f37sde878c739va5l0?pt=) - [Direct](https://image.cdn2.seaart.me/2026-04-14/d7f35ide878c73b0l3kg/bce9e46ed23d19047f2535e03398b739_high.webp)
 - [Details]() - [Direct]()
 - [Details]() - [Direct]()
+
+### shield
+
+```
+A medium-sized war shield for one-handed use alongside a spear — not a massive tower shield, not a small buckler. Large enough to cover torso and shoulder, light enough to not tire the arm for overhand throwing.
+
+Shape: slightly curved rectangular or elongated oval — vertical orientation, rounded top and bottom corners. Practical, not decorative.
+
+Face: angled blackened steel plates riveted over a dark wooden core. The steel is near-black with faint charcoal wear marks — matching the spear's head. Minimal rust-orange corrosion near a few rivets, same as the spear's socket. No heavy rust, just faint traces.
+
+Rivets: large dark iron, slightly domed, arranged in a simple functional grid — three across, four down.
+
+Edge: wrapped in blackened rawhide or worn leather, slightly darker than the face. No metal rim.
+
+Back (implied): leather arm straps and a padded black canvas backing. Not visible from front but affects silhouette — the shield has slight thickness.
+
+Center: no boss, no emblem, no crest, no decoration. The face is flat and blank — a working shield, not a heraldic prop.
+
+The shield's surface has subtle horizontal or diagonal gouges from old battles — shallow cuts in the steel, not rust.
+
+Silhouette: clean, blunt, slightly battered. Middle ground between the spear's angular sharpness and the hammer's crushing mass.
+
+White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style, heroic silhouette, warmer lighting, soft rim light from above. The rim light wraps across the center of the shield face but fades before reaching the dark leather edge.
+
+NEGATIVE: no spikes, no crest or emblem, no heraldry, no animal motifs, no gold or brass trim, no scalloped edges, no glowing elements, no tassels, no ornate filigree, no shield boss, no center dome.
+```
+
+- [Details](https://www.seaart.ai/explore/detail/d7fp1q5e878c73br8svg?pt=) - [Direct](https://image.cdn2.seaart.me/2026-04-15/d7fp0f5e878c73f0n740/19f522e95263bbe5e173222364614ed2_high.webp)
 - [Details]() - [Direct]()
-
-
+- [Details]() - [Direct]()
+- [Details]() - [Direct]()
 
 # licenses
 

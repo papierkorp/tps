@@ -392,7 +392,7 @@ NEGATIVE: no barbs, no serrated edges, no glowing elements, no tassels or dangly
 - [Details]() - [Direct]()
 - [Details]() - [Direct]()
 
-### shield
+#### shield
 
 ```
 A medium-sized war shield for one-handed use alongside a spear — not a massive tower shield, not a small buckler. Large enough to cover torso and shoulder, light enough to not tire the arm for overhand throwing.
@@ -418,10 +418,438 @@ White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runete
 NEGATIVE: no spikes, no crest or emblem, no heraldry, no animal motifs, no gold or brass trim, no scalloped edges, no glowing elements, no tassels, no ornate filigree, no shield boss, no center dome.
 ```
 
+
 - [Details](https://www.seaart.ai/explore/detail/d7fp1q5e878c73br8svg?pt=) - [Direct](https://image.cdn2.seaart.me/2026-04-15/d7fp0f5e878c73f0n740/19f522e95263bbe5e173222364614ed2_high.webp)
 - [Details]() - [Direct]()
 - [Details]() - [Direct]()
 - [Details]() - [Direct]()
+
+
+### props
+
+#### trees
+
+
+```
+A single mesh of a squat, bulbous tree. Trunk swells dramatically near base. Canopy is a dense cluster of rounded overlapping leaf blobs with NO gaps visible from any angle — solid silhouette. Mesh must be fully enclosed with no open faces. Pivot point at very bottom center of trunk. Flat cel shading, clean lineart. Warm gray-brown trunk, deep muted teal-green canopy with lighter moss-green highlights. Soft warm rim light from above. White background.
+
+MULTIMESH NOTES: Model from 4 equidistant angles should look nearly identical. Use simple collision shape — a tall cylinder or capsule. LOD0: 800-1200 triangles. LOD1: 300-500 triangles. LOD2: 100-150 triangles (single blob).
+```
+
+```
+A single mesh of a narrow conical evergreen tree. Single straight trunk visible at bottom. Layers of jagged triangular foliage stacked vertically, each layer slightly wider than above. Solid silhouette with no gaps through the canopy. Pivot point at very bottom center of trunk. Flat cel shading. Dark charcoal-brown trunk, cool dark green-gray foliage with pale sage-green highlights. Soft warm rim light from above. White background.
+
+MULTIMESH NOTES: Sharp conical silhouette must read from all angles. LOD0: 600-1000 triangles. LOD1: 200-300 triangles. LOD2: 50-80 triangles (simple cone).
+```
+
+```
+A single mesh of a wide-canopy tree. Short thick trunk splits into three large horizontal branches. Canopy is broad and slightly flattened on top, made of many small rounded leaf clusters with no gaps. Pivot point at bottom center. Flat cel shading. Warm earthy brown trunk and branches, warm olive-green canopy with yellow-green highlights. Soft warm rim light from above. White background.
+
+MULTIMESH NOTES: Canopy must be solid from below and above. LOD0: 1000-1500 triangles. LOD1: 400-600 triangles. LOD2: 120-180 triangles.
+```
+
+```
+A single mesh of a leafless gnarled tree. Trunk twists violently. Sharp jagged branches reach upward like claws. No leaves, no canopy. Pivot point at bottom center. Flat cel shading. Ash-gray and pale charcoal trunk. Single faint warm rim light from above catching highest branch tips. White background.
+
+MULTIMESH NOTES: Use this sparingly — it's a contrast piece. LOD0: 500-800 triangles. LOD1: 200-300 triangles. LOD2: 80-120 triangles.
+```
+
+```
+A single mesh of a slender slightly curved palm tree. Trunk has horizontal ring scars. Top has tight cluster of 5-6 long arched sword-shaped fronds drooping outward. Pivot point at bottom center. Flat cel shading. Warm golden-brown trunk, yellow-green fronds with darker green undersides. Soft warm rim light from above catching frond arches. White background.
+
+MULTIMESH NOTES: Fronds must be solid planes double-sided or thick enough to read from below. LOD0: 600-1000 triangles. LOD1: 250-400 triangles. LOD2: 100-150 triangles (star-shaped frond cluster).
+```
+
+
+#### rocks
+
+```
+A single mesh of a large angular boulder with sharp faceted planes and deep crevices. Silhouette is blocky and uneven. Pivot point at bottom center. Flat cel shading. Cool slate-gray base with warm charcoal shadows. Single prominent warm rim light from above hitting top-most flat surface. White background.
+
+MULTIMESH NOTES: Rock meshes should be rotated randomly when placed. LOD0: 300-500 triangles. LOD1: 150-250 triangles. LOD2: 60-100 triangles.
+```
+
+```
+A single mesh of a large smooth oval river stone with no sharp edges. Surface is featureless and softly curved. Pivot point at bottom center. Flat cel shading. Warm taupe-gray base with creamy beige highlight on top curve. Soft warm rim light from above. White background.
+
+MULTIMESH NOTES: Perfect for stream beds and cave floors. LOD0: 200-300 triangles. LOD1: 100-150 triangles. LOD2: 40-60 triangles.
+```
+
+```
+A single mesh of three flat disc-shaped stones stacked vertically like a small cairn. Each stone slightly offset. No gaps between stones — mesh is welded into one object. Pivot point at bottom center. Flat cel shading. Warm earthy brown-gray stones with subtle horizontal striations. Soft warm rim light from above hitting top stone. White background.
+
+MULTIMESH NOTES: Use as single object, not separate stones. LOD0: 400-600 triangles. LOD1: 200-300 triangles. LOD2: 80-120 triangles.
+```
+
+```
+A single mesh of a tall narrow vertical rock formation tapering to a blunt point. Sides are straight but uneven with two or three large vertical cracks. Pivot point at bottom center. Flat cel shading. Dark charcoal-gray with warm gray highlights on left face. Strong warm rim light from above grazing top point and left edge. White background.
+
+MULTIMESH NOTES: Good for canyon edges and ant nest entrances. LOD0: 300-500 triangles. LOD1: 150-250 triangles. LOD2: 60-100 triangles.
+```
+
+```
+A single mesh of a wide low table-like rock formation jutting horizontally. Top surface is relatively flat and broad. Bottom is uneven. Pivot point at bottom center. Flat cel shading. Warm sandy-brown base with pale cream-beige top surface. Soft warm rim light from above illuminating entire top surface. White background.
+
+MULTIMESH NOTES: Good for stepping stones and ledges. LOD0: 250-400 triangles. LOD1: 120-200 triangles. LOD2: 50-80 triangles.
+```
+
+#### bushes
+
+```
+A single mesh of a large dense perfectly hemispherical bush. Surface is smooth continuous dome made of tightly packed small rounded leaf clusters with no gaps. Pivot point at bottom center. Flat cel shading. Deep forest-green base with bright lime-green highlight patches across top curve. Soft warm rim light from above illuminating entire crown. White background.
+
+MULTIMESH NOTES: Solid dome — no transparency needed. LOD0: 300-500 triangles. LOD1: 150-250 triangles. LOD2: 50-80 triangles (single hemisphere).
+```
+
+```
+A single mesh of a chaotic sprawling bush made of sharp angular jagged branch tips extending outward in all directions. No visible leaves. Pivot point at bottom center. Flat cel shading. Warm dusty brown branches with pale tan thorn tips. Soft warm rim light from above catching highest spikes. White background.
+
+MULTIMESH NOTES: Aggressive silhouette — use near enemy spawns. LOD0: 400-600 triangles. LOD1: 200-300 triangles. LOD2: 80-120 triangles.
+```
+
+```
+A single mesh of a wide flat ground-hugging bush spreading horizontally. Only a few inches tall but several feet wide. Surface is bumpy and uneven. Pivot point at bottom center (lowest point). Flat cel shading. Muted sage-green base with pale yellow-green highlight spots scattered across top. Soft warm rim light from above grazing highest bumps. White background.
+
+MULTIMESH NOTES: Flattened silhouette — good for ground cover. LOD0: 300-500 triangles. LOD1: 150-250 triangles. LOD2: 60-100 triangles.
+```
+
+```
+A single mesh of a loose irregularly shaped bush taller than wide. Branches visible at bottom giving way to scattered leaf clusters toward top. Silhouette is airy but still solid — no gaps large enough to see through. Pivot point at bottom center. Flat cel shading. Warm brown branches, dark olive-green leaves in shadow, warm yellow-green leaves in light. Soft warm rim light from above catching top leaves. White background.
+
+MULTIMESH NOTES: Airy but opaque — use for variety. LOD0: 400-700 triangles. LOD1: 200-350 triangles. LOD2: 80-150 triangles.
+```
+
+```
+A single mesh of a bush with two distinct rounded lobes side by side, like two hemispheres fused together. Shallow dip in middle of top silhouette. Pivot point at bottom center. Flat cel shading. Deep bottle-green base with pale mint-green highlights on top of each lobe. Soft warm rim light from above hitting both lobes evenly. White background.
+
+MULTIMESH NOTES: Symmetrical but organic. LOD0: 350-550 triangles. LOD1: 180-280 triangles. LOD2: 70-110 triangles.
+```
+
+#### ball
+
+```
+A perfectly round ball of compacted dried earth and organic material, rolled by dung beetles in the ant world. The squirrel warrior collects these and uses them as disposable rolling targets.
+
+CONSTRUCTION:
+- Perfectly spherical
+- Surface is rough and textured — made of thousands of compacted dirt granules
+- No seams, no construction — completely natural
+
+COLORS:
+- Warm dried-earth brown — terracotta, umber, dusty tan
+- No bright colors, no green (completely dried)
+
+SURFACE DETAIL:
+- Subtle granular texture
+- Small cracks on the surface from drying
+- One or two small pebbles embedded in the surface
+
+SIZE:
+- About the size of a cantaloupe or small melon
+
+DAMAGE MARKINGS (for used targets):
+- Shatters or cracks when shot — one side can be shown with impact crater
+- Dust debris implied but not modeled
+
+MOVEMENT:
+- Rolls in straight lines when pushed
+- Slower and heavier than the beetle or chitin ball
+- Leaves a faint dust trail behind it
+
+LIGHTING:
+- Soft warm rim light from above
+- Flat cel shading, clean lineart
+- White background
+
+NEGATIVE: no bright colors, no rubber, no spikes, no glowing, no organic matter (dried only), no mud (it's hard and dry).
+```
+
+```
+A manufactured rolling target for shooting practice. A hollow sphere made of curved ant chitin plates riveted together.
+
+Perfectly round. Assembled from 6-8 curved chitin plates harvested from ant shells. Plates are near-void dark grey with faint iridescent sheen — matching enemy ant exoskeleton. Heavy matte black iron rivets at each seam with rust-orange corrosion on rivet heads. No visible gaps between plates.
+
+Surface has existing impact cracks and small dents from previous training sessions. Weighted slightly off-center internally so it rolls in unpredictable curves.
+
+Soft warm rim light from above catching the top curve. Flat cel shading, clean lineart. Hearthstone/Legends of Runeterra card art style. White background.
+
+NEGATIVE: no bright colors, no rubber, no visible seams, no glowing elements, no spikes, no visible interior.
+```
+
+#### dummy target
+
+```
+A training dummy built to resemble an ant soldier's upper body mounted on a post. Used by the squirrel warrior for weapon practice.
+
+CONSTRUCTION:
+- Central post: salvaged ant mandible or thick chitin leg bone — curved, tapered, dark grey with faint iridescent sheen, planted vertically into the ground
+- Torso: hollowed-out ant thorax shell (worker ant size, not soldier) strapped to the post with rusted iron bands — dark chitinous exoskeleton texture preserved
+- Head: empty ant head casing mounted on top, mandibles clamped shut, compound eyes removed leaving two empty dark sockets
+- Arms (optional): two smaller ant leg segments bolted to the sides as swinging arm targets
+
+DAMAGE MARKINGS:
+- Deep impact cracks radiating across the chitin torso
+- One entire side of the head casing shattered or missing
+- Rust-orange corrosion on the iron bands and bolts
+- Several shallow cut marks on the post
+
+COLORS:
+- Chitin: near-void dark grey with faint iridescent sheen (matching enemy ants)
+- Iron bands: matte black with rust-orange corrosion at edges and rivets
+- Post (if mandible bone): pale dirty bone-white with dark grey streaks
+
+LIGHTING:
+- Soft warm rim light from above catching the top of the head casing and the left side of the thorax
+- The empty eye sockets remain pure black — no light inside
+
+STYLE:
+- Flat cel shading, clean lineart
+- Hearthstone/Legends of Runeterra card art style
+- White background
+
+NEGATIVE: no burlap, no wood (except possibly the post if mandible bone isn't used), no rope, no sack, no straw, no medieval aesthetics, no face painted on, no target circles.
+```
+
+```
+A training dummy built by the squirrel warrior from scrap materials and old equipment.
+
+CONSTRUCTION:
+- Central post: thick dark stained wooden pole (matching the war hammer haft) — straight, uniform, planted vertically
+- Torso: discarded pitch black carbon chest plate (old damaged armor) bolted to the front of the post — missing its bottom section, cracked across the center
+- Head: a salvaged ant helmet (empty) or a battered metal pot with two small holes cut for eyes — bolted to the top
+- Shoulders: two curved rust-orange metal scraps bolted to the sides
+
+DAMAGE MARKINGS:
+- Deep impact dent in the center of the chest plate
+- Multiple shallow cut marks across the wood
+- One of the shoulder scraps is bent downward
+- Rust-orange corrosion around every bolt
+
+COLORS:
+- Wood post: dark stained hardwood (warm dark brown)
+- Chest plate: pitch black carbon with rust-orange trim edges
+- Helmet: dark grey chitin or matte black metal
+- Bolts and bands: matte black iron with rust-orange corrosion
+
+LIGHTING:
+- Soft warm rim light from above
+
+STYLE:
+- Flat cel shading, clean lineart
+- Hearthstone/Legends of Runeterra card art style
+- White background
+
+NEGATIVE: no burlap, no sack, no straw, no rope, no face, no target circles, no cloth.
+```
+
+#### tree house
+
+**Wall Piece (Flat)**
+
+```
+A single mesh of a flat wooden wall panel. Vertical planks tightly joined. Width is 2 units, height is 3 units (proportions for modular snapping). Top edge is straight. Bottom edge is straight. Left and right edges have snap points. Flat cel shading. Warm weathered brown-gray wood with darker plank lines. Soft warm rim light from above hitting top edge. White background.
+
+MODULAR NOTES: Use this for front/back/side walls. Provide 3 variants: blank wall, wall with window, wall with door frame.
+```
+
+**Wall with Circular Window**
+
+```
+Same as wall piece but with one small circular window cut through the center. Window has no glass. Inner edge of cut shows dark interior shadow. Flat cel shading. Same wood colors. Soft warm rim light from above. White background.
+```
+
+
+**Wall with Door Frame**
+
+```
+Same as wall piece but with a rectangular door opening at center bottom. Opening is 1.5 units tall, 1 unit wide. No door mesh included (door is separate piece). Inner edges show dark interior shadow. Flat cel shading. White background.
+```
+
+
+**Roof Piece (Slanted)**
+
+```
+A single mesh of a slanted roof panel. Overlapping bark shingles. Width is 2.5 units (overhangs wall by 0.25 units on each side). Depth is 2 units. Thickness is 0.2 units. Flat cel shading. Dark charcoal-brown shingles with subtle individual shingle lines. Soft warm rim light from above hitting top edge. White background.
+
+MODULAR NOTES: Combine two of these at an angle for peaked roof.
+```
+
+
+**Roof Peak (Ridge Cap)**
+
+```
+A single mesh of a ridge cap for peaked roof. Covers the seam where two slanted roof panels meet. Length is 2.5 units. Flat cel shading. Same dark charcoal-brown as shingles. Soft warm rim light from above. White background.
+```
+
+
+**Platform / Floor Piece**
+
+```
+A single mesh of a wooden floor platform. Wide horizontal planks. Width is 2 units, depth is 2 units, thickness is 0.2 units. Bottom has visible support beams (two crossing underneath). Pivot point at bottom of support beams. Flat cel shading. Warm brown-gray planks, darker brown support beams. Soft warm rim light from above hitting top surface. White background.
+```
+
+
+**Railing Piece**
+
+```
+A single mesh of a wooden railing segment. Three horizontal logs, two vertical posts. Fits along platform edge of 2 units width. Height is 1 unit. Flat cel shading. Warm weathered brown. Soft warm rim light from above hitting top rail and post tops. White background.
+```
+
+
+**Rope Ladder**
+
+```
+A single mesh of a hanging rope ladder. Two vertical ropes. 6 wooden rungs spaced evenly. Ladder length is 4 units (from top hook to bottom). Top has two iron hooks for mounting. Flat cel shading. Pale tan ropes, warm brown rungs, matte black iron hooks. Soft warm rim light from above. White background.
+```
+
+
+**Wall Hook (Interior)**
+
+```
+A single mesh of a simple iron wall hook. Single peg protruding from small round base plate. Two rivets on base plate. Flat cel shading. Matte black iron with rust-orange corrosion at rivet edges. Soft warm rim light from above. White background.
+```
+
+#### ant nest
+
+**Tunnel Straight (2m length)**
+
+```
+A single mesh of a straight tunnel section. Circular or slightly oval cross-section. Inner walls are smooth compacted dark earth with subtle horizontal scratch marks from digging. Both ends are open with matching rim diameter for snapping. Pivot point at center. Flat cel shading. Warm deep brown with darker umber shadows in deepest recesses. Soft warm ambient light (no direct rim light inside tunnel). White background.
+
+MODULAR NOTES: Length is 2 units. Inner diameter is 2 units. Outer diameter is 2.4 units (wall thickness 0.2 units).
+```
+
+**Tunnel Curve (90 degrees)**
+
+```
+Same as straight tunnel but curves 90 degrees over 2 units of arc length. Inner wall of curve is slightly smoother. Both ends open with matching diameter. Flat cel shading. Warm deep brown. White background.
+```
+
+
+**Tunnel T-Junction**
+
+```
+A three-way tunnel junction. Straight tunnel continues, a third tunnel branches off at 90 degrees from center. All three openings have matching diameter. Flat cel shading. Warm deep brown. White background.
+```
+
+
+**Tunnel Cross (Four-way)**
+
+```
+A four-way tunnel intersection. Two tunnels crossing at 90 degrees. All four openings have matching diameter. Flat cel shading. Warm deep brown. White background.
+```
+
+
+**Tunnel Slope (Ramp)**
+
+```
+A straight tunnel section with floor angled upward at 30 degrees. Length is 2 units. Both ends have matching diameter. Floor has subtle claw-grip texture lines. Flat cel shading. Warm deep brown. White background.
+```
+
+
+**Main Chamber (Empty)**
+
+```
+A single mesh of a large open chamber. Roughly oval in shape with domed ceiling. Floor is flat. Three tunnel openings positioned on walls (placeholders for snapping). Chamber dimensions: width 6 units, depth 5 units, height 4 units. Flat cel shading. Warm deep brown walls with subtle horizontal strata bands. Soft warm ambient light. White background.
+```
+
+
+**Nursery Chamber (with Eggs)**
+
+```
+Same as main chamber but smaller (width 4 units, depth 4 units, height 3 units). Floor has cluster of 8 large ant eggs modeled as part of the mesh (welded, not separate objects). Eggs are smooth oval shapes. Flat cel shading. Chamber walls warm deep brown. Eggs are pale creamy yellow with warm beige highlights. White background.
+```
+
+
+**Storage Chamber (Food Cache)**
+
+```
+Same as main chamber but smaller (width 4 units, depth 3 units, height 3 units). Back wall has cache of items modeled as part of mesh: three large seeds, two dried mushrooms, one small generic skull. Flat cel shading. Chamber walls warm deep brown. Seeds golden-brown, mushrooms pale tan, skull bone-white. White background.
+```
+
+
+**Surface Mound Exterior**
+
+```
+A single mesh of a large low dome-shaped anthill rising from flat ground. Surface made of thousands of small soil granules modeled as texture/bump, not individual spheres. One large central entrance hole at base (diameter 2 units, matching tunnel opening). Two smaller vent holes higher up. Mound dimensions: width 6 units, height 2.5 units at center. Pivot point at bottom center. Flat cel shading. Warm reddish-brown and terracotta soil. Entrance hole is pure black. Soft warm rim light from above hitting top of mound and vent hole rims. White background.
+
+NEGATIVE: no grass, no sticks.
+```
+
+
+**Mound Entrance Piece**
+
+```
+A single mesh of the transition piece between surface mound and underground tunnel. Upper half is mound soil with entrance hole. Lower half is tunnel opening matching diameter. Pivot point at center of tunnel opening. Flat cel shading. Top: warm reddish-brown soil. Bottom: warm deep brown tunnel interior. Entrance hole rim has subtle soil granules. White background.
+```
+
+
+
+
+
+### terrain tiling textures
+
+#### grass
+
+```
+A seamless square tile of dense short grass viewed from directly above (top-down orthographic view). Grass covers 100% of the frame with no visible dirt. Individual blades are short, blunt, and barely distinguishable at this scale — reads as a soft textured carpet of muted olive-green with subtle brightness variation. No single blade stands out. No flowers, no patches, no weeds. Designed to tile perfectly edge to edge with no visible seams. Flat cel shading, clean lineart, macro texture scale. Hearthstone/Legends of Runeterra card art style. Soft warm lighting from directly above, even illumination across the entire tile. White background.
+
+NEGATIVE: no individual blades visible as distinct shapes, no shadows from blades, no flowers, no dirt patches, no seams, no edge cropping.
+```
+
+#### earth
+
+```
+A seamless square tile of compacted dirt and loose topsoil viewed from directly above. Surface shows small cracks, scattered tiny pebbles (each no larger than 2 pixels), and subtle uneven contours. No grass, no roots, no rocks larger than pebbles. Designed to tile perfectly edge to edge. Warm browns and umber tones — deep reddish-brown shadows, lighter clay-brown highlights. Flat cel shading, clean lineart. Hearthstone/Legends of Runeterra card art style. Soft warm lighting from directly above, even illumination.
+
+NEGATIVE: no grass, no stones larger than pebbles, no footprints, no seams, no edge cropping.
+```
+
+```
+A seamless square tile of a well-worn dirt path viewed from directly above. Surface is flatter and smoother than raw earth, with subtle packed grooves running horizontally across the tile suggesting foot traffic direction. Lighter dusty brown base with darker compacted streaks. No grass growing through. Designed to tile perfectly edge to edge horizontally and vertically. Flat cel shading, clean lineart. Hearthstone/Legends of Runeterra card art style. Soft warm lighting from directly above.
+
+NEGATIVE: no grass, no rocks, no puddles, no footprints (just generalized wear), no seams.
+```
+
+```
+A seamless square tile of small angular gravel and crushed stone viewed from directly above. Surface is completely covered in fragments — no bare soil visible. Each stone fragment is a flat cel-shaded polygon shape in cool slate-gray and warm charcoal tones. No single stone larger than a thumbnail at this scale. Designed to tile perfectly edge to edge. Flat cel shading, clean lineart. Hearthstone/Legends of Runeterra card art style. Soft warm lighting from directly above.
+
+NEGATIVE: no soil, no sand, no moss, no single dominant stone, no seams.
+```
+
+#### water
+
+```
+Flat cel-shaded water surface for third-person shooter terrain.
+
+VISUAL STYLE:
+- Opaque surface (no transparency to geometry below)
+- Single solid teal-blue base color: RGB 30, 140, 150
+- Bright cyan-white wavy highlight lines that move across the surface
+- No reflections of environment
+- No refraction
+- No foam at edges
+
+ANIMATION:
+- Two layers of scrolling wave lines moving in opposite directions
+- Wave lines are sharp cel-shaded strokes, not smooth gradients
+- Wave line color: RGB 180, 240, 250
+- Wave line thickness: 2-4 pixels at 1080p equivalent
+- Animation speed: slow, calm (not churning)
+
+SHORELINE BEHAVIOR:
+- Hard edge where water meets land
+- No transparency fade at edges
+- No foam or whitewater
+
+LIGHTING:
+- Responds to same warm rim light from above as other assets
+- Rim light creates a pale amber glow on the far edge of water bodies
+
+NEGATIVE: no transparency, no reflections, no refraction, no foam, no ripples (only wave lines), no caustics, no depth darkening.
+```
+
+
 
 # licenses
 

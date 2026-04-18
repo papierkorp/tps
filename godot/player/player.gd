@@ -3,7 +3,8 @@ class_name PlayerController extends CharacterBody3D
 @export_category("References")
 @export var camera_controller: CameraController
 @export var state: State
-@export var mesh: MeshInstance3D
+#@export var mesh: MeshInstance3D
+@export var model_root: Node3D
 
 @export_category("Movement Settings")
 @export var SPEED: float = 7.0
@@ -109,5 +110,5 @@ func can_air_charge() -> bool:
 
 
 func _on_camera_rotation_changed(horizontal: float, vertical: float):
-	mesh.rotation.y = horizontal
-	mesh.rotation.x = -vertical
+	model_root.rotation.y = horizontal
+	model_root.rotation.x = -vertical

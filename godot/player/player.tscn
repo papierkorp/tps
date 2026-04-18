@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://waxnia675j70"]
 
 [ext_resource type="Script" uid="uid://f7uwu0t55ov7" path="res://player/player.gd" id="1_ebx5c"]
+[ext_resource type="PackedScene" uid="uid://cvb3eba2rbd4a" path="res://assets/player/squirrel_idle.glb" id="2_bjvpn"]
 [ext_resource type="Script" uid="uid://b2enxkjx2fe4p" path="res://player/camera_controller.gd" id="2_rkbax"]
 [ext_resource type="Script" uid="uid://b2sniaurrmd8r" path="res://player/statemanager/state_manager.gd" id="3_d1dig"]
 [ext_resource type="Script" uid="uid://6kvaf246ivxd" path="res://player/statemanager/states/idle.gd" id="4_boad6"]
@@ -99,16 +100,49 @@ _data = {
 &"zoom_in": SubResource("Animation_c35mf")
 }
 
-[node name="player" type="CharacterBody3D" unique_id=2066123868 node_paths=PackedStringArray("camera_controller", "state", "mesh")]
+[node name="player" type="CharacterBody3D" unique_id=2066123868 node_paths=PackedStringArray("camera_controller", "state", "model_root")]
 collision_mask = 6
 script = ExtResource("1_ebx5c")
 camera_controller = NodePath("camera_controller")
 state = NodePath("state_manager/idle")
-mesh = NodePath("")
+model_root = NodePath("squirrel_idle")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=145105441]
 visible = false
 mesh = SubResource("CapsuleMesh_kqu6x")
+
+[node name="squirrel_idle" parent="." unique_id=742002188 instance=ExtResource("2_bjvpn")]
+
+[node name="Skeleton3D" parent="squirrel_idle/Armature" parent_id_path=PackedInt32Array(742002188, 1867479821) index="0" unique_id=534902385]
+bones/0/position = Vector3(-0.004382303, -0.021954417, -0.6632755)
+bones/0/rotation = Quaternion(-0.71275336, -0.012747215, -0.0017700111, 0.7012966)
+bones/1/rotation = Quaternion(-0.04938176, -0.00095739705, -0.01631797, 0.9986462)
+bones/2/rotation = Quaternion(-0.03356361, 0.00066220306, -0.00081683305, 0.999436)
+bones/3/rotation = Quaternion(-0.033562385, 0.0007196561, -0.00082686683, 0.9994361)
+bones/4/rotation = Quaternion(0.035213813, -0.0024394682, -0.0039010101, 0.9993692)
+bones/5/rotation = Quaternion(-0.06719344, -0.049987853, -0.07911841, 0.9933411)
+bones/7/rotation = Quaternion(-0.5608209, -0.42946514, 0.6185664, -0.34411538)
+bones/8/rotation = Quaternion(0.36512643, 0.28737098, 0.08767019, 0.8811439)
+bones/9/rotation = Quaternion(-0.0088301785, -0.011078344, 0.07556866, 0.99704003)
+bones/10/rotation = Quaternion(0.017539622, -0.23988324, 0.02314708, 0.97036725)
+bones/11/rotation = Quaternion(0.1634284, -0.014537788, -0.04054204, 0.9856146)
+bones/12/rotation = Quaternion(0.29124662, -0.03718766, -0.0019948294, 0.95592284)
+bones/13/rotation = Quaternion(0.13336469, -0.03585937, -0.1417838, 0.980217)
+bones/15/rotation = Quaternion(0.55470264, -0.44824785, 0.58774364, 0.382016)
+bones/16/rotation = Quaternion(0.45944798, -0.0852411, 0.07472516, 0.88094145)
+bones/17/rotation = Quaternion(-0.010680806, 0.01527453, -0.12345439, 0.9921752)
+bones/18/rotation = Quaternion(0.024103845, 0.11576639, -0.14421403, 0.98245585)
+bones/19/rotation = Quaternion(-0.034296997, 0.90480244, 0.10834183, -0.41038823)
+bones/20/rotation = Quaternion(0.031782, -0.06788295, -0.4536067, 0.88804436)
+bones/21/rotation = Quaternion(-0.048566416, -0.12640451, -0.29062504, 0.9472066)
+bones/23/rotation = Quaternion(0.05325543, 0.117935166, 0.990727, -0.04141563)
+bones/24/rotation = Quaternion(-0.3541661, -0.021602757, 0.04657556, 0.9337722)
+bones/25/rotation = Quaternion(0.64990187, -0.18018901, 0.1309682, 0.7266408)
+bones/26/rotation = Quaternion(0.2166792, -0.21268138, 0.046156257, 0.9516756)
+bones/28/rotation = Quaternion(-0.08296327, 0.036707632, 0.99394876, 0.061931778)
+bones/29/rotation = Quaternion(-0.28544086, 0.05872263, -0.036240596, 0.9559089)
+bones/30/rotation = Quaternion(0.60291684, 0.20572996, -0.1233129, 0.76089454)
+bones/31/rotation = Quaternion(0.23543172, 0.22940987, -0.051832363, 0.943004)
 
 [node name="StandingCollisionShape3D" type="CollisionShape3D" parent="." unique_id=1519850987]
 shape = SubResource("CapsuleShape3D_oul6g")
@@ -225,4 +259,5 @@ metadata/_custom_type_script = "uid://cer1ch1uw6uek"
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 
+[editable path="squirrel_idle"]
 [editable path="ui"]

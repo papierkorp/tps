@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://waxnia675j70"]
 
 [ext_resource type="Script" uid="uid://f7uwu0t55ov7" path="res://player/player.gd" id="1_ebx5c"]
+[ext_resource type="PackedScene" uid="uid://cqbnk8prank5l" path="res://assets/player/squirrel5.glb" id="2_bjvpn"]
 [ext_resource type="Script" uid="uid://b2enxkjx2fe4p" path="res://player/camera_controller.gd" id="2_rkbax"]
 [ext_resource type="Script" uid="uid://b2sniaurrmd8r" path="res://player/statemanager/state_manager.gd" id="3_d1dig"]
 [ext_resource type="Script" uid="uid://6kvaf246ivxd" path="res://player/statemanager/states/idle.gd" id="4_boad6"]
@@ -104,11 +105,44 @@ collision_mask = 6
 script = ExtResource("1_ebx5c")
 camera_controller = NodePath("camera_controller")
 state = NodePath("state_manager/idle")
-model_root = NodePath("")
+model_root = NodePath("squirrel5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=145105441]
 visible = false
 mesh = SubResource("CapsuleMesh_kqu6x")
+
+[node name="squirrel5" parent="." unique_id=1916304214 instance=ExtResource("2_bjvpn")]
+
+[node name="Skeleton3D" parent="squirrel5/Armature" parent_id_path=PackedInt32Array(1916304214, 263402217) index="1" unique_id=994545682]
+bones/0/position = Vector3(-0.0043870006, 0.6632781, -0.021948233)
+bones/0/rotation = Quaternion(-0.008101198, -0.0077620265, -0.0102644, 0.99988437)
+bones/1/rotation = Quaternion(-0.049308777, -0.00095624395, -0.01631885, 0.99864984)
+bones/2/rotation = Quaternion(-0.033523567, 0.00071436097, -0.00081254984, 0.99943733)
+bones/3/rotation = Quaternion(-0.033523083, 0.00076408, -0.0008232675, 0.99943733)
+bones/4/rotation = Quaternion(0.035213944, -0.0024388738, -0.0039179684, 0.9993692)
+bones/5/rotation = Quaternion(-0.06719453, -0.04998758, -0.07913486, 0.9933397)
+bones/7/rotation = Quaternion(-0.56082064, -0.42946547, 0.6185661, -0.3441158)
+bones/8/rotation = Quaternion(0.3651263, 0.28737152, 0.08767021, 0.88114375)
+bones/9/rotation = Quaternion(-0.008830129, -0.011078856, 0.07556889, 0.99704003)
+bones/10/rotation = Quaternion(0.017539445, -0.2398849, 0.023145972, 0.9703669)
+bones/11/rotation = Quaternion(0.16342977, -0.014533022, -0.04054338, 0.98561436)
+bones/12/rotation = Quaternion(0.2912459, -0.037190583, -0.0019940923, 0.95592296)
+bones/13/rotation = Quaternion(0.13336465, -0.035859216, -0.14178395, 0.980217)
+bones/15/rotation = Quaternion(0.55472475, -0.44827, 0.58771783, 0.38199767)
+bones/16/rotation = Quaternion(0.45947212, -0.085241094, 0.07472545, 0.88092875)
+bones/17/rotation = Quaternion(-0.0106805675, 0.015274194, -0.12345452, 0.9921752)
+bones/18/rotation = Quaternion(0.024103709, 0.11576691, -0.14421412, 0.9824558)
+bones/19/rotation = Quaternion(-0.034297094, 0.9048025, 0.108341575, -0.41038793)
+bones/20/rotation = Quaternion(0.031792257, -0.06787471, -0.45358276, 0.8880569)
+bones/21/rotation = Quaternion(-0.04856565, -0.12640715, -0.29062474, 0.9472064)
+bones/23/rotation = Quaternion(0.053253222, 0.11797608, 0.99072397, -0.041372363)
+bones/24/rotation = Quaternion(-0.3541371, -0.021592252, 0.046622977, 0.933781)
+bones/25/rotation = Quaternion(0.6498972, -0.18012488, 0.13093859, 0.7266663)
+bones/26/rotation = Quaternion(0.21664092, -0.21267597, 0.046153806, 0.95168567)
+bones/28/rotation = Quaternion(-0.08296695, 0.03669371, 0.9939492, 0.061928354)
+bones/29/rotation = Quaternion(-0.28542513, 0.05872663, -0.036239352, 0.95591336)
+bones/30/rotation = Quaternion(0.6029182, 0.20572712, -0.12331364, 0.76089406)
+bones/31/rotation = Quaternion(0.23543091, 0.22940865, -0.05183265, 0.94300437)
 
 [node name="StandingCollisionShape3D" type="CollisionShape3D" parent="." unique_id=1519850987]
 shape = SubResource("CapsuleShape3D_oul6g")
@@ -141,9 +175,10 @@ collision_mask = 2
 script = ExtResource("3_d1dig")
 initial_state = NodePath("idle")
 
-[node name="idle" type="Node3D" parent="state_manager" unique_id=113879422 node_paths=PackedStringArray("player")]
+[node name="idle" type="Node3D" parent="state_manager" unique_id=113879422 node_paths=PackedStringArray("player", "anim_player")]
 script = ExtResource("4_boad6")
 player = NodePath("../..")
+anim_player = NodePath("../../squirrel5/AnimationPlayer")
 
 [node name="movement" type="Node3D" parent="state_manager" unique_id=849479216 node_paths=PackedStringArray("player")]
 script = ExtResource("5_8t03j")
@@ -211,6 +246,7 @@ player_state_machine = NodePath("../../../../../../state_manager")
 weapon_manager = NodePath("../../weapon_manager")
 
 [node name="weapon_manager" parent="." unique_id=2112504327 node_paths=PackedStringArray("player", "camera_controller", "camera") instance=ExtResource("17_tqiix")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2031729, 0)
 player = NodePath("..")
 camera_controller = NodePath("../camera_controller")
 camera = NodePath("../camera_controller/Camera3D")
@@ -225,4 +261,5 @@ metadata/_custom_type_script = "uid://cer1ch1uw6uek"
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 
+[editable path="squirrel5"]
 [editable path="ui"]

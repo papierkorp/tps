@@ -2,6 +2,7 @@ extends State
 
 @export_category("References")
 @export var player: PlayerController
+@export var anim_player: AnimationPlayer
 
 const ALLOWED: Array[State.States] = [State.States.MOVEMENT ,State.States.IDLE ,State.States.FALLING, State.States.AIR_RISE, State.States.JUMP, State.States.CROUCH]
 
@@ -16,6 +17,7 @@ func Enter():
 	if input_dir == Vector2.ZERO:
 		player.velocity.x = 0
 		player.velocity.z = 0
+	anim_player.play("idle")
 
 func Physics_Update(delta):
 	if !player:
@@ -41,3 +43,6 @@ func Physics_Update(delta):
 	var input_dir := player.get_input_dir()
 	if input_dir.length() > 0:
 		_emit_transition(State.States.MOVEMENT)
+
+func Exit() -> void:
+	anim_player.stop()

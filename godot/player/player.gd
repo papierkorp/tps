@@ -111,4 +111,4 @@ func can_air_charge() -> bool:
 
 func _on_camera_rotation_changed(horizontal: float, vertical: float):
 	model_root.rotation.y = horizontal
-	model_root.rotation.x = -vertical
+	#model_root.rotation.x = -vertical

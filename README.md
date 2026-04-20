@@ -647,66 +647,62 @@ NEGATIVE: no burlap, no sack, no straw, no rope, no face, no target circles, no 
 **Wall Piece (Flat)**
 
 ```
-A single mesh of a flat wooden wall panel. Vertical planks tightly joined. Width is 2 units, height is 3 units (proportions for modular snapping). Top edge is straight. Bottom edge is straight. Left and right edges have snap points. Flat cel shading. Warm weathered brown-gray wood with darker plank lines. Soft warm rim light from above hitting top edge. White background.
-
-MODULAR NOTES: Use this for front/back/side walls. Provide 3 variants: blank wall, wall with window, wall with door frame.
+A single mesh of a flat wooden wall panel with no openings. Vertical planks tightly joined. Width is 2 units, height is 3 units. Top edge is straight. Bottom edge is straight. Left and right edges have snap points. Flat cel shading. Warm weathered brown-gray wood with darker plank lines. Soft warm rim light from above hitting top edge. White background.
 ```
 
 **Wall with Circular Window**
 
 ```
-Same as wall piece but with one small circular window cut through the center. Window has no glass. Inner edge of cut shows dark interior shadow. Flat cel shading. Same wood colors. Soft warm rim light from above. White background.
+A single mesh of a flat wooden wall panel with one small circular window cut through the center. Vertical planks tightly joined. Width is 2 units, height is 3 units. Top edge is straight. Bottom edge is straight. Left and right edges have snap points. The circular window has no glass - it is an open hole. Inner edge of the cut shows dark interior shadow. Flat cel shading. Warm weathered brown-gray wood with darker plank lines. Soft warm rim light from above hitting top edge. White background.
 ```
 
 
 **Wall with Door Frame**
 
 ```
-Same as wall piece but with a rectangular door opening at center bottom. Opening is 1.5 units tall, 1 unit wide. No door mesh included (door is separate piece). Inner edges show dark interior shadow. Flat cel shading. White background.
+A single mesh of a flat wooden wall panel with a rectangular door opening at center bottom. Vertical planks tightly joined. Width is 2 units, height is 3 units. Top edge is straight. Bottom edge is straight. Left and right edges have snap points. The door opening is 1.5 units tall and 1 unit wide. No door mesh included (door is separate piece). Inner edges of the opening show dark interior shadow. Flat cel shading. Warm weathered brown-gray wood with darker plank lines. Soft warm rim light from above hitting top edge. White background.
 ```
 
 
 **Roof Piece (Slanted)**
 
 ```
-A single mesh of a slanted roof panel. Overlapping bark shingles. Width is 2.5 units (overhangs wall by 0.25 units on each side). Depth is 2 units. Thickness is 0.2 units. Flat cel shading. Dark charcoal-brown shingles with subtle individual shingle lines. Soft warm rim light from above hitting top edge. White background.
-
-MODULAR NOTES: Combine two of these at an angle for peaked roof.
+A single mesh of a slanted roof panel made of overlapping bark shingles. Width is 2.5 units (overhangs a 2-unit-wide wall by 0.25 units on each side). Depth (the slope distance from ridge to eave) is 2 units. Thickness is 0.2 units. Flat cel shading. Dark charcoal-brown shingles with subtle individual shingle lines. Soft warm rim light from above hitting the top edge. White background. Two of these panels can be combined at an angle to form a peaked roof.
 ```
 
 
 **Roof Peak (Ridge Cap)**
 
 ```
-A single mesh of a ridge cap for peaked roof. Covers the seam where two slanted roof panels meet. Length is 2.5 units. Flat cel shading. Same dark charcoal-brown as shingles. Soft warm rim light from above. White background.
+A single mesh of a ridge cap for a peaked roof. Covers the seam where two slanted roof panels meet at the top. Length is 2.5 units to match roof panel width. Shape is like an inverted V or curved top covering the ridge line. Flat cel shading. Dark charcoal-brown wood matching the shingle color. Soft warm rim light from above. White background.
 ```
 
 
 **Platform / Floor Piece**
 
 ```
-A single mesh of a wooden floor platform. Wide horizontal planks. Width is 2 units, depth is 2 units, thickness is 0.2 units. Bottom has visible support beams (two crossing underneath). Pivot point at bottom of support beams. Flat cel shading. Warm brown-gray planks, darker brown support beams. Soft warm rim light from above hitting top surface. White background.
+A single mesh of a wooden floor platform. Wide horizontal planks running across the surface. Width is 2 units, depth is 2 units, thickness is 0.2 units. Bottom has visible support beams - two beams crossing underneath (one along each direction). Pivot point is at the bottom of the support beams (so platform sits on top of them). Flat cel shading. Top planks are warm brown-gray. Support beams are darker brown. Soft warm rim light from above hitting the top surface. White background.
 ```
 
 
 **Railing Piece**
 
 ```
-A single mesh of a wooden railing segment. Three horizontal logs, two vertical posts. Fits along platform edge of 2 units width. Height is 1 unit. Flat cel shading. Warm weathered brown. Soft warm rim light from above hitting top rail and post tops. White background.
+A single mesh of a wooden railing segment. Made of three horizontal logs stacked vertically, and two vertical posts at left and right ends. Fits along a platform edge of 2 units width. Total height of railing is 1 unit. Flat cel shading. Warm weathered brown wood. Soft warm rim light from above hitting the top rail and the tops of both vertical posts. White background.
 ```
 
 
 **Rope Ladder**
 
 ```
-A single mesh of a hanging rope ladder. Two vertical ropes. 6 wooden rungs spaced evenly. Ladder length is 4 units (from top hook to bottom). Top has two iron hooks for mounting. Flat cel shading. Pale tan ropes, warm brown rungs, matte black iron hooks. Soft warm rim light from above. White background.
+A single mesh of a hanging rope ladder. Two vertical ropes running the full length. 6 wooden rungs spaced evenly between the ropes. Ladder length from top hook to bottom is 4 units. Top has two iron hooks for mounting onto a platform edge or beam. Flat cel shading. Vertical ropes are pale tan. Wooden rungs are warm brown. Iron hooks are matte black. Soft warm rim light from above. White background.
 ```
 
 
 **Wall Hook (Interior)**
 
 ```
-A single mesh of a simple iron wall hook. Single peg protruding from small round base plate. Two rivets on base plate. Flat cel shading. Matte black iron with rust-orange corrosion at rivet edges. Soft warm rim light from above. White background.
+A single mesh of a simple iron wall hook for interior use. Single peg protruding outward from a small round base plate. Two rivets visible on the base plate. Flat cel shading. Base plate and peg are matte black iron with subtle rust-orange corrosion at the rivet edges. Soft warm rim light from above. White background.
 ```
 
 #### ant nest
@@ -722,49 +718,49 @@ MODULAR NOTES: Length is 2 units. Inner diameter is 2 units. Outer diameter is 2
 **Tunnel Curve (90 degrees)**
 
 ```
-Same as straight tunnel but curves 90 degrees over 2 units of arc length. Inner wall of curve is slightly smoother. Both ends open with matching diameter. Flat cel shading. Warm deep brown. White background.
+A single mesh of a curved tunnel section that bends 90 degrees. Circular cross-section. Inner walls are smooth compacted dark earth. The inner wall of the curve (the shorter side) is slightly smoother than the outer wall. Both ends are open circular openings with inner diameter of 2 units, outer diameter of 2.4 units (wall thickness 0.2 units). The arc length from end to end is 2 units. Flat cel shading. Warm deep brown with darker umber shadows in deepest recesses. Soft warm ambient light (no direct rim light inside tunnel). White background.
 ```
 
 
 **Tunnel T-Junction**
 
 ```
-A three-way tunnel junction. Straight tunnel continues, a third tunnel branches off at 90 degrees from center. All three openings have matching diameter. Flat cel shading. Warm deep brown. White background.
+A single mesh of a three-way tunnel junction. A straight tunnel continues through, and a third tunnel branches off at 90 degrees from the center point. All three openings are circular with inner diameter of 2 units, outer diameter of 2.4 units. Inner walls are smooth compacted dark earth with subtle horizontal scratch marks. Flat cel shading. Warm deep brown with darker umber shadows. Soft warm ambient light. White background.
 ```
 
 
 **Tunnel Cross (Four-way)**
 
 ```
-A four-way tunnel intersection. Two tunnels crossing at 90 degrees. All four openings have matching diameter. Flat cel shading. Warm deep brown. White background.
+A single mesh of a four-way tunnel intersection. Two tunnels crossing at 90 degrees through the center. All four openings are circular with inner diameter of 2 units, outer diameter of 2.4 units. Inner walls are smooth compacted dark earth. Flat cel shading. Warm deep brown with darker umber shadows. Soft warm ambient light. White background.
 ```
 
 
 **Tunnel Slope (Ramp)**
 
 ```
-A straight tunnel section with floor angled upward at 30 degrees. Length is 2 units. Both ends have matching diameter. Floor has subtle claw-grip texture lines. Flat cel shading. Warm deep brown. White background.
+A single mesh of a straight tunnel section where the floor is angled upward at 30 degrees relative to the ceiling. Length from end to end is 2 units. Circular cross-section with inner diameter of 2 units, outer diameter of 2.4 units. Both ends are open circular openings. The floor has subtle claw-grip texture lines running along the slope direction. Inner walls are smooth compacted dark earth. Flat cel shading. Warm deep brown with darker umber shadows. Soft warm ambient light. White background.
 ```
 
 
 **Main Chamber (Empty)**
 
 ```
-A single mesh of a large open chamber. Roughly oval in shape with domed ceiling. Floor is flat. Three tunnel openings positioned on walls (placeholders for snapping). Chamber dimensions: width 6 units, depth 5 units, height 4 units. Flat cel shading. Warm deep brown walls with subtle horizontal strata bands. Soft warm ambient light. White background.
+A single mesh of a large open chamber. Roughly oval shape with domed ceiling. Floor is flat. Three circular tunnel openings positioned on the walls, each with inner diameter of 2 units. Chamber dimensions: width 6 units, depth 5 units, height 4 units. No objects or props inside - completely empty. Flat cel shading. Walls are warm deep brown with subtle horizontal strata bands. Soft warm ambient light. White background.
 ```
 
 
 **Nursery Chamber (with Eggs)**
 
 ```
-Same as main chamber but smaller (width 4 units, depth 4 units, height 3 units). Floor has cluster of 8 large ant eggs modeled as part of the mesh (welded, not separate objects). Eggs are smooth oval shapes. Flat cel shading. Chamber walls warm deep brown. Eggs are pale creamy yellow with warm beige highlights. White background.
+A single mesh of a large open chamber. Roughly oval shape with domed ceiling. Floor is flat. Three circular tunnel openings in the walls, each with inner diameter of 2 units. Chamber dimensions: width 4 units, depth 4 units, height 3 units. The floor has a cluster of 8 large ant eggs modeled as part of the mesh (welded to floor, not separate objects). Eggs are smooth oval shapes, each roughly 0.5 units long. Flat cel shading. Chamber walls are warm deep brown with subtle horizontal strata bands. Eggs are pale creamy yellow with warm beige highlights. Soft warm ambient light. White background.
 ```
 
 
 **Storage Chamber (Food Cache)**
 
 ```
-Same as main chamber but smaller (width 4 units, depth 3 units, height 3 units). Back wall has cache of items modeled as part of mesh: three large seeds, two dried mushrooms, one small generic skull. Flat cel shading. Chamber walls warm deep brown. Seeds golden-brown, mushrooms pale tan, skull bone-white. White background.
+A single mesh of a large open chamber. Roughly oval shape with domed ceiling. Floor is flat. Three circular tunnel openings in the walls, each with inner diameter of 2 units. Chamber dimensions: width 4 units, depth 3 units, height 3 units. The back wall has a cache of items modeled as part of the mesh (welded, not separate objects): three large seeds (golden-brown, each 0.4 units), two dried mushrooms (pale tan, cap shape), and one small generic skull (bone-white, rodent-sized). Flat cel shading. Chamber walls are warm deep brown with subtle horizontal strata bands. Soft warm ambient light. White background.
 ```
 
 

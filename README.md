@@ -318,6 +318,88 @@ White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runete
 - [Details]() - [Direct]()
 - [Details]() - [Direct]()
 
+#### queen
+
+**The Broodmother — Immobile Siege Commander**
+
+```
+Ant queen — Broodmother variant. Immobile, massive, territorial.
+
+LOWER BODY: Enormous pulsating abdomen, swollen and segmented, resting on the ground like a siege engine — too heavy to lift. Abdomen is pale translucent grey-chitin with faint internal glow — visible clusters of round eggs and larvae moving inside, pressed against the membrane. Abdomen is at least three times wider than her thorax. Trailing from the rear: a thin wet organic tether or birth sac, not a stinger.
+
+UPPER BODY: Anthropomorphic, regal, ancient. Massive broad thorax and shoulders, covered in layered dark grey chitin with rust-orange veining — not painted armor, but natural chitin that has grown in overlapping plates like old battle-worn carapace. Head is broad and flat, larger than soldier ants. Mandibles are long, curved, and crossed beneath her face like a ceremonial collar — clamped shut, not for biting.
+
+EYES: Large compound eyes, but unlike other ants — these are DEEP BLOOD ORANGE, not acid-yellow. Glowing faintly but warmly, almost like embers. Intelligent, patient, calculating.
+
+ARMS: Two thick arms, humanoid in proportion but chitinous. One arm is braced against the ground like a pillar. The other arm is raised, holding a freshly torn grub — pale white, curled, leaking luminous green fluid from its soft body.
+
+ABDOMEN SURFACE: The abdomen has open soft seams along the underside where grubs occasionally emerge — not grossly explicit, but visibly organic and vulnerable. Several small grubs are already on the ground near her, twitching.
+
+EXPRESSION: Not aggressive — ancient, tired, but absolutely lethal. The face of something that has outlived everything.
+
+DETAILS: Antennae long and drooping, almost weary, tipped with faint orange glow. No armor — her body IS the armor. Several old cracks and healed scars across her thorax.
+
+White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style. Warmer lighting, soft rim light from above. Rim light catches the curve of her abdomen and the wet grub in her hand.
+
+NEGATIVE: no wings, no stinger, no held weapon, no normal proportions, no bipedal walking stance, no jewelry, no crown, no throne.
+```
+
+**The Sovereign — Elegant Duellist**
+
+```
+Ant queen — Sovereign variant. Bipedal, slender, lethal.
+
+POSTURE: Stands on her rear two legs — but unlike the brawler ant's dense powerlifter stance, the queen is TALL and SLENDER. Her legs are long, segmented, almost elegant — digitigrade reverse-jointed, ending in sharp clawed points. She stands on her toes like a bird of prey. Her thorax is narrow and elongated, almost wasp-like.
+
+COLOR: Deep charcoal-black chitin with a faint burgundy-purple iridescent sheen in direct light — royal and cold. No rust-orange anywhere on her body. She is clean, dark, and beautiful in a terrifying way.
+
+HEAD: Narrow and sharp, almost triangular. Mandibles are long, thin, and crossed tightly beneath her face — not aggressive, but ready. Eyes are BRIGHT PALE GOLD — almost white-yellow — narrow and focused.
+
+WEAPON (integrated): Her LEFT forelimb is not a normal arm — it has evolved into a LIVING BONE SCYTHE. The entire limb from elbow to tip is a single curved blade of dark glossy chitin, serrated along the inner edge, needle-sharp at the point. The blade is slightly longer than her torso. Her RIGHT arm is a normal chitinous arm with three clawed fingers, held open and balanced.
+
+ARMS: Right arm is raised in a duellist's guard — open claw, ready to parry or grab. Left arm (the scythe) is extended low and back, blade pointing behind her, ready to swing upward in a rising cut.
+
+ANTENNAE: Long, swept back like twin ribbons, tipped with pale gold glow.
+
+ABDOMEN: Small and tucked high — not bloated. She does not lay eggs anymore. She is a warrior queen, not a mother.
+
+EXPRESSION: Cold, patient, intelligent. No emotion — just the stillness of a perfect predator.
+
+DETAILS: No armor. Her chitin IS her armor. Several old battle scars — long healed cracks across her thorax and one missing claw on her right hand.
+
+White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style. Warmer lighting, soft rim light from above. Rim light catches the edge of the bone scythe and her mandibles.
+
+NEGATIVE: no bloated abdomen, no eggs, no grubs, no rust-orange color, no heavy armor, no thick body, no open mouth, no wings, no stinger.
+```
+
+**The Symbiote Queen — Armored Caster**
+
+```
+Ant queen — Symbiote variant. Bipedal, heavily armored, organic.
+
+BODY PLAN: Stands on two thick rear legs — not as dense as the brawler, but solid and planted. Her torso is humanoid but completely unrecognizable beneath a LIVING SYMBIOTIC ARMOR — a second organism that has fused to her chitin. The armor is thick, pulsating, slightly translucent dark chitin with BRIGHT ORANGE-PURPLE GLOWING VEINS running through it like circuitry. The veins pulse slowly — visible heartbeat rhythm.
+
+HEAD: Her actual head is barely visible — the symbiote has grown a HELMET-LIKE CARAPACE over her face. Only her COMPOUND EYES are visible through two narrow slits — glowing HOT ORANGE (not yellow, not red). Her mandibles are completely hidden. Antennae have fused into the symbiote and now emerge as two thick, ridged horns curving backward.
+
+UPPER BODY: The symbiote has grown a massive BULBOUS THORAX ARMOR — wider than her shoulders, sloping downward like a beetle's shell. The orange-purple veins are thickest here, converging on a single LARGE PULSING SAC on her right shoulder — this is the pheromone mortar.
+
+LEFT ARM: Completely transformed — the symbiote has grown a MASSIVE LIVING SHIELD where her forearm should be. The shield is a curved, bulbous growth of dark chitin, almost spherical but flattened on the front, with a small ventral pore on the underside that leaks glowing orange fluid — the acid spitter.
+
+RIGHT ARM: Thick, clawed, free — held open in a commanding gesture. Three fingers, each tipped with a curved black claw.
+
+ABDOMEN: Tucked high and small — she has not reproduced in years. The symbiote has consumed most of her reproductive system.
+
+LEGS: Thick, armored, digitigrade. The symbiote has grown small spike-like projections along the shins.
+
+EXPRESSION: Impossible to read — her face is hidden. But her posture is COMMANDING — chest slightly forward, one foot planted ahead of the other, right arm raised like a general addressing an army.
+
+DETAILS: The symbiote is slightly too large for her body — it bulges at the joints, looks heavy and uncomfortable. Several small parasitic tendrils connect from the armor into her actual chitin at the neck and wrists.
+
+White background. Clean lineart, flat cel shading, Hearthstone/Legends of Runeterra card art style. Warmer lighting, soft rim light from above. Rim light should wrap across the curved shield and the bulbous thorax armor, but the glowing veins should be the primary light source in the shadows.
+
+NEGATIVE: no separate shield prop, no weapon prop, no rust-orange trim, no black carbon armor, no rivets, no human-made armor, no throne, no eggs, no grubs.
+```
+
 ### weapons
 
 #### rifle

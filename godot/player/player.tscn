@@ -1,3 +1,259 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:680446b7e8ca187708ccdae13ddeb225df1ff102ba562650858e38b73d3981ec
-size 11862
+[gd_scene format=3 uid="uid://waxnia675j70"]
+
+[ext_resource type="Script" uid="uid://f7uwu0t55ov7" path="res://player/player.gd" id="1_ebx5c"]
+[ext_resource type="PackedScene" uid="uid://d1ocobjqslf1j" path="res://player/squirrel_model.tscn" id="2_bjvpn"]
+[ext_resource type="Script" uid="uid://b2enxkjx2fe4p" path="res://player/camera_controller.gd" id="2_rkbax"]
+[ext_resource type="Script" uid="uid://b2sniaurrmd8r" path="res://player/statemanager/state_manager.gd" id="3_d1dig"]
+[ext_resource type="Script" uid="uid://6kvaf246ivxd" path="res://player/statemanager/states/idle.gd" id="4_boad6"]
+[ext_resource type="PackedScene" uid="uid://bgoo5xlh2qrdv" path="res://player/ui/ui.tscn" id="4_yw30f"]
+[ext_resource type="Script" uid="uid://u75mjk02j7di" path="res://player/statemanager/states/movement.gd" id="5_8t03j"]
+[ext_resource type="Script" uid="uid://8ch3mvjc0nck" path="res://player/statemanager/states/jump.gd" id="6_2ieo8"]
+[ext_resource type="Script" uid="uid://dm6fmvaq6gdcm" path="res://player/statemanager/states/rolling.gd" id="7_32hag"]
+[ext_resource type="Script" uid="uid://tq43r0mcmut8" path="res://player/statemanager/states/gliding.gd" id="7_ebec5"]
+[ext_resource type="Script" uid="uid://dodebdd4s5rwo" path="res://player/statemanager/states/sprint_jump.gd" id="8_tqiix"]
+[ext_resource type="Script" uid="uid://231i4fgis6k1" path="res://player/statemanager/states/crouch.gd" id="8_yllr7"]
+[ext_resource type="Script" uid="uid://d4ebx8e673rby" path="res://player/statemanager/states/sprinting.gd" id="9_kb6p2"]
+[ext_resource type="Script" uid="uid://r87ufqs7wsov" path="res://player/statemanager/states/falling.gd" id="10_tqiix"]
+[ext_resource type="Script" uid="uid://xjb5vtxjeq1e" path="res://player/statemanager/states/air_hover.gd" id="10_wodsf"]
+[ext_resource type="Script" uid="uid://8accbxu7uycl" path="res://player/statemanager/states/air_charge.gd" id="11_32hag"]
+[ext_resource type="Script" uid="uid://dvanfud05qfka" path="res://player/statemanager/states/air_rise.gd" id="15_c35mf"]
+[ext_resource type="PackedScene" uid="uid://cskq2japwlrg6" path="res://player/statemanager/air_charge/air_charge_impact_articles.tscn" id="15_x7c3f"]
+[ext_resource type="PackedScene" uid="uid://lvyfvt3cty23" path="res://player/weaponmanager/weapon_manager.tscn" id="17_tqiix"]
+[ext_resource type="PackedScene" uid="uid://cvxr4eyr44h5l" path="res://player/weaponmanager/impact_articles.tscn" id="18_c35mf"]
+[ext_resource type="Resource" uid="uid://cac4p8rh45l2s" path="res://player/weaponmanager/weapons/example.tres" id="18_e7oew"]
+[ext_resource type="Animation" uid="uid://dshh80ochssf6" path="res://assets/player/animations/idle_without_skin.anim" id="18_s7qer"]
+[ext_resource type="Script" uid="uid://cer1ch1uw6uek" path="res://modules/health_component.gd" id="20_65viv"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kqu6x"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oul6g"]
+radius = 0.6
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c35mf"]
+height = 1.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_d1dig"]
+radius = 0.2
+
+[sub_resource type="Animation" id="Animation_e7oew"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fov")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [75.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_65viv"]
+resource_name = "crouch"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(0.55478483, 0.46651652, 0.39229217),
+"update": 0,
+"values": [1.0, 0.75, 0.5]
+}
+
+[sub_resource type="Animation" id="Animation_c35mf"]
+resource_name = "zoom_in"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fov")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [75.0, 45.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_65viv"]
+_data = {
+&"RESET": SubResource("Animation_e7oew"),
+&"crouch": SubResource("Animation_65viv"),
+&"zoom_in": SubResource("Animation_c35mf")
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bjvpn"]
+
+[sub_resource type="Animation" id="Animation_bjvpn"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s7qer"]
+_data = {
+&"RESET": SubResource("Animation_bjvpn")
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g4c7l"]
+_data = {
+&"idle_without_skin": ExtResource("18_s7qer")
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7pqkx"]
+
+[node name="player" type="CharacterBody3D" unique_id=2066123868 node_paths=PackedStringArray("camera_controller", "state", "model_root")]
+collision_mask = 6
+script = ExtResource("1_ebx5c")
+camera_controller = NodePath("camera_controller")
+state = NodePath("state_manager/idle")
+model_root = NodePath("squirrel_model")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=145105441]
+visible = false
+mesh = SubResource("CapsuleMesh_kqu6x")
+
+[node name="squirrel_model" parent="." unique_id=1995572879 instance=ExtResource("2_bjvpn")]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+
+[node name="StandingCollisionShape3D" type="CollisionShape3D" parent="." unique_id=1519850987]
+shape = SubResource("CapsuleShape3D_oul6g")
+
+[node name="CrouchingCollisionShape3D" type="CollisionShape3D" parent="." unique_id=1907329734]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("CapsuleShape3D_c35mf")
+
+[node name="camera_controller" type="Node3D" parent="." unique_id=681305640 node_paths=PackedStringArray("player", "camera", "shape_cast", "animation_player")]
+script = ExtResource("2_rkbax")
+player = NodePath("..")
+camera = NodePath("Camera3D")
+shape_cast = NodePath("ShapeCast3D")
+animation_player = NodePath("../AnimationPlayer")
+mouse_sensitivity = 0.001
+
+[node name="Camera3D" type="Camera3D" parent="camera_controller" unique_id=220676002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1, 2.5)
+cull_mask = 1
+
+[node name="bullet_raycast" type="RayCast3D" parent="camera_controller/Camera3D" unique_id=993476726]
+enabled = false
+collision_mask = 6
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="camera_controller" unique_id=904858338]
+shape = SubResource("SphereShape3D_d1dig")
+collision_mask = 2
+
+[node name="state_manager" type="Node3D" parent="." unique_id=1583884867 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("3_d1dig")
+initial_state = NodePath("idle")
+
+[node name="idle" type="Node3D" parent="state_manager" unique_id=113879422 node_paths=PackedStringArray("player", "anim_player")]
+script = ExtResource("4_boad6")
+player = NodePath("../..")
+anim_player = NodePath("../../CharacterAnimationPlayer")
+
+[node name="movement" type="Node3D" parent="state_manager" unique_id=849479216 node_paths=PackedStringArray("player")]
+script = ExtResource("5_8t03j")
+player = NodePath("../..")
+
+[node name="sprinting" type="Node3D" parent="state_manager" unique_id=982344138 node_paths=PackedStringArray("player")]
+script = ExtResource("9_kb6p2")
+player = NodePath("../..")
+
+[node name="rolling" type="Node3D" parent="state_manager" unique_id=1086312837 node_paths=PackedStringArray("player")]
+script = ExtResource("7_32hag")
+player = NodePath("../..")
+
+[node name="jump" type="Node3D" parent="state_manager" unique_id=401070768 node_paths=PackedStringArray("player")]
+script = ExtResource("6_2ieo8")
+player = NodePath("../..")
+
+[node name="sprint_jump" type="Node3D" parent="state_manager" unique_id=2056664348 node_paths=PackedStringArray("player")]
+script = ExtResource("8_tqiix")
+player = NodePath("../..")
+
+[node name="gliding" type="Node3D" parent="state_manager" unique_id=1935030530 node_paths=PackedStringArray("player")]
+script = ExtResource("7_ebec5")
+player = NodePath("../..")
+
+[node name="falling" type="Node3D" parent="state_manager" unique_id=2056145630 node_paths=PackedStringArray("player")]
+script = ExtResource("10_tqiix")
+player = NodePath("../..")
+
+[node name="crouch" type="Node3D" parent="state_manager" unique_id=160658173 node_paths=PackedStringArray("player", "mesh", "stand_collision", "crouch_collision", "weapon_manager", "animation_player")]
+script = ExtResource("8_yllr7")
+player = NodePath("../..")
+mesh = NodePath("../../MeshInstance3D")
+stand_collision = NodePath("../../StandingCollisionShape3D")
+crouch_collision = NodePath("../../CrouchingCollisionShape3D")
+weapon_manager = NodePath("../../weapon_manager")
+animation_player = NodePath("../../AnimationPlayer")
+
+[node name="air_hover" type="Node3D" parent="state_manager" unique_id=128259962 node_paths=PackedStringArray("player")]
+script = ExtResource("10_wodsf")
+player = NodePath("../..")
+
+[node name="air_charge" type="Node3D" parent="state_manager" unique_id=567399489 node_paths=PackedStringArray("player")]
+script = ExtResource("11_32hag")
+player = NodePath("../..")
+impact_scene = ExtResource("15_x7c3f")
+
+[node name="air_rise" type="Node3D" parent="state_manager" unique_id=316163710 node_paths=PackedStringArray("player")]
+script = ExtResource("15_c35mf")
+player = NodePath("../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1098153867]
+root_node = NodePath("../camera_controller/Camera3D")
+libraries/ = SubResource("AnimationLibrary_65viv")
+libraries/mixamo = SubResource("AnimationLibrary_bjvpn")
+
+[node name="CharacterAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1144167767]
+root_node = NodePath("../squirrel_model/Armature")
+libraries/ = SubResource("AnimationLibrary_s7qer")
+libraries/mixamo = SubResource("AnimationLibrary_g4c7l")
+libraries/test = SubResource("AnimationLibrary_7pqkx")
+
+[node name="ui" parent="." unique_id=20229051 instance=ExtResource("4_yw30f")]
+
+[node name="speed" parent="ui/debug_panel/MarginContainer/ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(20229051, 1103326045) index="1" unique_id=694684104 node_paths=PackedStringArray("player")]
+player = NodePath("../../../../../..")
+
+[node name="all_states" parent="ui/debug_panel/MarginContainer/ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(20229051, 1103326045) index="2" unique_id=2025488691 node_paths=PackedStringArray("player_state_machine")]
+player_state_machine = NodePath("../../../../../../state_manager")
+
+[node name="ammuniation" parent="ui" index="2" unique_id=640421984 node_paths=PackedStringArray("weapon_manager")]
+weapon_manager = NodePath("../../weapon_manager")
+
+[node name="weapon_manager" parent="." unique_id=2112504327 node_paths=PackedStringArray("player", "camera_controller", "camera") instance=ExtResource("17_tqiix")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2031729, 0)
+player = NodePath("..")
+camera_controller = NodePath("../camera_controller")
+camera = NodePath("../camera_controller/Camera3D")
+impact_scene = ExtResource("18_c35mf")
+current_weapon = ExtResource("18_e7oew")
+
+[node name="HealthComponent" type="Node" parent="." unique_id=1048145455]
+script = ExtResource("20_65viv")
+max_health = 500.0
+starting_health = 500.0
+metadata/_custom_type_script = "uid://cer1ch1uw6uek"
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+
+[editable path="ui"]

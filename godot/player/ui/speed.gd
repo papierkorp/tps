@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1f94050439397f4b7ac3e970cd861b90058c51763af0a6a86192a13a98a4f609
-size 382
+extends Label
+
+@export_category("References")
+@export var player: PlayerController
+	
+func _process(_delta: float) -> void:
+	var horizontal_speed = Vector2(player.velocity.x, player.velocity.z).length()
+	var vertical_speed = abs(player.velocity.y)
+	self.text = "horizontal speed: " + str(snappedf(horizontal_speed, 0.01)) + "\nvertical speed: " + str(snappedf(vertical_speed, 0.01))

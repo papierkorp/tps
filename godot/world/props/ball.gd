@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:11bc24b63d77725f6e6644f356645f31e81f2d4e182230a8d6a2d1ceaea6bdb4
-size 353
+extends RigidBody3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+
+
+func _on_health_component_died() -> void:
+	print(name, " destroyed")
+	queue_free()

@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a2242f4cf911fdc3280f9739b387935fadbda64e891d5fb779a38e44e9058068
-size 1233
+[gd_resource type="Resource" script_class="Weapon" format=3 uid="uid://cac4p8rh45l2s"]
+
+[ext_resource type="Script" uid="uid://oo5lyqfok7fi" path="res://player/weaponmanager/weapon.gd" id="1_yern4"]
+[ext_resource type="AudioStream" uid="uid://b4rtqfscq5v8h" path="res://assets/weapons/sound_effects/pistol_reload.mp3" id="2_6cjfu"]
+[ext_resource type="AudioStream" uid="uid://b7tka2xqffeu0" path="res://assets/weapons/sound_effects/shoot.wav" id="3_cuj0d"]
+[ext_resource type="AudioStream" uid="uid://dwhc3cjmngpwb" path="res://assets/weapons/sound_effects/out_of_magazine.mp3" id="4_wxrcq"]
+[ext_resource type="PackedScene" uid="uid://bl8g12kagoc2p" path="res://player/weaponmanager/weapons/example.tscn" id="5_6cjfu"]
+
+[resource]
+script = ExtResource("1_yern4")
+weapon_name = "example"
+weapon_scene = ExtResource("5_6cjfu")
+weapon_position = Vector3(0.5, -1, -0.6)
+anim_idle = "idle"
+anim_equip = "equip"
+anim_shoot = "shoot"
+anim_reload = "reload"
+anim_outofammo = "outofammo"
+sound_shoot = ExtResource("3_cuj0d")
+sound_reload = ExtResource("2_6cjfu")
+sound_unholster = ExtResource("4_wxrcq")
+ammo_currently_loaded = 5
+ammo_reserve = 120
+ammo_able_to_load = 30
+auto_fire = true
+metadata/_custom_type_script = "uid://oo5lyqfok7fi"

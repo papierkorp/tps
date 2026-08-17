@@ -1,3 +1,76 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:71d315a1d508f52eff9e347c200df3340d5acb414d94e66f3b6942b568827a46
-size 2374
+[gd_scene format=3 uid="uid://bl8g12kagoc2p"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_o3sr5"]
+size = Vector3(0.2, 0.2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8drdh"]
+size = Vector3(0.2, 0.2, 0.4)
+
+[sub_resource type="Animation" id="Animation_t6022"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_o3sr5"]
+resource_name = "equip"
+
+[sub_resource type="Animation" id="Animation_8drdh"]
+resource_name = "idle"
+
+[sub_resource type="Animation" id="Animation_63k5l"]
+resource_name = "outofammo"
+
+[sub_resource type="Animation" id="Animation_6sq50"]
+resource_name = "reload"
+length = 0.61
+
+[sub_resource type="Animation" id="Animation_0c1f1"]
+resource_name = "shoot"
+length = 0.033333335
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t6022"]
+_data = {
+&"RESET": SubResource("Animation_t6022"),
+&"equip": SubResource("Animation_o3sr5"),
+&"idle": SubResource("Animation_8drdh"),
+&"outofammo": SubResource("Animation_63k5l"),
+&"reload": SubResource("Animation_6sq50"),
+&"shoot": SubResource("Animation_0c1f1")
+}
+
+[node name="example" type="Node3D" unique_id=1505432535]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=326421944]
+mesh = SubResource("BoxMesh_o3sr5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" unique_id=261953018]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -0.1360032, 0.3999313)
+mesh = SubResource("BoxMesh_8drdh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1437044132]
+libraries/ = SubResource("AnimationLibrary_t6022")
+
+[node name="BulletSpawn" type="Marker3D" parent="." unique_id=1434724710]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.41391194)

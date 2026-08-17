@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b01f297a9e1390812fa31e49bed1eff90c5582b1c697dfb481a2b4eebed9d25b
-size 389
+extends GPUParticles3D
+
+@export var decal: Decal
+var stay_time := 5.0
+var fade_time := 1.0
+
+func _ready():
+	# impact
+	one_shot = true
+	emitting = true
+	await get_tree().create_timer(lifetime + 0.1).timeout
+	# decals
+	await get_tree().create_timer(stay_time).timeout
+	var tween = create_tween()
+	tween.tween_property(decal, "modulate:a", 0.0, fade_time)
+	await tween.finished
+	queue_free()

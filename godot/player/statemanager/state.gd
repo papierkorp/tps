@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:20bedc57fae8f2f8279a2994dbe23416296a0c0c8c605b34d0881dac83b6480c
-size 723
+class_name State extends Node
+
+signal state_transition(new_state_name: StringName)
+
+enum States {
+	IDLE,
+	MOVEMENT,
+	SPRINTING,
+	JUMP,
+	SPRINT_JUMP,
+	FALLING,
+	GLIDING,
+	AIR_HOVER,
+	AIR_RISE,
+	AIR_CHARGE,
+	CROUCH,
+	ROLLING
+}
+
+func _emit_transition(new_state: States) -> void:
+	var allowed = get("ALLOWED")
+	if allowed == null or allowed.is_empty() or new_state in allowed:
+		state_transition.emit(_state_to_string(new_state))
+	else:
+		push_error("Illegal transition from '%s' to '%s'" % [name, _state_to_string(new_state)])
+
+func _state_to_string(state: States) -> StringName:
+	return States.keys()[state].to_lower()
+
+
+func Enter():
+	pass
+
+func Exit():
+	pass
+
+func Update(_delta):
+	pass
+
+func Physics_Update(_delta):
+	pass
